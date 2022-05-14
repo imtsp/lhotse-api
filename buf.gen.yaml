@@ -9,3 +9,5 @@ plugins:
 - name: go-grpc
   out: .
   opt: paths=source_relative
+- name: java
+  out: ./src/main/java

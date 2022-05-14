@@ -4,7 +4,8 @@ package lhotse.networking.v1alpha1;
 
 import "google/protobuf/any.proto";
 
-option go_package = "lhotse/networking/v1alpha1";
+option go_package = "lhotse/api/networking/v1alpha1";
+option java_package = "com.lhotse.api.networking.v1alpha1";
 
 message DataPush {
     enum DataCategory {
