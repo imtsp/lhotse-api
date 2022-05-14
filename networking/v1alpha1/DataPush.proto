@@ -7,13 +7,41 @@ import "google/protobuf/any.proto";
 option go_package = "lhotse/api/networking/v1alpha1";
 option java_package = "com.lhotse.api.networking.v1alpha1";
 
-message DataPush {
-    enum DataCategory {
-        SERVICE = 0;
-        CLUSTER = 1;
-        ENDPOINT = 2;
-        RULE = 3;
-    }
+
+enum DataCategory {
+    DATA_CATEGORY_SERVICE = 0;
+    DATA_CATEGORY_CLUSTER = 1;
+    DATA_CATEGORY_ENDPOINT = 2;
+    DATA_CATEGORY_RULE = 3;
+}
+
+enum PushStatus {
+    PUSH_STATUS_OK = 0;
+    PUSH_STATUS_FAIL = 1;
+}
+
+// 推送动作
+enum PushAction {
+    PUSH_ACTION_FULL = 0; // 全量
+    PUSH_ACTION_INCREMENT = 1;// 增量
+}
+
+// 推送请求
+message DataPushRequest {
     DataCategory category = 1;// 数据类型
-    google.protobuf.Any data = 2;// 数据
+    PushAction action = 2; // 动作
+    google.protobuf.Any data = 3;// 数据
+}
+
+// 推送结果
+message DataPushResponse {
+    PushStatus status = 1;// 状态
+    string message = 2;// 消息
+}
+
+
+
+service PushService {
+    // 推送数据到agent
+    rpc PushData (stream DataPushRequest) returns (stream DataPushResponse);
 }
