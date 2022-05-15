@@ -1,4 +1,4 @@
-module lhotse-api
+module github.com/imtsp/lhotse-api
 
 go 1.17
 
