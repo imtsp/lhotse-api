@@ -20,4 +20,5 @@ set -eu
 # Generate all protos
 buf generate \
   --path networking \
-  --path push
+  --path push \
+  --path agent

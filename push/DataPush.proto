@@ -4,8 +4,8 @@ package lhotse.networking.v1alpha1;
 
 import "google/protobuf/any.proto";
 
-option go_package = "lhotse/api/networking/v1alpha1";
-option java_package = "com.lhotse.api.networking.v1alpha1";
+option go_package = "lhotse/api/push";
+option java_package = "com.lhotse.api.push";
 
 
 enum DataCategory {
@@ -13,6 +13,8 @@ enum DataCategory {
     DATA_CATEGORY_CLUSTER = 1;
     DATA_CATEGORY_ENDPOINT = 2;
     DATA_CATEGORY_RULE = 3;
+    DATA_CATEGORY_AGENT_META = 4;
+    DATA_CATEGORY_AGENT_UPLOAD_STATUS = 5;
 }
 
 enum PushStatus {
@@ -29,14 +31,26 @@ enum PushAction {
 // 推送请求
 message DataPushRequest {
     DataCategory category = 1;// 数据类型
-    PushAction action = 2; // 动作
-    google.protobuf.Any data = 3;// 数据
+    google.protobuf.Any data = 2;// 数据
+}
+
+message ServerDataPushRequest {
+    PushAction action = 1; // 动作
+    string checksum = 2;//校验和
+    string revision = 3;//修订版本
+    google.protobuf.Any data = 4;// 数据
 }
 
 // 推送结果
 message DataPushResponse {
     PushStatus status = 1;// 状态
     string message = 2;// 消息
+}
+
+// Agent启动上报身份信息
+message AgentRegisterRequest {
+    string agent_id = 1;
+    string version = 2;
 }
 
 

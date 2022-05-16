@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lhotse.api.agent;
+
+option go_package = "lhotse/api/agent";
+option java_package = "com.lhotse.api.agent";
+
+message AgentMeta {
+    string version = 1;
+}

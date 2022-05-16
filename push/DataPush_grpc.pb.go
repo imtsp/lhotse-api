@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: push/DataPush.proto
 
-package v1alpha1
+package push
 
 import (
 	context "context"
