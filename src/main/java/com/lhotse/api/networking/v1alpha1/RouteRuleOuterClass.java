@@ -19,86 +19,78 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string service_name = 1 [json_name = "serviceName"];</code>
-     * @return The serviceName.
+     * <code>string service_name = 1[json_name = "serviceName"];</code>
      */
     java.lang.String getServiceName();
     /**
-     * <code>string service_name = 1 [json_name = "serviceName"];</code>
-     * @return The bytes for serviceName.
+     * <code>string service_name = 1[json_name = "serviceName"];</code>
      */
     com.google.protobuf.ByteString
         getServiceNameBytes();
 
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @return A list containing the hosts.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     java.util.List<java.lang.String>
         getHostsList();
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @return The count of hosts.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     int getHostsCount();
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @param index The index of the element to return.
-     * @return The hosts at the given index.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     java.lang.String getHosts(int index);
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the hosts at the given index.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     com.google.protobuf.ByteString
         getHostsBytes(int index);
 
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
     java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster> 
         getClustersList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster getClusters(int index);
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
     int getClustersCount();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
     java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder> 
         getClustersOrBuilderList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder getClustersOrBuilder(
         int index);
 
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
     java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule> 
         getRulesList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule getRules(int index);
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
     int getRulesCount();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
     java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder> 
         getRulesOrBuilderList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder getRulesOrBuilder(
         int index);
@@ -106,7 +98,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.Service}
    */
-  public static final class Service extends
+  public  static final class Service extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.Service)
       ServiceOrBuilder {
@@ -120,13 +112,6 @@ public final class RouteRuleOuterClass {
       hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       clusters_ = java.util.Collections.emptyList();
       rules_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Service();
     }
 
     @java.lang.Override
@@ -161,33 +146,33 @@ public final class RouteRuleOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 hosts_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               hosts_.add(s);
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 clusters_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000004;
               }
               clusters_.add(
                   input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.parser(), extensionRegistry));
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 rules_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               rules_.add(
                   input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -201,13 +186,13 @@ public final class RouteRuleOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           hosts_ = hosts_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           clusters_ = java.util.Collections.unmodifiableList(clusters_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           rules_ = java.util.Collections.unmodifiableList(rules_);
         }
         this.unknownFields = unknownFields.build();
@@ -227,13 +212,12 @@ public final class RouteRuleOuterClass {
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SERVICE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object serviceName_;
     /**
-     * <code>string service_name = 1 [json_name = "serviceName"];</code>
-     * @return The serviceName.
+     * <code>string service_name = 1[json_name = "serviceName"];</code>
      */
-    @java.lang.Override
     public java.lang.String getServiceName() {
       java.lang.Object ref = serviceName_;
       if (ref instanceof java.lang.String) {
@@ -247,10 +231,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string service_name = 1 [json_name = "serviceName"];</code>
-     * @return The bytes for serviceName.
+     * <code>string service_name = 1[json_name = "serviceName"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceNameBytes() {
       java.lang.Object ref = serviceName_;
@@ -268,32 +250,26 @@ public final class RouteRuleOuterClass {
     public static final int HOSTS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList hosts_;
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @return A list containing the hosts.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getHostsList() {
       return hosts_;
     }
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @return The count of hosts.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     public int getHostsCount() {
       return hosts_.size();
     }
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @param index The index of the element to return.
-     * @return The hosts at the given index.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     public java.lang.String getHosts(int index) {
       return hosts_.get(index);
     }
     /**
-     * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the hosts at the given index.
+     * <code>repeated string hosts = 2[json_name = "hosts"];</code>
      */
     public com.google.protobuf.ByteString
         getHostsBytes(int index) {
@@ -303,38 +279,33 @@ public final class RouteRuleOuterClass {
     public static final int CLUSTERS_FIELD_NUMBER = 3;
     private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster> clusters_;
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
-    @java.lang.Override
     public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster> getClustersList() {
       return clusters_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder> 
         getClustersOrBuilderList() {
       return clusters_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
-    @java.lang.Override
     public int getClustersCount() {
       return clusters_.size();
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster getClusters(int index) {
       return clusters_.get(index);
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder getClustersOrBuilder(
         int index) {
       return clusters_.get(index);
@@ -343,38 +314,33 @@ public final class RouteRuleOuterClass {
     public static final int RULES_FIELD_NUMBER = 4;
     private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule> rules_;
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
-    @java.lang.Override
     public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule> getRulesList() {
       return rules_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder> 
         getRulesOrBuilderList() {
       return rules_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
-    @java.lang.Override
     public int getRulesCount() {
       return rules_.size();
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule getRules(int index) {
       return rules_.get(index);
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder getRulesOrBuilder(
         int index) {
       return rules_.get(index);
@@ -449,16 +415,17 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service) obj;
 
-      if (!getServiceName()
-          .equals(other.getServiceName())) return false;
-      if (!getHostsList()
-          .equals(other.getHostsList())) return false;
-      if (!getClustersList()
-          .equals(other.getClustersList())) return false;
-      if (!getRulesList()
-          .equals(other.getRulesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getServiceName()
+          .equals(other.getServiceName());
+      result = result && getHostsList()
+          .equals(other.getHostsList());
+      result = result && getClustersList()
+          .equals(other.getClustersList());
+      result = result && getRulesList()
+          .equals(other.getRulesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -620,16 +587,16 @@ public final class RouteRuleOuterClass {
         serviceName_ = "";
 
         hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (clustersBuilder_ == null) {
           clusters_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           clustersBuilder_.clear();
         }
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           rulesBuilder_.clear();
         }
@@ -660,65 +627,67 @@ public final class RouteRuleOuterClass {
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service buildPartial() {
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.serviceName_ = serviceName_;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           hosts_ = hosts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.hosts_ = hosts_;
         if (clustersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             clusters_ = java.util.Collections.unmodifiableList(clusters_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.clusters_ = clusters_;
         } else {
           result.clusters_ = clustersBuilder_.build();
         }
         if (rulesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             rules_ = java.util.Collections.unmodifiableList(rules_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.rules_ = rules_;
         } else {
           result.rules_ = rulesBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -739,7 +708,7 @@ public final class RouteRuleOuterClass {
         if (!other.hosts_.isEmpty()) {
           if (hosts_.isEmpty()) {
             hosts_ = other.hosts_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureHostsIsMutable();
             hosts_.addAll(other.hosts_);
@@ -750,7 +719,7 @@ public final class RouteRuleOuterClass {
           if (!other.clusters_.isEmpty()) {
             if (clusters_.isEmpty()) {
               clusters_ = other.clusters_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureClustersIsMutable();
               clusters_.addAll(other.clusters_);
@@ -763,7 +732,7 @@ public final class RouteRuleOuterClass {
               clustersBuilder_.dispose();
               clustersBuilder_ = null;
               clusters_ = other.clusters_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               clustersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getClustersFieldBuilder() : null;
@@ -776,7 +745,7 @@ public final class RouteRuleOuterClass {
           if (!other.rules_.isEmpty()) {
             if (rules_.isEmpty()) {
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureRulesIsMutable();
               rules_.addAll(other.rules_);
@@ -789,7 +758,7 @@ public final class RouteRuleOuterClass {
               rulesBuilder_.dispose();
               rulesBuilder_ = null;
               rules_ = other.rules_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               rulesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRulesFieldBuilder() : null;
@@ -830,8 +799,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object serviceName_ = "";
       /**
-       * <code>string service_name = 1 [json_name = "serviceName"];</code>
-       * @return The serviceName.
+       * <code>string service_name = 1[json_name = "serviceName"];</code>
        */
       public java.lang.String getServiceName() {
         java.lang.Object ref = serviceName_;
@@ -846,8 +814,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string service_name = 1 [json_name = "serviceName"];</code>
-       * @return The bytes for serviceName.
+       * <code>string service_name = 1[json_name = "serviceName"];</code>
        */
       public com.google.protobuf.ByteString
           getServiceNameBytes() {
@@ -863,9 +830,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string service_name = 1 [json_name = "serviceName"];</code>
-       * @param value The serviceName to set.
-       * @return This builder for chaining.
+       * <code>string service_name = 1[json_name = "serviceName"];</code>
        */
       public Builder setServiceName(
           java.lang.String value) {
@@ -878,8 +843,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string service_name = 1 [json_name = "serviceName"];</code>
-       * @return This builder for chaining.
+       * <code>string service_name = 1[json_name = "serviceName"];</code>
        */
       public Builder clearServiceName() {
         
@@ -888,9 +852,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string service_name = 1 [json_name = "serviceName"];</code>
-       * @param value The bytes for serviceName to set.
-       * @return This builder for chaining.
+       * <code>string service_name = 1[json_name = "serviceName"];</code>
        */
       public Builder setServiceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -906,48 +868,39 @@ public final class RouteRuleOuterClass {
 
       private com.google.protobuf.LazyStringList hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureHostsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           hosts_ = new com.google.protobuf.LazyStringArrayList(hosts_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @return A list containing the hosts.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public com.google.protobuf.ProtocolStringList
           getHostsList() {
         return hosts_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @return The count of hosts.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public int getHostsCount() {
         return hosts_.size();
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @param index The index of the element to return.
-       * @return The hosts at the given index.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public java.lang.String getHosts(int index) {
         return hosts_.get(index);
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the hosts at the given index.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public com.google.protobuf.ByteString
           getHostsBytes(int index) {
         return hosts_.getByteString(index);
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @param index The index to set the value at.
-       * @param value The hosts to set.
-       * @return This builder for chaining.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public Builder setHosts(
           int index, java.lang.String value) {
@@ -960,9 +913,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @param value The hosts to add.
-       * @return This builder for chaining.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public Builder addHosts(
           java.lang.String value) {
@@ -975,9 +926,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @param values The hosts to add.
-       * @return This builder for chaining.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public Builder addAllHosts(
           java.lang.Iterable<java.lang.String> values) {
@@ -988,19 +937,16 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @return This builder for chaining.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public Builder clearHosts() {
         hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string hosts = 2 [json_name = "hosts"];</code>
-       * @param value The bytes of the hosts to add.
-       * @return This builder for chaining.
+       * <code>repeated string hosts = 2[json_name = "hosts"];</code>
        */
       public Builder addHostsBytes(
           com.google.protobuf.ByteString value) {
@@ -1017,9 +963,9 @@ public final class RouteRuleOuterClass {
       private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster> clusters_ =
         java.util.Collections.emptyList();
       private void ensureClustersIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           clusters_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster>(clusters_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -1027,7 +973,7 @@ public final class RouteRuleOuterClass {
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder> clustersBuilder_;
 
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster> getClustersList() {
         if (clustersBuilder_ == null) {
@@ -1037,7 +983,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public int getClustersCount() {
         if (clustersBuilder_ == null) {
@@ -1047,7 +993,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster getClusters(int index) {
         if (clustersBuilder_ == null) {
@@ -1057,7 +1003,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder setClusters(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster value) {
@@ -1074,7 +1020,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder setClusters(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder builderForValue) {
@@ -1088,7 +1034,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder addClusters(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster value) {
         if (clustersBuilder_ == null) {
@@ -1104,7 +1050,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder addClusters(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster value) {
@@ -1121,7 +1067,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder addClusters(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder builderForValue) {
@@ -1135,7 +1081,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder addClusters(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder builderForValue) {
@@ -1149,7 +1095,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder addAllClusters(
           java.lang.Iterable<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster> values) {
@@ -1164,12 +1110,12 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder clearClusters() {
         if (clustersBuilder_ == null) {
           clusters_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           clustersBuilder_.clear();
@@ -1177,7 +1123,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public Builder removeClusters(int index) {
         if (clustersBuilder_ == null) {
@@ -1190,14 +1136,14 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder getClustersBuilder(
           int index) {
         return getClustersFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder getClustersOrBuilder(
           int index) {
@@ -1207,7 +1153,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder> 
            getClustersOrBuilderList() {
@@ -1218,14 +1164,14 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder addClustersBuilder() {
         return getClustersFieldBuilder().addBuilder(
             com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder addClustersBuilder(
           int index) {
@@ -1233,7 +1179,7 @@ public final class RouteRuleOuterClass {
             index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3 [json_name = "clusters"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Cluster clusters = 3[json_name = "clusters"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder> 
            getClustersBuilderList() {
@@ -1246,7 +1192,7 @@ public final class RouteRuleOuterClass {
           clustersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder>(
                   clusters_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           clusters_ = null;
@@ -1257,9 +1203,9 @@ public final class RouteRuleOuterClass {
       private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule> rules_ =
         java.util.Collections.emptyList();
       private void ensureRulesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           rules_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule>(rules_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -1267,7 +1213,7 @@ public final class RouteRuleOuterClass {
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder> rulesBuilder_;
 
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule> getRulesList() {
         if (rulesBuilder_ == null) {
@@ -1277,7 +1223,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public int getRulesCount() {
         if (rulesBuilder_ == null) {
@@ -1287,7 +1233,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule getRules(int index) {
         if (rulesBuilder_ == null) {
@@ -1297,7 +1243,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder setRules(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule value) {
@@ -1314,7 +1260,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder setRules(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder builderForValue) {
@@ -1328,7 +1274,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder addRules(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule value) {
         if (rulesBuilder_ == null) {
@@ -1344,7 +1290,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder addRules(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule value) {
@@ -1361,7 +1307,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder addRules(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder builderForValue) {
@@ -1375,7 +1321,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder addRules(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder builderForValue) {
@@ -1389,7 +1335,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder addAllRules(
           java.lang.Iterable<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule> values) {
@@ -1404,12 +1350,12 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder clearRules() {
         if (rulesBuilder_ == null) {
           rules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           rulesBuilder_.clear();
@@ -1417,7 +1363,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public Builder removeRules(int index) {
         if (rulesBuilder_ == null) {
@@ -1430,14 +1376,14 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder getRulesBuilder(
           int index) {
         return getRulesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder getRulesOrBuilder(
           int index) {
@@ -1447,7 +1393,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder> 
            getRulesOrBuilderList() {
@@ -1458,14 +1404,14 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder addRulesBuilder() {
         return getRulesFieldBuilder().addBuilder(
             com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder addRulesBuilder(
           int index) {
@@ -1473,7 +1419,7 @@ public final class RouteRuleOuterClass {
             index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4 [json_name = "rules"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.RouteRule rules = 4[json_name = "rules"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder> 
            getRulesBuilderList() {
@@ -1486,7 +1432,7 @@ public final class RouteRuleOuterClass {
           rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRuleOrBuilder>(
                   rules_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           rules_ = null;
@@ -1496,7 +1442,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1551,60 +1497,56 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-     * @return The clusterName.
+     * <code>string cluster_name = 1[json_name = "clusterName"];</code>
      */
     java.lang.String getClusterName();
     /**
-     * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-     * @return The bytes for clusterName.
+     * <code>string cluster_name = 1[json_name = "clusterName"];</code>
      */
     com.google.protobuf.ByteString
         getClusterNameBytes();
 
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
     java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint> 
         getEndpointsList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint getEndpoints(int index);
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
     int getEndpointsCount();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
     java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder> 
         getEndpointsOrBuilderList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder getEndpointsOrBuilder(
         int index);
 
     /**
-     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
-     * @return Whether the trafficPolicy field is set.
+     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
      */
     boolean hasTrafficPolicy();
     /**
-     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
-     * @return The trafficPolicy.
+     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy getTrafficPolicy();
     /**
-     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicyOrBuilder getTrafficPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.Cluster}
    */
-  public static final class Cluster extends
+  public  static final class Cluster extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.Cluster)
       ClusterOrBuilder {
@@ -1616,13 +1558,6 @@ public final class RouteRuleOuterClass {
     private Cluster() {
       clusterName_ = "";
       endpoints_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Cluster();
     }
 
     @java.lang.Override
@@ -1656,9 +1591,9 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 endpoints_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               endpoints_.add(
                   input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.parser(), extensionRegistry));
@@ -1678,7 +1613,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1692,7 +1627,7 @@ public final class RouteRuleOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
         }
         this.unknownFields = unknownFields.build();
@@ -1712,13 +1647,12 @@ public final class RouteRuleOuterClass {
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLUSTER_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterName_;
     /**
-     * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-     * @return The clusterName.
+     * <code>string cluster_name = 1[json_name = "clusterName"];</code>
      */
-    @java.lang.Override
     public java.lang.String getClusterName() {
       java.lang.Object ref = clusterName_;
       if (ref instanceof java.lang.String) {
@@ -1732,10 +1666,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-     * @return The bytes for clusterName.
+     * <code>string cluster_name = 1[json_name = "clusterName"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterNameBytes() {
       java.lang.Object ref = clusterName_;
@@ -1753,38 +1685,33 @@ public final class RouteRuleOuterClass {
     public static final int ENDPOINTS_FIELD_NUMBER = 2;
     private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint> endpoints_;
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
-    @java.lang.Override
     public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint> getEndpointsList() {
       return endpoints_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder> 
         getEndpointsOrBuilderList() {
       return endpoints_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
-    @java.lang.Override
     public int getEndpointsCount() {
       return endpoints_.size();
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint getEndpoints(int index) {
       return endpoints_.get(index);
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder getEndpointsOrBuilder(
         int index) {
       return endpoints_.get(index);
@@ -1793,25 +1720,20 @@ public final class RouteRuleOuterClass {
     public static final int TRAFFIC_POLICY_FIELD_NUMBER = 3;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy trafficPolicy_;
     /**
-     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
-     * @return Whether the trafficPolicy field is set.
+     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
      */
-    @java.lang.Override
     public boolean hasTrafficPolicy() {
       return trafficPolicy_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
-     * @return The trafficPolicy.
+     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy getTrafficPolicy() {
       return trafficPolicy_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy.getDefaultInstance() : trafficPolicy_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+     * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicyOrBuilder getTrafficPolicyOrBuilder() {
       return getTrafficPolicy();
     }
@@ -1874,17 +1796,18 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster) obj;
 
-      if (!getClusterName()
-          .equals(other.getClusterName())) return false;
-      if (!getEndpointsList()
-          .equals(other.getEndpointsList())) return false;
-      if (hasTrafficPolicy() != other.hasTrafficPolicy()) return false;
+      boolean result = true;
+      result = result && getClusterName()
+          .equals(other.getClusterName());
+      result = result && getEndpointsList()
+          .equals(other.getEndpointsList());
+      result = result && (hasTrafficPolicy() == other.hasTrafficPolicy());
       if (hasTrafficPolicy()) {
-        if (!getTrafficPolicy()
-            .equals(other.getTrafficPolicy())) return false;
+        result = result && getTrafficPolicy()
+            .equals(other.getTrafficPolicy());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -2042,7 +1965,7 @@ public final class RouteRuleOuterClass {
 
         if (endpointsBuilder_ == null) {
           endpoints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           endpointsBuilder_.clear();
         }
@@ -2079,11 +2002,12 @@ public final class RouteRuleOuterClass {
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster buildPartial() {
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.clusterName_ = clusterName_;
         if (endpointsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
             endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.endpoints_ = endpoints_;
         } else {
@@ -2094,41 +2018,42 @@ public final class RouteRuleOuterClass {
         } else {
           result.trafficPolicy_ = trafficPolicyBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2150,7 +2075,7 @@ public final class RouteRuleOuterClass {
           if (!other.endpoints_.isEmpty()) {
             if (endpoints_.isEmpty()) {
               endpoints_ = other.endpoints_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureEndpointsIsMutable();
               endpoints_.addAll(other.endpoints_);
@@ -2163,7 +2088,7 @@ public final class RouteRuleOuterClass {
               endpointsBuilder_.dispose();
               endpointsBuilder_ = null;
               endpoints_ = other.endpoints_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               endpointsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEndpointsFieldBuilder() : null;
@@ -2207,8 +2132,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object clusterName_ = "";
       /**
-       * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-       * @return The clusterName.
+       * <code>string cluster_name = 1[json_name = "clusterName"];</code>
        */
       public java.lang.String getClusterName() {
         java.lang.Object ref = clusterName_;
@@ -2223,8 +2147,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-       * @return The bytes for clusterName.
+       * <code>string cluster_name = 1[json_name = "clusterName"];</code>
        */
       public com.google.protobuf.ByteString
           getClusterNameBytes() {
@@ -2240,9 +2163,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-       * @param value The clusterName to set.
-       * @return This builder for chaining.
+       * <code>string cluster_name = 1[json_name = "clusterName"];</code>
        */
       public Builder setClusterName(
           java.lang.String value) {
@@ -2255,8 +2176,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-       * @return This builder for chaining.
+       * <code>string cluster_name = 1[json_name = "clusterName"];</code>
        */
       public Builder clearClusterName() {
         
@@ -2265,9 +2185,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string cluster_name = 1 [json_name = "clusterName"];</code>
-       * @param value The bytes for clusterName to set.
-       * @return This builder for chaining.
+       * <code>string cluster_name = 1[json_name = "clusterName"];</code>
        */
       public Builder setClusterNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2284,9 +2202,9 @@ public final class RouteRuleOuterClass {
       private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint> endpoints_ =
         java.util.Collections.emptyList();
       private void ensureEndpointsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           endpoints_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint>(endpoints_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2294,7 +2212,7 @@ public final class RouteRuleOuterClass {
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder> endpointsBuilder_;
 
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint> getEndpointsList() {
         if (endpointsBuilder_ == null) {
@@ -2304,7 +2222,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public int getEndpointsCount() {
         if (endpointsBuilder_ == null) {
@@ -2314,7 +2232,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint getEndpoints(int index) {
         if (endpointsBuilder_ == null) {
@@ -2324,7 +2242,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder setEndpoints(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint value) {
@@ -2341,7 +2259,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder setEndpoints(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder builderForValue) {
@@ -2355,7 +2273,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder addEndpoints(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint value) {
         if (endpointsBuilder_ == null) {
@@ -2371,7 +2289,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder addEndpoints(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint value) {
@@ -2388,7 +2306,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder addEndpoints(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder builderForValue) {
@@ -2402,7 +2320,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder addEndpoints(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder builderForValue) {
@@ -2416,7 +2334,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder addAllEndpoints(
           java.lang.Iterable<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint> values) {
@@ -2431,12 +2349,12 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder clearEndpoints() {
         if (endpointsBuilder_ == null) {
           endpoints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           endpointsBuilder_.clear();
@@ -2444,7 +2362,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public Builder removeEndpoints(int index) {
         if (endpointsBuilder_ == null) {
@@ -2457,14 +2375,14 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder getEndpointsBuilder(
           int index) {
         return getEndpointsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder getEndpointsOrBuilder(
           int index) {
@@ -2474,7 +2392,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder> 
            getEndpointsOrBuilderList() {
@@ -2485,14 +2403,14 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder addEndpointsBuilder() {
         return getEndpointsFieldBuilder().addBuilder(
             com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder addEndpointsBuilder(
           int index) {
@@ -2500,7 +2418,7 @@ public final class RouteRuleOuterClass {
             index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2 [json_name = "endpoints"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.Endpoint endpoints = 2[json_name = "endpoints"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder> 
            getEndpointsBuilderList() {
@@ -2513,7 +2431,7 @@ public final class RouteRuleOuterClass {
           endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder>(
                   endpoints_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
           endpoints_ = null;
@@ -2521,19 +2439,17 @@ public final class RouteRuleOuterClass {
         return endpointsBuilder_;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy trafficPolicy_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy trafficPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicyOrBuilder> trafficPolicyBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
-       * @return Whether the trafficPolicy field is set.
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public boolean hasTrafficPolicy() {
         return trafficPolicyBuilder_ != null || trafficPolicy_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
-       * @return The trafficPolicy.
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy getTrafficPolicy() {
         if (trafficPolicyBuilder_ == null) {
@@ -2543,7 +2459,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public Builder setTrafficPolicy(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy value) {
         if (trafficPolicyBuilder_ == null) {
@@ -2559,7 +2475,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public Builder setTrafficPolicy(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy.Builder builderForValue) {
@@ -2573,7 +2489,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public Builder mergeTrafficPolicy(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy value) {
         if (trafficPolicyBuilder_ == null) {
@@ -2591,7 +2507,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public Builder clearTrafficPolicy() {
         if (trafficPolicyBuilder_ == null) {
@@ -2605,7 +2521,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy.Builder getTrafficPolicyBuilder() {
         
@@ -2613,7 +2529,7 @@ public final class RouteRuleOuterClass {
         return getTrafficPolicyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicyOrBuilder getTrafficPolicyOrBuilder() {
         if (trafficPolicyBuilder_ != null) {
@@ -2624,7 +2540,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3 [json_name = "trafficPolicy"];</code>
+       * <code>.lhotse.networking.v1alpha1.TrafficPolicy traffic_policy = 3[json_name = "trafficPolicy"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicyOrBuilder> 
@@ -2642,7 +2558,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2697,27 +2613,24 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string ip = 1 [json_name = "ip"];</code>
-     * @return The ip.
+     * <code>string ip = 1[json_name = "ip"];</code>
      */
     java.lang.String getIp();
     /**
-     * <code>string ip = 1 [json_name = "ip"];</code>
-     * @return The bytes for ip.
+     * <code>string ip = 1[json_name = "ip"];</code>
      */
     com.google.protobuf.ByteString
         getIpBytes();
 
     /**
-     * <code>int32 port = 2 [json_name = "port"];</code>
-     * @return The port.
+     * <code>int32 port = 2[json_name = "port"];</code>
      */
     int getPort();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.Endpoint}
    */
-  public static final class Endpoint extends
+  public  static final class Endpoint extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.Endpoint)
       EndpointOrBuilder {
@@ -2728,13 +2641,7 @@ public final class RouteRuleOuterClass {
     }
     private Endpoint() {
       ip_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Endpoint();
+      port_ = 0;
     }
 
     @java.lang.Override
@@ -2750,6 +2657,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2772,7 +2680,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2806,10 +2714,8 @@ public final class RouteRuleOuterClass {
     public static final int IP_FIELD_NUMBER = 1;
     private volatile java.lang.Object ip_;
     /**
-     * <code>string ip = 1 [json_name = "ip"];</code>
-     * @return The ip.
+     * <code>string ip = 1[json_name = "ip"];</code>
      */
-    @java.lang.Override
     public java.lang.String getIp() {
       java.lang.Object ref = ip_;
       if (ref instanceof java.lang.String) {
@@ -2823,10 +2729,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string ip = 1 [json_name = "ip"];</code>
-     * @return The bytes for ip.
+     * <code>string ip = 1[json_name = "ip"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIpBytes() {
       java.lang.Object ref = ip_;
@@ -2844,10 +2748,8 @@ public final class RouteRuleOuterClass {
     public static final int PORT_FIELD_NUMBER = 2;
     private int port_;
     /**
-     * <code>int32 port = 2 [json_name = "port"];</code>
-     * @return The port.
+     * <code>int32 port = 2[json_name = "port"];</code>
      */
-    @java.lang.Override
     public int getPort() {
       return port_;
     }
@@ -2903,12 +2805,13 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint) obj;
 
-      if (!getIp()
-          .equals(other.getIp())) return false;
-      if (getPort()
-          != other.getPort()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getIp()
+          .equals(other.getIp());
+      result = result && (getPort()
+          == other.getPort());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -3093,35 +2996,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3173,8 +3076,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object ip_ = "";
       /**
-       * <code>string ip = 1 [json_name = "ip"];</code>
-       * @return The ip.
+       * <code>string ip = 1[json_name = "ip"];</code>
        */
       public java.lang.String getIp() {
         java.lang.Object ref = ip_;
@@ -3189,8 +3091,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string ip = 1 [json_name = "ip"];</code>
-       * @return The bytes for ip.
+       * <code>string ip = 1[json_name = "ip"];</code>
        */
       public com.google.protobuf.ByteString
           getIpBytes() {
@@ -3206,9 +3107,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string ip = 1 [json_name = "ip"];</code>
-       * @param value The ip to set.
-       * @return This builder for chaining.
+       * <code>string ip = 1[json_name = "ip"];</code>
        */
       public Builder setIp(
           java.lang.String value) {
@@ -3221,8 +3120,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string ip = 1 [json_name = "ip"];</code>
-       * @return This builder for chaining.
+       * <code>string ip = 1[json_name = "ip"];</code>
        */
       public Builder clearIp() {
         
@@ -3231,9 +3129,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string ip = 1 [json_name = "ip"];</code>
-       * @param value The bytes for ip to set.
-       * @return This builder for chaining.
+       * <code>string ip = 1[json_name = "ip"];</code>
        */
       public Builder setIpBytes(
           com.google.protobuf.ByteString value) {
@@ -3249,17 +3145,13 @@ public final class RouteRuleOuterClass {
 
       private int port_ ;
       /**
-       * <code>int32 port = 2 [json_name = "port"];</code>
-       * @return The port.
+       * <code>int32 port = 2[json_name = "port"];</code>
        */
-      @java.lang.Override
       public int getPort() {
         return port_;
       }
       /**
-       * <code>int32 port = 2 [json_name = "port"];</code>
-       * @param value The port to set.
-       * @return This builder for chaining.
+       * <code>int32 port = 2[json_name = "port"];</code>
        */
       public Builder setPort(int value) {
         
@@ -3268,8 +3160,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>int32 port = 2 [json_name = "port"];</code>
-       * @return This builder for chaining.
+       * <code>int32 port = 2[json_name = "port"];</code>
        */
       public Builder clearPort() {
         
@@ -3280,7 +3171,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -3335,49 +3226,45 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string service_name = 2 [json_name = "serviceName"];</code>
-     * @return The serviceName.
+     * <code>string service_name = 2[json_name = "serviceName"];</code>
      */
     java.lang.String getServiceName();
     /**
-     * <code>string service_name = 2 [json_name = "serviceName"];</code>
-     * @return The bytes for serviceName.
+     * <code>string service_name = 2[json_name = "serviceName"];</code>
      */
     com.google.protobuf.ByteString
         getServiceNameBytes();
 
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
     java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule> 
         getHttpRuleList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule getHttpRule(int index);
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
     int getHttpRuleCount();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
     java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder> 
         getHttpRuleOrBuilderList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder getHttpRuleOrBuilder(
         int index);
@@ -3385,7 +3272,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.RouteRule}
    */
-  public static final class RouteRule extends
+  public  static final class RouteRule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.RouteRule)
       RouteRuleOrBuilder {
@@ -3398,13 +3285,6 @@ public final class RouteRuleOuterClass {
       name_ = "";
       serviceName_ = "";
       httpRule_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RouteRule();
     }
 
     @java.lang.Override
@@ -3444,16 +3324,16 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 httpRule_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               httpRule_.add(
                   input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3467,7 +3347,7 @@ public final class RouteRuleOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           httpRule_ = java.util.Collections.unmodifiableList(httpRule_);
         }
         this.unknownFields = unknownFields.build();
@@ -3487,13 +3367,12 @@ public final class RouteRuleOuterClass {
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3507,10 +3386,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -3528,10 +3405,8 @@ public final class RouteRuleOuterClass {
     public static final int SERVICE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object serviceName_;
     /**
-     * <code>string service_name = 2 [json_name = "serviceName"];</code>
-     * @return The serviceName.
+     * <code>string service_name = 2[json_name = "serviceName"];</code>
      */
-    @java.lang.Override
     public java.lang.String getServiceName() {
       java.lang.Object ref = serviceName_;
       if (ref instanceof java.lang.String) {
@@ -3545,10 +3420,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string service_name = 2 [json_name = "serviceName"];</code>
-     * @return The bytes for serviceName.
+     * <code>string service_name = 2[json_name = "serviceName"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceNameBytes() {
       java.lang.Object ref = serviceName_;
@@ -3566,38 +3439,33 @@ public final class RouteRuleOuterClass {
     public static final int HTTP_RULE_FIELD_NUMBER = 3;
     private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule> httpRule_;
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
-    @java.lang.Override
     public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule> getHttpRuleList() {
       return httpRule_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder> 
         getHttpRuleOrBuilderList() {
       return httpRule_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
-    @java.lang.Override
     public int getHttpRuleCount() {
       return httpRule_.size();
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule getHttpRule(int index) {
       return httpRule_.get(index);
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder getHttpRuleOrBuilder(
         int index) {
       return httpRule_.get(index);
@@ -3660,14 +3528,15 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getServiceName()
-          .equals(other.getServiceName())) return false;
-      if (!getHttpRuleList()
-          .equals(other.getHttpRuleList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getServiceName()
+          .equals(other.getServiceName());
+      result = result && getHttpRuleList()
+          .equals(other.getHttpRuleList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -3825,7 +3694,7 @@ public final class RouteRuleOuterClass {
 
         if (httpRuleBuilder_ == null) {
           httpRule_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           httpRuleBuilder_.clear();
         }
@@ -3856,52 +3725,54 @@ public final class RouteRuleOuterClass {
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule buildPartial() {
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.RouteRule(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.name_ = name_;
         result.serviceName_ = serviceName_;
         if (httpRuleBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             httpRule_ = java.util.Collections.unmodifiableList(httpRule_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.httpRule_ = httpRule_;
         } else {
           result.httpRule_ = httpRuleBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3927,7 +3798,7 @@ public final class RouteRuleOuterClass {
           if (!other.httpRule_.isEmpty()) {
             if (httpRule_.isEmpty()) {
               httpRule_ = other.httpRule_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureHttpRuleIsMutable();
               httpRule_.addAll(other.httpRule_);
@@ -3940,7 +3811,7 @@ public final class RouteRuleOuterClass {
               httpRuleBuilder_.dispose();
               httpRuleBuilder_ = null;
               httpRule_ = other.httpRule_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               httpRuleBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHttpRuleFieldBuilder() : null;
@@ -3981,8 +3852,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The name.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3997,8 +3867,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The bytes for name.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4014,9 +3883,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4029,8 +3896,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder clearName() {
         
@@ -4039,9 +3905,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4057,8 +3921,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object serviceName_ = "";
       /**
-       * <code>string service_name = 2 [json_name = "serviceName"];</code>
-       * @return The serviceName.
+       * <code>string service_name = 2[json_name = "serviceName"];</code>
        */
       public java.lang.String getServiceName() {
         java.lang.Object ref = serviceName_;
@@ -4073,8 +3936,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string service_name = 2 [json_name = "serviceName"];</code>
-       * @return The bytes for serviceName.
+       * <code>string service_name = 2[json_name = "serviceName"];</code>
        */
       public com.google.protobuf.ByteString
           getServiceNameBytes() {
@@ -4090,9 +3952,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string service_name = 2 [json_name = "serviceName"];</code>
-       * @param value The serviceName to set.
-       * @return This builder for chaining.
+       * <code>string service_name = 2[json_name = "serviceName"];</code>
        */
       public Builder setServiceName(
           java.lang.String value) {
@@ -4105,8 +3965,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string service_name = 2 [json_name = "serviceName"];</code>
-       * @return This builder for chaining.
+       * <code>string service_name = 2[json_name = "serviceName"];</code>
        */
       public Builder clearServiceName() {
         
@@ -4115,9 +3974,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string service_name = 2 [json_name = "serviceName"];</code>
-       * @param value The bytes for serviceName to set.
-       * @return This builder for chaining.
+       * <code>string service_name = 2[json_name = "serviceName"];</code>
        */
       public Builder setServiceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4134,9 +3991,9 @@ public final class RouteRuleOuterClass {
       private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule> httpRule_ =
         java.util.Collections.emptyList();
       private void ensureHttpRuleIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           httpRule_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule>(httpRule_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -4144,7 +4001,7 @@ public final class RouteRuleOuterClass {
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder> httpRuleBuilder_;
 
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule> getHttpRuleList() {
         if (httpRuleBuilder_ == null) {
@@ -4154,7 +4011,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public int getHttpRuleCount() {
         if (httpRuleBuilder_ == null) {
@@ -4164,7 +4021,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule getHttpRule(int index) {
         if (httpRuleBuilder_ == null) {
@@ -4174,7 +4031,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder setHttpRule(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule value) {
@@ -4191,7 +4048,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder setHttpRule(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder builderForValue) {
@@ -4205,7 +4062,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder addHttpRule(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule value) {
         if (httpRuleBuilder_ == null) {
@@ -4221,7 +4078,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder addHttpRule(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule value) {
@@ -4238,7 +4095,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder addHttpRule(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder builderForValue) {
@@ -4252,7 +4109,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder addHttpRule(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder builderForValue) {
@@ -4266,7 +4123,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder addAllHttpRule(
           java.lang.Iterable<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule> values) {
@@ -4281,12 +4138,12 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder clearHttpRule() {
         if (httpRuleBuilder_ == null) {
           httpRule_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           httpRuleBuilder_.clear();
@@ -4294,7 +4151,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public Builder removeHttpRule(int index) {
         if (httpRuleBuilder_ == null) {
@@ -4307,14 +4164,14 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder getHttpRuleBuilder(
           int index) {
         return getHttpRuleFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder getHttpRuleOrBuilder(
           int index) {
@@ -4324,7 +4181,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder> 
            getHttpRuleOrBuilderList() {
@@ -4335,14 +4192,14 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder addHttpRuleBuilder() {
         return getHttpRuleFieldBuilder().addBuilder(
             com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder addHttpRuleBuilder(
           int index) {
@@ -4350,7 +4207,7 @@ public final class RouteRuleOuterClass {
             index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3 [json_name = "httpRule"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRule http_rule = 3[json_name = "httpRule"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder> 
            getHttpRuleBuilderList() {
@@ -4363,7 +4220,7 @@ public final class RouteRuleOuterClass {
           httpRuleBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRuleOrBuilder>(
                   httpRule_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           httpRule_ = null;
@@ -4373,7 +4230,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -4428,96 +4285,87 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
-     * @return Whether the match field is set.
+     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
      */
     boolean hasMatch();
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
-     * @return The match.
+     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest getMatch();
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequestOrBuilder getMatchOrBuilder();
 
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
     java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination> 
         getRouteList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination getRoute(int index);
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
     int getRouteCount();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
     java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder> 
         getRouteOrBuilderList();
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder getRouteOrBuilder(
         int index);
 
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
-     * @return Whether the redirect field is set.
+     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
      */
     boolean hasRedirect();
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
-     * @return The redirect.
+     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect getRedirect();
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirectOrBuilder getRedirectOrBuilder();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
-     * @return Whether the rewrite field is set.
+     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
      */
     boolean hasRewrite();
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
-     * @return The rewrite.
+     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite getRewrite();
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewriteOrBuilder getRewriteOrBuilder();
 
     /**
-     * <code>int32 timeout = 6 [json_name = "timeout"];</code>
-     * @return The timeout.
+     * <code>int32 timeout = 6[json_name = "timeout"];</code>
      */
     int getTimeout();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.HttpRule}
    */
-  public static final class HttpRule extends
+  public  static final class HttpRule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.HttpRule)
       HttpRuleOrBuilder {
@@ -4529,13 +4377,7 @@ public final class RouteRuleOuterClass {
     private HttpRule() {
       name_ = "";
       route_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HttpRule();
+      timeout_ = 0;
     }
 
     @java.lang.Override
@@ -4582,9 +4424,9 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 route_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               route_.add(
                   input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.parser(), extensionRegistry));
@@ -4622,7 +4464,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4636,7 +4478,7 @@ public final class RouteRuleOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           route_ = java.util.Collections.unmodifiableList(route_);
         }
         this.unknownFields = unknownFields.build();
@@ -4656,13 +4498,12 @@ public final class RouteRuleOuterClass {
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4676,10 +4517,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4697,25 +4536,20 @@ public final class RouteRuleOuterClass {
     public static final int MATCH_FIELD_NUMBER = 2;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest match_;
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
-     * @return Whether the match field is set.
+     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
      */
-    @java.lang.Override
     public boolean hasMatch() {
       return match_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
-     * @return The match.
+     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest getMatch() {
       return match_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.getDefaultInstance() : match_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+     * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequestOrBuilder getMatchOrBuilder() {
       return getMatch();
     }
@@ -4723,38 +4557,33 @@ public final class RouteRuleOuterClass {
     public static final int ROUTE_FIELD_NUMBER = 3;
     private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination> route_;
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
-    @java.lang.Override
     public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination> getRouteList() {
       return route_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder> 
         getRouteOrBuilderList() {
       return route_;
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
-    @java.lang.Override
     public int getRouteCount() {
       return route_.size();
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination getRoute(int index) {
       return route_.get(index);
     }
     /**
-     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+     * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder getRouteOrBuilder(
         int index) {
       return route_.get(index);
@@ -4763,25 +4592,20 @@ public final class RouteRuleOuterClass {
     public static final int REDIRECT_FIELD_NUMBER = 4;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect redirect_;
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
-     * @return Whether the redirect field is set.
+     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
      */
-    @java.lang.Override
     public boolean hasRedirect() {
       return redirect_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
-     * @return The redirect.
+     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect getRedirect() {
       return redirect_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect.getDefaultInstance() : redirect_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+     * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirectOrBuilder getRedirectOrBuilder() {
       return getRedirect();
     }
@@ -4789,25 +4613,20 @@ public final class RouteRuleOuterClass {
     public static final int REWRITE_FIELD_NUMBER = 5;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite rewrite_;
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
-     * @return Whether the rewrite field is set.
+     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
      */
-    @java.lang.Override
     public boolean hasRewrite() {
       return rewrite_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
-     * @return The rewrite.
+     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite getRewrite() {
       return rewrite_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite.getDefaultInstance() : rewrite_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+     * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewriteOrBuilder getRewriteOrBuilder() {
       return getRewrite();
     }
@@ -4815,10 +4634,8 @@ public final class RouteRuleOuterClass {
     public static final int TIMEOUT_FIELD_NUMBER = 6;
     private int timeout_;
     /**
-     * <code>int32 timeout = 6 [json_name = "timeout"];</code>
-     * @return The timeout.
+     * <code>int32 timeout = 6[json_name = "timeout"];</code>
      */
-    @java.lang.Override
     public int getTimeout() {
       return timeout_;
     }
@@ -4902,29 +4719,30 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasMatch() != other.hasMatch()) return false;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && (hasMatch() == other.hasMatch());
       if (hasMatch()) {
-        if (!getMatch()
-            .equals(other.getMatch())) return false;
+        result = result && getMatch()
+            .equals(other.getMatch());
       }
-      if (!getRouteList()
-          .equals(other.getRouteList())) return false;
-      if (hasRedirect() != other.hasRedirect()) return false;
+      result = result && getRouteList()
+          .equals(other.getRouteList());
+      result = result && (hasRedirect() == other.hasRedirect());
       if (hasRedirect()) {
-        if (!getRedirect()
-            .equals(other.getRedirect())) return false;
+        result = result && getRedirect()
+            .equals(other.getRedirect());
       }
-      if (hasRewrite() != other.hasRewrite()) return false;
+      result = result && (hasRewrite() == other.hasRewrite());
       if (hasRewrite()) {
-        if (!getRewrite()
-            .equals(other.getRewrite())) return false;
+        result = result && getRewrite()
+            .equals(other.getRewrite());
       }
-      if (getTimeout()
-          != other.getTimeout()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && (getTimeout()
+          == other.getTimeout());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -5098,7 +4916,7 @@ public final class RouteRuleOuterClass {
         }
         if (routeBuilder_ == null) {
           route_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           routeBuilder_.clear();
         }
@@ -5143,6 +4961,7 @@ public final class RouteRuleOuterClass {
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule buildPartial() {
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRule(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.name_ = name_;
         if (matchBuilder_ == null) {
           result.match_ = match_;
@@ -5150,9 +4969,9 @@ public final class RouteRuleOuterClass {
           result.match_ = matchBuilder_.build();
         }
         if (routeBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             route_ = java.util.Collections.unmodifiableList(route_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.route_ = route_;
         } else {
@@ -5169,41 +4988,42 @@ public final class RouteRuleOuterClass {
           result.rewrite_ = rewriteBuilder_.build();
         }
         result.timeout_ = timeout_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5228,7 +5048,7 @@ public final class RouteRuleOuterClass {
           if (!other.route_.isEmpty()) {
             if (route_.isEmpty()) {
               route_ = other.route_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureRouteIsMutable();
               route_.addAll(other.route_);
@@ -5241,7 +5061,7 @@ public final class RouteRuleOuterClass {
               routeBuilder_.dispose();
               routeBuilder_ = null;
               route_ = other.route_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               routeBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRouteFieldBuilder() : null;
@@ -5291,8 +5111,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The name.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5307,8 +5126,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The bytes for name.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5324,9 +5142,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -5339,8 +5155,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder clearName() {
         
@@ -5349,9 +5164,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5365,19 +5178,17 @@ public final class RouteRuleOuterClass {
         return this;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest match_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest match_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequestOrBuilder> matchBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
-       * @return Whether the match field is set.
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public boolean hasMatch() {
         return matchBuilder_ != null || match_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
-       * @return The match.
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest getMatch() {
         if (matchBuilder_ == null) {
@@ -5387,7 +5198,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public Builder setMatch(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest value) {
         if (matchBuilder_ == null) {
@@ -5403,7 +5214,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public Builder setMatch(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.Builder builderForValue) {
@@ -5417,7 +5228,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public Builder mergeMatch(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest value) {
         if (matchBuilder_ == null) {
@@ -5435,7 +5246,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public Builder clearMatch() {
         if (matchBuilder_ == null) {
@@ -5449,7 +5260,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.Builder getMatchBuilder() {
         
@@ -5457,7 +5268,7 @@ public final class RouteRuleOuterClass {
         return getMatchFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequestOrBuilder getMatchOrBuilder() {
         if (matchBuilder_ != null) {
@@ -5468,7 +5279,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2 [json_name = "match"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpMatchRequest match = 2[json_name = "match"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequestOrBuilder> 
@@ -5487,9 +5298,9 @@ public final class RouteRuleOuterClass {
       private java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination> route_ =
         java.util.Collections.emptyList();
       private void ensureRouteIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           route_ = new java.util.ArrayList<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination>(route_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -5497,7 +5308,7 @@ public final class RouteRuleOuterClass {
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder> routeBuilder_;
 
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination> getRouteList() {
         if (routeBuilder_ == null) {
@@ -5507,7 +5318,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public int getRouteCount() {
         if (routeBuilder_ == null) {
@@ -5517,7 +5328,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination getRoute(int index) {
         if (routeBuilder_ == null) {
@@ -5527,7 +5338,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder setRoute(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination value) {
@@ -5544,7 +5355,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder setRoute(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder builderForValue) {
@@ -5558,7 +5369,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder addRoute(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination value) {
         if (routeBuilder_ == null) {
@@ -5574,7 +5385,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder addRoute(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination value) {
@@ -5591,7 +5402,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder addRoute(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder builderForValue) {
@@ -5605,7 +5416,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder addRoute(
           int index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder builderForValue) {
@@ -5619,7 +5430,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder addAllRoute(
           java.lang.Iterable<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination> values) {
@@ -5634,12 +5445,12 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder clearRoute() {
         if (routeBuilder_ == null) {
           route_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           routeBuilder_.clear();
@@ -5647,7 +5458,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public Builder removeRoute(int index) {
         if (routeBuilder_ == null) {
@@ -5660,14 +5471,14 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder getRouteBuilder(
           int index) {
         return getRouteFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder getRouteOrBuilder(
           int index) {
@@ -5677,7 +5488,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public java.util.List<? extends com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder> 
            getRouteOrBuilderList() {
@@ -5688,14 +5499,14 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder addRouteBuilder() {
         return getRouteFieldBuilder().addBuilder(
             com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder addRouteBuilder(
           int index) {
@@ -5703,7 +5514,7 @@ public final class RouteRuleOuterClass {
             index, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.getDefaultInstance());
       }
       /**
-       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3 [json_name = "route"];</code>
+       * <code>repeated .lhotse.networking.v1alpha1.HttpRouteDestination route = 3[json_name = "route"];</code>
        */
       public java.util.List<com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder> 
            getRouteBuilderList() {
@@ -5716,7 +5527,7 @@ public final class RouteRuleOuterClass {
           routeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestinationOrBuilder>(
                   route_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           route_ = null;
@@ -5724,19 +5535,17 @@ public final class RouteRuleOuterClass {
         return routeBuilder_;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect redirect_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect redirect_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirectOrBuilder> redirectBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
-       * @return Whether the redirect field is set.
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public boolean hasRedirect() {
         return redirectBuilder_ != null || redirect_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
-       * @return The redirect.
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect getRedirect() {
         if (redirectBuilder_ == null) {
@@ -5746,7 +5555,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public Builder setRedirect(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect value) {
         if (redirectBuilder_ == null) {
@@ -5762,7 +5571,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public Builder setRedirect(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect.Builder builderForValue) {
@@ -5776,7 +5585,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public Builder mergeRedirect(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect value) {
         if (redirectBuilder_ == null) {
@@ -5794,7 +5603,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public Builder clearRedirect() {
         if (redirectBuilder_ == null) {
@@ -5808,7 +5617,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect.Builder getRedirectBuilder() {
         
@@ -5816,7 +5625,7 @@ public final class RouteRuleOuterClass {
         return getRedirectFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirectOrBuilder getRedirectOrBuilder() {
         if (redirectBuilder_ != null) {
@@ -5827,7 +5636,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4 [json_name = "redirect"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRedirect redirect = 4[json_name = "redirect"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirectOrBuilder> 
@@ -5843,19 +5652,17 @@ public final class RouteRuleOuterClass {
         return redirectBuilder_;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite rewrite_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite rewrite_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewriteOrBuilder> rewriteBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
-       * @return Whether the rewrite field is set.
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public boolean hasRewrite() {
         return rewriteBuilder_ != null || rewrite_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
-       * @return The rewrite.
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite getRewrite() {
         if (rewriteBuilder_ == null) {
@@ -5865,7 +5672,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public Builder setRewrite(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite value) {
         if (rewriteBuilder_ == null) {
@@ -5881,7 +5688,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public Builder setRewrite(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite.Builder builderForValue) {
@@ -5895,7 +5702,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public Builder mergeRewrite(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite value) {
         if (rewriteBuilder_ == null) {
@@ -5913,7 +5720,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public Builder clearRewrite() {
         if (rewriteBuilder_ == null) {
@@ -5927,7 +5734,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite.Builder getRewriteBuilder() {
         
@@ -5935,7 +5742,7 @@ public final class RouteRuleOuterClass {
         return getRewriteFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewriteOrBuilder getRewriteOrBuilder() {
         if (rewriteBuilder_ != null) {
@@ -5946,7 +5753,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5 [json_name = "rewrite"];</code>
+       * <code>.lhotse.networking.v1alpha1.HttpRewrite rewrite = 5[json_name = "rewrite"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewriteOrBuilder> 
@@ -5964,17 +5771,13 @@ public final class RouteRuleOuterClass {
 
       private int timeout_ ;
       /**
-       * <code>int32 timeout = 6 [json_name = "timeout"];</code>
-       * @return The timeout.
+       * <code>int32 timeout = 6[json_name = "timeout"];</code>
        */
-      @java.lang.Override
       public int getTimeout() {
         return timeout_;
       }
       /**
-       * <code>int32 timeout = 6 [json_name = "timeout"];</code>
-       * @param value The timeout to set.
-       * @return This builder for chaining.
+       * <code>int32 timeout = 6[json_name = "timeout"];</code>
        */
       public Builder setTimeout(int value) {
         
@@ -5983,8 +5786,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>int32 timeout = 6 [json_name = "timeout"];</code>
-       * @return This builder for chaining.
+       * <code>int32 timeout = 6[json_name = "timeout"];</code>
        */
       public Builder clearTimeout() {
         
@@ -5995,7 +5797,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -6050,83 +5852,73 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
-     * @return Whether the uri field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
      */
     boolean hasUri();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
-     * @return The uri.
+     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getUri();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getUriOrBuilder();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
-     * @return Whether the scheme field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
      */
     boolean hasScheme();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
-     * @return The scheme.
+     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getScheme();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getSchemeOrBuilder();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
-     * @return Whether the method field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
      */
     boolean hasMethod();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
-     * @return The method.
+     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getMethod();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getMethodOrBuilder();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
-     * @return Whether the authority field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
      */
     boolean hasAuthority();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getAuthority();
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getAuthorityOrBuilder();
 
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
     int getHeadersCount();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
     boolean containsHeaders(
         java.lang.String key);
@@ -6137,36 +5929,35 @@ public final class RouteRuleOuterClass {
     java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
     getHeaders();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
     java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
     getHeadersMap();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
 
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getHeadersOrDefault(
         java.lang.String key,
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch defaultValue);
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
 
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getHeadersOrThrow(
         java.lang.String key);
 
     /**
-     * <code>int32 port = 7 [json_name = "port"];</code>
-     * @return The port.
+     * <code>int32 port = 7[json_name = "port"];</code>
      */
     int getPort();
 
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
     int getSourceLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
     boolean containsSourceLabels(
         java.lang.String key);
@@ -6177,30 +5968,30 @@ public final class RouteRuleOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getSourceLabels();
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getSourceLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
 
     java.lang.String getSourceLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
 
     java.lang.String getSourceLabelsOrThrow(
         java.lang.String key);
 
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
     int getQueryParamsCount();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
     boolean containsQueryParams(
         java.lang.String key);
@@ -6211,36 +6002,35 @@ public final class RouteRuleOuterClass {
     java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
     getQueryParams();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
     java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
     getQueryParamsMap();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
 
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getQueryParamsOrDefault(
         java.lang.String key,
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch defaultValue);
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
 
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getQueryParamsOrThrow(
         java.lang.String key);
 
     /**
-     * <code>bool ignore_uri_case = 10 [json_name = "ignoreUriCase"];</code>
-     * @return The ignoreUriCase.
+     * <code>bool ignore_uri_case = 10[json_name = "ignoreUriCase"];</code>
      */
     boolean getIgnoreUriCase();
 
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
     int getWithoutHeadersCount();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
     boolean containsWithoutHeaders(
         java.lang.String key);
@@ -6251,19 +6041,19 @@ public final class RouteRuleOuterClass {
     java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
     getWithoutHeaders();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
     java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
     getWithoutHeadersMap();
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
 
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getWithoutHeadersOrDefault(
         java.lang.String key,
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch defaultValue);
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
 
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getWithoutHeadersOrThrow(
@@ -6272,7 +6062,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.HttpMatchRequest}
    */
-  public static final class HttpMatchRequest extends
+  public  static final class HttpMatchRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.HttpMatchRequest)
       HttpMatchRequestOrBuilder {
@@ -6283,13 +6073,8 @@ public final class RouteRuleOuterClass {
     }
     private HttpMatchRequest() {
       name_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HttpMatchRequest();
+      port_ = 0;
+      ignoreUriCase_ = false;
     }
 
     @java.lang.Override
@@ -6375,10 +6160,10 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 headers_ = com.google.protobuf.MapField.newMapField(
                     HeadersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000020;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
               headers__ = input.readMessage(
@@ -6393,10 +6178,10 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 sourceLabels_ = com.google.protobuf.MapField.newMapField(
                     SourceLabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000080;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               sourceLabels__ = input.readMessage(
@@ -6406,10 +6191,10 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 queryParams_ = com.google.protobuf.MapField.newMapField(
                     QueryParamsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000100;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
               queryParams__ = input.readMessage(
@@ -6424,10 +6209,10 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                 withoutHeaders_ = com.google.protobuf.MapField.newMapField(
                     WithoutHeadersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000400;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch>
               withoutHeaders__ = input.readMessage(
@@ -6437,7 +6222,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6486,13 +6271,12 @@ public final class RouteRuleOuterClass {
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6506,10 +6290,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string name = 1[json_name = "name"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6527,25 +6309,20 @@ public final class RouteRuleOuterClass {
     public static final int URI_FIELD_NUMBER = 2;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch uri_;
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
-     * @return Whether the uri field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public boolean hasUri() {
       return uri_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
-     * @return The uri.
+     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getUri() {
       return uri_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.getDefaultInstance() : uri_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getUriOrBuilder() {
       return getUri();
     }
@@ -6553,25 +6330,20 @@ public final class RouteRuleOuterClass {
     public static final int SCHEME_FIELD_NUMBER = 3;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch scheme_;
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
-     * @return Whether the scheme field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
      */
-    @java.lang.Override
     public boolean hasScheme() {
       return scheme_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
-     * @return The scheme.
+     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getScheme() {
       return scheme_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.getDefaultInstance() : scheme_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getSchemeOrBuilder() {
       return getScheme();
     }
@@ -6579,25 +6351,20 @@ public final class RouteRuleOuterClass {
     public static final int METHOD_FIELD_NUMBER = 4;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch method_;
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
-     * @return Whether the method field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
      */
-    @java.lang.Override
     public boolean hasMethod() {
       return method_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
-     * @return The method.
+     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getMethod() {
       return method_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.getDefaultInstance() : method_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getMethodOrBuilder() {
       return getMethod();
     }
@@ -6605,25 +6372,20 @@ public final class RouteRuleOuterClass {
     public static final int AUTHORITY_FIELD_NUMBER = 5;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch authority_;
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
-     * @return Whether the authority field is set.
+     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public boolean hasAuthority() {
       return authority_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getAuthority() {
       return authority_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.getDefaultInstance() : authority_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+     * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getAuthorityOrBuilder() {
       return getAuthority();
     }
@@ -6655,10 +6417,9 @@ public final class RouteRuleOuterClass {
       return internalGetHeaders().getMap().size();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
 
-    @java.lang.Override
     public boolean containsHeaders(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -6667,23 +6428,20 @@ public final class RouteRuleOuterClass {
     /**
      * Use {@link #getHeadersMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getHeaders() {
       return getHeadersMap();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getHeadersMap() {
       return internalGetHeaders().getMap();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
-    @java.lang.Override
 
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getHeadersOrDefault(
         java.lang.String key,
@@ -6694,9 +6452,8 @@ public final class RouteRuleOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
      */
-    @java.lang.Override
 
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getHeadersOrThrow(
         java.lang.String key) {
@@ -6712,10 +6469,8 @@ public final class RouteRuleOuterClass {
     public static final int PORT_FIELD_NUMBER = 7;
     private int port_;
     /**
-     * <code>int32 port = 7 [json_name = "port"];</code>
-     * @return The port.
+     * <code>int32 port = 7[json_name = "port"];</code>
      */
-    @java.lang.Override
     public int getPort() {
       return port_;
     }
@@ -6747,10 +6502,9 @@ public final class RouteRuleOuterClass {
       return internalGetSourceLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
 
-    @java.lang.Override
     public boolean containsSourceLabels(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -6759,23 +6513,20 @@ public final class RouteRuleOuterClass {
     /**
      * Use {@link #getSourceLabelsMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getSourceLabels() {
       return getSourceLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getSourceLabelsMap() {
       return internalGetSourceLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
-    @java.lang.Override
 
     public java.lang.String getSourceLabelsOrDefault(
         java.lang.String key,
@@ -6786,9 +6537,8 @@ public final class RouteRuleOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+     * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
      */
-    @java.lang.Override
 
     public java.lang.String getSourceLabelsOrThrow(
         java.lang.String key) {
@@ -6828,10 +6578,9 @@ public final class RouteRuleOuterClass {
       return internalGetQueryParams().getMap().size();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
 
-    @java.lang.Override
     public boolean containsQueryParams(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -6840,23 +6589,20 @@ public final class RouteRuleOuterClass {
     /**
      * Use {@link #getQueryParamsMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getQueryParams() {
       return getQueryParamsMap();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getQueryParamsMap() {
       return internalGetQueryParams().getMap();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
-    @java.lang.Override
 
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getQueryParamsOrDefault(
         java.lang.String key,
@@ -6867,9 +6613,8 @@ public final class RouteRuleOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
      */
-    @java.lang.Override
 
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getQueryParamsOrThrow(
         java.lang.String key) {
@@ -6885,10 +6630,8 @@ public final class RouteRuleOuterClass {
     public static final int IGNORE_URI_CASE_FIELD_NUMBER = 10;
     private boolean ignoreUriCase_;
     /**
-     * <code>bool ignore_uri_case = 10 [json_name = "ignoreUriCase"];</code>
-     * @return The ignoreUriCase.
+     * <code>bool ignore_uri_case = 10[json_name = "ignoreUriCase"];</code>
      */
-    @java.lang.Override
     public boolean getIgnoreUriCase() {
       return ignoreUriCase_;
     }
@@ -6920,10 +6663,9 @@ public final class RouteRuleOuterClass {
       return internalGetWithoutHeaders().getMap().size();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
 
-    @java.lang.Override
     public boolean containsWithoutHeaders(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -6932,23 +6674,20 @@ public final class RouteRuleOuterClass {
     /**
      * Use {@link #getWithoutHeadersMap()} instead.
      */
-    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getWithoutHeaders() {
       return getWithoutHeadersMap();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
-    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getWithoutHeadersMap() {
       return internalGetWithoutHeaders().getMap();
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
-    @java.lang.Override
 
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getWithoutHeadersOrDefault(
         java.lang.String key,
@@ -6959,9 +6698,8 @@ public final class RouteRuleOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+     * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
      */
-    @java.lang.Override
 
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getWithoutHeadersOrThrow(
         java.lang.String key) {
@@ -7124,42 +6862,43 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasUri() != other.hasUri()) return false;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && (hasUri() == other.hasUri());
       if (hasUri()) {
-        if (!getUri()
-            .equals(other.getUri())) return false;
+        result = result && getUri()
+            .equals(other.getUri());
       }
-      if (hasScheme() != other.hasScheme()) return false;
+      result = result && (hasScheme() == other.hasScheme());
       if (hasScheme()) {
-        if (!getScheme()
-            .equals(other.getScheme())) return false;
+        result = result && getScheme()
+            .equals(other.getScheme());
       }
-      if (hasMethod() != other.hasMethod()) return false;
+      result = result && (hasMethod() == other.hasMethod());
       if (hasMethod()) {
-        if (!getMethod()
-            .equals(other.getMethod())) return false;
+        result = result && getMethod()
+            .equals(other.getMethod());
       }
-      if (hasAuthority() != other.hasAuthority()) return false;
+      result = result && (hasAuthority() == other.hasAuthority());
       if (hasAuthority()) {
-        if (!getAuthority()
-            .equals(other.getAuthority())) return false;
+        result = result && getAuthority()
+            .equals(other.getAuthority());
       }
-      if (!internalGetHeaders().equals(
-          other.internalGetHeaders())) return false;
-      if (getPort()
-          != other.getPort()) return false;
-      if (!internalGetSourceLabels().equals(
-          other.internalGetSourceLabels())) return false;
-      if (!internalGetQueryParams().equals(
-          other.internalGetQueryParams())) return false;
-      if (getIgnoreUriCase()
-          != other.getIgnoreUriCase()) return false;
-      if (!internalGetWithoutHeaders().equals(
-          other.internalGetWithoutHeaders())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && internalGetHeaders().equals(
+          other.internalGetHeaders());
+      result = result && (getPort()
+          == other.getPort());
+      result = result && internalGetSourceLabels().equals(
+          other.internalGetSourceLabels());
+      result = result && internalGetQueryParams().equals(
+          other.internalGetQueryParams());
+      result = result && (getIgnoreUriCase()
+          == other.getIgnoreUriCase());
+      result = result && internalGetWithoutHeaders().equals(
+          other.internalGetWithoutHeaders());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -7436,6 +7175,7 @@ public final class RouteRuleOuterClass {
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest buildPartial() {
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpMatchRequest(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.name_ = name_;
         if (uriBuilder_ == null) {
           result.uri_ = uri_;
@@ -7467,41 +7207,42 @@ public final class RouteRuleOuterClass {
         result.ignoreUriCase_ = ignoreUriCase_;
         result.withoutHeaders_ = internalGetWithoutHeaders();
         result.withoutHeaders_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7577,8 +7318,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The name.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7593,8 +7333,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The bytes for name.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7610,9 +7349,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -7625,8 +7362,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder clearName() {
         
@@ -7635,9 +7371,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
+       * <code>string name = 1[json_name = "name"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7651,19 +7385,17 @@ public final class RouteRuleOuterClass {
         return this;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch uri_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch uri_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> uriBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
-       * @return Whether the uri field is set.
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public boolean hasUri() {
         return uriBuilder_ != null || uri_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
-       * @return The uri.
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getUri() {
         if (uriBuilder_ == null) {
@@ -7673,7 +7405,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public Builder setUri(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (uriBuilder_ == null) {
@@ -7689,7 +7421,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public Builder setUri(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder builderForValue) {
@@ -7703,7 +7435,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public Builder mergeUri(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (uriBuilder_ == null) {
@@ -7721,7 +7453,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public Builder clearUri() {
         if (uriBuilder_ == null) {
@@ -7735,7 +7467,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder getUriBuilder() {
         
@@ -7743,7 +7475,7 @@ public final class RouteRuleOuterClass {
         return getUriFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getUriOrBuilder() {
         if (uriBuilder_ != null) {
@@ -7754,7 +7486,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2 [json_name = "uri"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch uri = 2[json_name = "uri"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> 
@@ -7770,19 +7502,17 @@ public final class RouteRuleOuterClass {
         return uriBuilder_;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch scheme_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch scheme_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> schemeBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
-       * @return Whether the scheme field is set.
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public boolean hasScheme() {
         return schemeBuilder_ != null || scheme_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
-       * @return The scheme.
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getScheme() {
         if (schemeBuilder_ == null) {
@@ -7792,7 +7522,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public Builder setScheme(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (schemeBuilder_ == null) {
@@ -7808,7 +7538,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public Builder setScheme(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder builderForValue) {
@@ -7822,7 +7552,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public Builder mergeScheme(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (schemeBuilder_ == null) {
@@ -7840,7 +7570,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public Builder clearScheme() {
         if (schemeBuilder_ == null) {
@@ -7854,7 +7584,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder getSchemeBuilder() {
         
@@ -7862,7 +7592,7 @@ public final class RouteRuleOuterClass {
         return getSchemeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getSchemeOrBuilder() {
         if (schemeBuilder_ != null) {
@@ -7873,7 +7603,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3 [json_name = "scheme"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch scheme = 3[json_name = "scheme"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> 
@@ -7889,19 +7619,17 @@ public final class RouteRuleOuterClass {
         return schemeBuilder_;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch method_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch method_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> methodBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
-       * @return Whether the method field is set.
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public boolean hasMethod() {
         return methodBuilder_ != null || method_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
-       * @return The method.
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getMethod() {
         if (methodBuilder_ == null) {
@@ -7911,7 +7639,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public Builder setMethod(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (methodBuilder_ == null) {
@@ -7927,7 +7655,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public Builder setMethod(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder builderForValue) {
@@ -7941,7 +7669,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public Builder mergeMethod(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (methodBuilder_ == null) {
@@ -7959,7 +7687,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public Builder clearMethod() {
         if (methodBuilder_ == null) {
@@ -7973,7 +7701,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder getMethodBuilder() {
         
@@ -7981,7 +7709,7 @@ public final class RouteRuleOuterClass {
         return getMethodFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getMethodOrBuilder() {
         if (methodBuilder_ != null) {
@@ -7992,7 +7720,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4 [json_name = "method"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch method = 4[json_name = "method"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> 
@@ -8008,19 +7736,17 @@ public final class RouteRuleOuterClass {
         return methodBuilder_;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch authority_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch authority_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> authorityBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
-       * @return Whether the authority field is set.
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public boolean hasAuthority() {
         return authorityBuilder_ != null || authority_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
-       * @return The authority.
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getAuthority() {
         if (authorityBuilder_ == null) {
@@ -8030,7 +7756,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public Builder setAuthority(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (authorityBuilder_ == null) {
@@ -8046,7 +7772,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public Builder setAuthority(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder builderForValue) {
@@ -8060,7 +7786,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public Builder mergeAuthority(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch value) {
         if (authorityBuilder_ == null) {
@@ -8078,7 +7804,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public Builder clearAuthority() {
         if (authorityBuilder_ == null) {
@@ -8092,7 +7818,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder getAuthorityBuilder() {
         
@@ -8100,7 +7826,7 @@ public final class RouteRuleOuterClass {
         return getAuthorityFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder getAuthorityOrBuilder() {
         if (authorityBuilder_ != null) {
@@ -8111,7 +7837,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5 [json_name = "authority"];</code>
+       * <code>.lhotse.networking.v1alpha1.StringMatch authority = 5[json_name = "authority"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatchOrBuilder> 
@@ -8154,10 +7880,9 @@ public final class RouteRuleOuterClass {
         return internalGetHeaders().getMap().size();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
 
-      @java.lang.Override
       public boolean containsHeaders(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8166,23 +7891,20 @@ public final class RouteRuleOuterClass {
       /**
        * Use {@link #getHeadersMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getHeaders() {
         return getHeadersMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getHeadersMap() {
         return internalGetHeaders().getMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
-      @java.lang.Override
 
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getHeadersOrDefault(
           java.lang.String key,
@@ -8193,9 +7915,8 @@ public final class RouteRuleOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
-      @java.lang.Override
 
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getHeadersOrThrow(
           java.lang.String key) {
@@ -8214,7 +7935,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
 
       public Builder removeHeaders(
@@ -8233,7 +7954,7 @@ public final class RouteRuleOuterClass {
         return internalGetMutableHeaders().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
       public Builder putHeaders(
           java.lang.String key,
@@ -8245,7 +7966,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6 [json_name = "headers"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; headers = 6[json_name = "headers"];</code>
        */
 
       public Builder putAllHeaders(
@@ -8257,17 +7978,13 @@ public final class RouteRuleOuterClass {
 
       private int port_ ;
       /**
-       * <code>int32 port = 7 [json_name = "port"];</code>
-       * @return The port.
+       * <code>int32 port = 7[json_name = "port"];</code>
        */
-      @java.lang.Override
       public int getPort() {
         return port_;
       }
       /**
-       * <code>int32 port = 7 [json_name = "port"];</code>
-       * @param value The port to set.
-       * @return This builder for chaining.
+       * <code>int32 port = 7[json_name = "port"];</code>
        */
       public Builder setPort(int value) {
         
@@ -8276,8 +7993,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>int32 port = 7 [json_name = "port"];</code>
-       * @return This builder for chaining.
+       * <code>int32 port = 7[json_name = "port"];</code>
        */
       public Builder clearPort() {
         
@@ -8313,10 +8029,9 @@ public final class RouteRuleOuterClass {
         return internalGetSourceLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
 
-      @java.lang.Override
       public boolean containsSourceLabels(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8325,23 +8040,20 @@ public final class RouteRuleOuterClass {
       /**
        * Use {@link #getSourceLabelsMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getSourceLabels() {
         return getSourceLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getSourceLabelsMap() {
         return internalGetSourceLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
-      @java.lang.Override
 
       public java.lang.String getSourceLabelsOrDefault(
           java.lang.String key,
@@ -8352,9 +8064,8 @@ public final class RouteRuleOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
-      @java.lang.Override
 
       public java.lang.String getSourceLabelsOrThrow(
           java.lang.String key) {
@@ -8373,7 +8084,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
 
       public Builder removeSourceLabels(
@@ -8392,7 +8103,7 @@ public final class RouteRuleOuterClass {
         return internalGetMutableSourceLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
       public Builder putSourceLabels(
           java.lang.String key,
@@ -8404,7 +8115,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; source_labels = 8 [json_name = "sourceLabels"];</code>
+       * <code>map&lt;string, string&gt; source_labels = 8[json_name = "sourceLabels"];</code>
        */
 
       public Builder putAllSourceLabels(
@@ -8441,10 +8152,9 @@ public final class RouteRuleOuterClass {
         return internalGetQueryParams().getMap().size();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
 
-      @java.lang.Override
       public boolean containsQueryParams(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8453,23 +8163,20 @@ public final class RouteRuleOuterClass {
       /**
        * Use {@link #getQueryParamsMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getQueryParams() {
         return getQueryParamsMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getQueryParamsMap() {
         return internalGetQueryParams().getMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
-      @java.lang.Override
 
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getQueryParamsOrDefault(
           java.lang.String key,
@@ -8480,9 +8187,8 @@ public final class RouteRuleOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
-      @java.lang.Override
 
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getQueryParamsOrThrow(
           java.lang.String key) {
@@ -8501,7 +8207,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
 
       public Builder removeQueryParams(
@@ -8520,7 +8226,7 @@ public final class RouteRuleOuterClass {
         return internalGetMutableQueryParams().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
       public Builder putQueryParams(
           java.lang.String key,
@@ -8532,7 +8238,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9 [json_name = "queryParams"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; query_params = 9[json_name = "queryParams"];</code>
        */
 
       public Builder putAllQueryParams(
@@ -8544,17 +8250,13 @@ public final class RouteRuleOuterClass {
 
       private boolean ignoreUriCase_ ;
       /**
-       * <code>bool ignore_uri_case = 10 [json_name = "ignoreUriCase"];</code>
-       * @return The ignoreUriCase.
+       * <code>bool ignore_uri_case = 10[json_name = "ignoreUriCase"];</code>
        */
-      @java.lang.Override
       public boolean getIgnoreUriCase() {
         return ignoreUriCase_;
       }
       /**
-       * <code>bool ignore_uri_case = 10 [json_name = "ignoreUriCase"];</code>
-       * @param value The ignoreUriCase to set.
-       * @return This builder for chaining.
+       * <code>bool ignore_uri_case = 10[json_name = "ignoreUriCase"];</code>
        */
       public Builder setIgnoreUriCase(boolean value) {
         
@@ -8563,8 +8265,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>bool ignore_uri_case = 10 [json_name = "ignoreUriCase"];</code>
-       * @return This builder for chaining.
+       * <code>bool ignore_uri_case = 10[json_name = "ignoreUriCase"];</code>
        */
       public Builder clearIgnoreUriCase() {
         
@@ -8600,10 +8301,9 @@ public final class RouteRuleOuterClass {
         return internalGetWithoutHeaders().getMap().size();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
 
-      @java.lang.Override
       public boolean containsWithoutHeaders(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8612,23 +8312,20 @@ public final class RouteRuleOuterClass {
       /**
        * Use {@link #getWithoutHeadersMap()} instead.
        */
-      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getWithoutHeaders() {
         return getWithoutHeadersMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
-      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch> getWithoutHeadersMap() {
         return internalGetWithoutHeaders().getMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
-      @java.lang.Override
 
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getWithoutHeadersOrDefault(
           java.lang.String key,
@@ -8639,9 +8336,8 @@ public final class RouteRuleOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
-      @java.lang.Override
 
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch getWithoutHeadersOrThrow(
           java.lang.String key) {
@@ -8660,7 +8356,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
 
       public Builder removeWithoutHeaders(
@@ -8679,7 +8375,7 @@ public final class RouteRuleOuterClass {
         return internalGetMutableWithoutHeaders().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
       public Builder putWithoutHeaders(
           java.lang.String key,
@@ -8691,7 +8387,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11 [json_name = "withoutHeaders"];</code>
+       * <code>map&lt;string, .lhotse.networking.v1alpha1.StringMatch&gt; without_headers = 11[json_name = "withoutHeaders"];</code>
        */
 
       public Builder putAllWithoutHeaders(
@@ -8703,7 +8399,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -8758,52 +8454,31 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string exact = 1 [json_name = "exact"];</code>
-     * @return Whether the exact field is set.
-     */
-    boolean hasExact();
-    /**
-     * <code>string exact = 1 [json_name = "exact"];</code>
-     * @return The exact.
+     * <code>string exact = 1[json_name = "exact"];</code>
      */
     java.lang.String getExact();
     /**
-     * <code>string exact = 1 [json_name = "exact"];</code>
-     * @return The bytes for exact.
+     * <code>string exact = 1[json_name = "exact"];</code>
      */
     com.google.protobuf.ByteString
         getExactBytes();
 
     /**
-     * <code>string prefix = 2 [json_name = "prefix"];</code>
-     * @return Whether the prefix field is set.
-     */
-    boolean hasPrefix();
-    /**
-     * <code>string prefix = 2 [json_name = "prefix"];</code>
-     * @return The prefix.
+     * <code>string prefix = 2[json_name = "prefix"];</code>
      */
     java.lang.String getPrefix();
     /**
-     * <code>string prefix = 2 [json_name = "prefix"];</code>
-     * @return The bytes for prefix.
+     * <code>string prefix = 2[json_name = "prefix"];</code>
      */
     com.google.protobuf.ByteString
         getPrefixBytes();
 
     /**
-     * <code>string regex = 3 [json_name = "regex"];</code>
-     * @return Whether the regex field is set.
-     */
-    boolean hasRegex();
-    /**
-     * <code>string regex = 3 [json_name = "regex"];</code>
-     * @return The regex.
+     * <code>string regex = 3[json_name = "regex"];</code>
      */
     java.lang.String getRegex();
     /**
-     * <code>string regex = 3 [json_name = "regex"];</code>
-     * @return The bytes for regex.
+     * <code>string regex = 3[json_name = "regex"];</code>
      */
     com.google.protobuf.ByteString
         getRegexBytes();
@@ -8813,7 +8488,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.StringMatch}
    */
-  public static final class StringMatch extends
+  public  static final class StringMatch extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.StringMatch)
       StringMatchOrBuilder {
@@ -8823,13 +8498,6 @@ public final class RouteRuleOuterClass {
       super(builder);
     }
     private StringMatch() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StringMatch();
     }
 
     @java.lang.Override
@@ -8845,6 +8513,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8874,7 +8543,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8908,8 +8577,7 @@ public final class RouteRuleOuterClass {
     private int stringMatchCase_ = 0;
     private java.lang.Object stringMatch_;
     public enum StringMatchCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        implements com.google.protobuf.Internal.EnumLite {
       EXACT(1),
       PREFIX(2),
       REGEX(3),
@@ -8919,8 +8587,6 @@ public final class RouteRuleOuterClass {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8950,15 +8616,7 @@ public final class RouteRuleOuterClass {
 
     public static final int EXACT_FIELD_NUMBER = 1;
     /**
-     * <code>string exact = 1 [json_name = "exact"];</code>
-     * @return Whether the exact field is set.
-     */
-    public boolean hasExact() {
-      return stringMatchCase_ == 1;
-    }
-    /**
-     * <code>string exact = 1 [json_name = "exact"];</code>
-     * @return The exact.
+     * <code>string exact = 1[json_name = "exact"];</code>
      */
     public java.lang.String getExact() {
       java.lang.Object ref = "";
@@ -8978,8 +8636,7 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string exact = 1 [json_name = "exact"];</code>
-     * @return The bytes for exact.
+     * <code>string exact = 1[json_name = "exact"];</code>
      */
     public com.google.protobuf.ByteString
         getExactBytes() {
@@ -9002,15 +8659,7 @@ public final class RouteRuleOuterClass {
 
     public static final int PREFIX_FIELD_NUMBER = 2;
     /**
-     * <code>string prefix = 2 [json_name = "prefix"];</code>
-     * @return Whether the prefix field is set.
-     */
-    public boolean hasPrefix() {
-      return stringMatchCase_ == 2;
-    }
-    /**
-     * <code>string prefix = 2 [json_name = "prefix"];</code>
-     * @return The prefix.
+     * <code>string prefix = 2[json_name = "prefix"];</code>
      */
     public java.lang.String getPrefix() {
       java.lang.Object ref = "";
@@ -9030,8 +8679,7 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string prefix = 2 [json_name = "prefix"];</code>
-     * @return The bytes for prefix.
+     * <code>string prefix = 2[json_name = "prefix"];</code>
      */
     public com.google.protobuf.ByteString
         getPrefixBytes() {
@@ -9054,15 +8702,7 @@ public final class RouteRuleOuterClass {
 
     public static final int REGEX_FIELD_NUMBER = 3;
     /**
-     * <code>string regex = 3 [json_name = "regex"];</code>
-     * @return Whether the regex field is set.
-     */
-    public boolean hasRegex() {
-      return stringMatchCase_ == 3;
-    }
-    /**
-     * <code>string regex = 3 [json_name = "regex"];</code>
-     * @return The regex.
+     * <code>string regex = 3[json_name = "regex"];</code>
      */
     public java.lang.String getRegex() {
       java.lang.Object ref = "";
@@ -9082,8 +8722,7 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string regex = 3 [json_name = "regex"];</code>
-     * @return The bytes for regex.
+     * <code>string regex = 3[json_name = "regex"];</code>
      */
     public com.google.protobuf.ByteString
         getRegexBytes() {
@@ -9160,25 +8799,28 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.StringMatch) obj;
 
-      if (!getStringMatchCase().equals(other.getStringMatchCase())) return false;
+      boolean result = true;
+      result = result && getStringMatchCase().equals(
+          other.getStringMatchCase());
+      if (!result) return false;
       switch (stringMatchCase_) {
         case 1:
-          if (!getExact()
-              .equals(other.getExact())) return false;
+          result = result && getExact()
+              .equals(other.getExact());
           break;
         case 2:
-          if (!getPrefix()
-              .equals(other.getPrefix())) return false;
+          result = result && getPrefix()
+              .equals(other.getPrefix());
           break;
         case 3:
-          if (!getRegex()
-              .equals(other.getRegex())) return false;
+          result = result && getRegex()
+              .equals(other.getRegex());
           break;
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -9381,35 +9023,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9491,18 +9133,8 @@ public final class RouteRuleOuterClass {
 
 
       /**
-       * <code>string exact = 1 [json_name = "exact"];</code>
-       * @return Whether the exact field is set.
+       * <code>string exact = 1[json_name = "exact"];</code>
        */
-      @java.lang.Override
-      public boolean hasExact() {
-        return stringMatchCase_ == 1;
-      }
-      /**
-       * <code>string exact = 1 [json_name = "exact"];</code>
-       * @return The exact.
-       */
-      @java.lang.Override
       public java.lang.String getExact() {
         java.lang.Object ref = "";
         if (stringMatchCase_ == 1) {
@@ -9521,10 +9153,8 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string exact = 1 [json_name = "exact"];</code>
-       * @return The bytes for exact.
+       * <code>string exact = 1[json_name = "exact"];</code>
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getExactBytes() {
         java.lang.Object ref = "";
@@ -9544,9 +9174,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string exact = 1 [json_name = "exact"];</code>
-       * @param value The exact to set.
-       * @return This builder for chaining.
+       * <code>string exact = 1[json_name = "exact"];</code>
        */
       public Builder setExact(
           java.lang.String value) {
@@ -9559,8 +9187,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string exact = 1 [json_name = "exact"];</code>
-       * @return This builder for chaining.
+       * <code>string exact = 1[json_name = "exact"];</code>
        */
       public Builder clearExact() {
         if (stringMatchCase_ == 1) {
@@ -9571,9 +9198,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string exact = 1 [json_name = "exact"];</code>
-       * @param value The bytes for exact to set.
-       * @return This builder for chaining.
+       * <code>string exact = 1[json_name = "exact"];</code>
        */
       public Builder setExactBytes(
           com.google.protobuf.ByteString value) {
@@ -9588,18 +9213,8 @@ public final class RouteRuleOuterClass {
       }
 
       /**
-       * <code>string prefix = 2 [json_name = "prefix"];</code>
-       * @return Whether the prefix field is set.
+       * <code>string prefix = 2[json_name = "prefix"];</code>
        */
-      @java.lang.Override
-      public boolean hasPrefix() {
-        return stringMatchCase_ == 2;
-      }
-      /**
-       * <code>string prefix = 2 [json_name = "prefix"];</code>
-       * @return The prefix.
-       */
-      @java.lang.Override
       public java.lang.String getPrefix() {
         java.lang.Object ref = "";
         if (stringMatchCase_ == 2) {
@@ -9618,10 +9233,8 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string prefix = 2 [json_name = "prefix"];</code>
-       * @return The bytes for prefix.
+       * <code>string prefix = 2[json_name = "prefix"];</code>
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getPrefixBytes() {
         java.lang.Object ref = "";
@@ -9641,9 +9254,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string prefix = 2 [json_name = "prefix"];</code>
-       * @param value The prefix to set.
-       * @return This builder for chaining.
+       * <code>string prefix = 2[json_name = "prefix"];</code>
        */
       public Builder setPrefix(
           java.lang.String value) {
@@ -9656,8 +9267,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string prefix = 2 [json_name = "prefix"];</code>
-       * @return This builder for chaining.
+       * <code>string prefix = 2[json_name = "prefix"];</code>
        */
       public Builder clearPrefix() {
         if (stringMatchCase_ == 2) {
@@ -9668,9 +9278,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string prefix = 2 [json_name = "prefix"];</code>
-       * @param value The bytes for prefix to set.
-       * @return This builder for chaining.
+       * <code>string prefix = 2[json_name = "prefix"];</code>
        */
       public Builder setPrefixBytes(
           com.google.protobuf.ByteString value) {
@@ -9685,18 +9293,8 @@ public final class RouteRuleOuterClass {
       }
 
       /**
-       * <code>string regex = 3 [json_name = "regex"];</code>
-       * @return Whether the regex field is set.
+       * <code>string regex = 3[json_name = "regex"];</code>
        */
-      @java.lang.Override
-      public boolean hasRegex() {
-        return stringMatchCase_ == 3;
-      }
-      /**
-       * <code>string regex = 3 [json_name = "regex"];</code>
-       * @return The regex.
-       */
-      @java.lang.Override
       public java.lang.String getRegex() {
         java.lang.Object ref = "";
         if (stringMatchCase_ == 3) {
@@ -9715,10 +9313,8 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string regex = 3 [json_name = "regex"];</code>
-       * @return The bytes for regex.
+       * <code>string regex = 3[json_name = "regex"];</code>
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getRegexBytes() {
         java.lang.Object ref = "";
@@ -9738,9 +9334,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string regex = 3 [json_name = "regex"];</code>
-       * @param value The regex to set.
-       * @return This builder for chaining.
+       * <code>string regex = 3[json_name = "regex"];</code>
        */
       public Builder setRegex(
           java.lang.String value) {
@@ -9753,8 +9347,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string regex = 3 [json_name = "regex"];</code>
-       * @return This builder for chaining.
+       * <code>string regex = 3[json_name = "regex"];</code>
        */
       public Builder clearRegex() {
         if (stringMatchCase_ == 3) {
@@ -9765,9 +9358,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string regex = 3 [json_name = "regex"];</code>
-       * @param value The bytes for regex to set.
-       * @return This builder for chaining.
+       * <code>string regex = 3[json_name = "regex"];</code>
        */
       public Builder setRegexBytes(
           com.google.protobuf.ByteString value) {
@@ -9783,7 +9374,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -9838,35 +9429,29 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
-     * @return Whether the destination field is set.
+     * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
      */
     boolean hasDestination();
     /**
-     * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
-     * @return The destination.
+     * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination getDestination();
     /**
-     * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+     * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.DestinationOrBuilder getDestinationOrBuilder();
 
     /**
-     * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-     * @return Whether the weight field is set.
-     */
-    boolean hasWeight();
-    /**
-     * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-     * @return The weight.
+     * <code>int32 weight = 2[json_name = "weight"];</code>
      */
     int getWeight();
+
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.WeightCase getWeightCase();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.HttpRouteDestination}
    */
-  public static final class HttpRouteDestination extends
+  public  static final class HttpRouteDestination extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.HttpRouteDestination)
       HttpRouteDestinationOrBuilder {
@@ -9876,13 +9461,6 @@ public final class RouteRuleOuterClass {
       super(builder);
     }
     private HttpRouteDestination() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HttpRouteDestination();
     }
 
     @java.lang.Override
@@ -9923,12 +9501,12 @@ public final class RouteRuleOuterClass {
               break;
             }
             case 16: {
-              bitField0_ |= 0x00000001;
-              weight_ = input.readInt32();
+              WeightCase_ = 2;
+              Weight_ = input.readInt32();
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9959,50 +9537,72 @@ public final class RouteRuleOuterClass {
               com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination.Builder.class);
     }
 
-    private int bitField0_;
+    private int WeightCase_ = 0;
+    private java.lang.Object Weight_;
+    public enum WeightCase
+        implements com.google.protobuf.Internal.EnumLite {
+      WEIGHT(2),
+      WEIGHT_NOT_SET(0);
+      private final int value;
+      private WeightCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static WeightCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static WeightCase forNumber(int value) {
+        switch (value) {
+          case 2: return WEIGHT;
+          case 0: return WEIGHT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public WeightCase
+    getWeightCase() {
+      return WeightCase.forNumber(
+          WeightCase_);
+    }
+
     public static final int DESTINATION_FIELD_NUMBER = 1;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination destination_;
     /**
-     * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
-     * @return Whether the destination field is set.
+     * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
      */
-    @java.lang.Override
     public boolean hasDestination() {
       return destination_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
-     * @return The destination.
+     * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination getDestination() {
       return destination_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination.getDefaultInstance() : destination_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+     * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.DestinationOrBuilder getDestinationOrBuilder() {
       return getDestination();
     }
 
     public static final int WEIGHT_FIELD_NUMBER = 2;
-    private int weight_;
     /**
-     * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-     * @return Whether the weight field is set.
+     * <code>int32 weight = 2[json_name = "weight"];</code>
      */
-    @java.lang.Override
-    public boolean hasWeight() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-     * @return The weight.
-     */
-    @java.lang.Override
     public int getWeight() {
-      return weight_;
+      if (WeightCase_ == 2) {
+        return (java.lang.Integer) Weight_;
+      }
+      return 0;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10022,8 +9622,9 @@ public final class RouteRuleOuterClass {
       if (destination_ != null) {
         output.writeMessage(1, getDestination());
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt32(2, weight_);
+      if (WeightCase_ == 2) {
+        output.writeInt32(
+            2, (int)((java.lang.Integer) Weight_));
       }
       unknownFields.writeTo(output);
     }
@@ -10038,9 +9639,10 @@ public final class RouteRuleOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDestination());
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (WeightCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, weight_);
+          .computeInt32Size(
+              2, (int)((java.lang.Integer) Weight_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10057,18 +9659,25 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination) obj;
 
-      if (hasDestination() != other.hasDestination()) return false;
+      boolean result = true;
+      result = result && (hasDestination() == other.hasDestination());
       if (hasDestination()) {
-        if (!getDestination()
-            .equals(other.getDestination())) return false;
+        result = result && getDestination()
+            .equals(other.getDestination());
       }
-      if (hasWeight() != other.hasWeight()) return false;
-      if (hasWeight()) {
-        if (getWeight()
-            != other.getWeight()) return false;
+      result = result && getWeightCase().equals(
+          other.getWeightCase());
+      if (!result) return false;
+      switch (WeightCase_) {
+        case 2:
+          result = result && (getWeight()
+              == other.getWeight());
+          break;
+        case 0:
+        default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -10082,9 +9691,13 @@ public final class RouteRuleOuterClass {
         hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
         hash = (53 * hash) + getDestination().hashCode();
       }
-      if (hasWeight()) {
-        hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
-        hash = (53 * hash) + getWeight();
+      switch (WeightCase_) {
+        case 2:
+          hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+          hash = (53 * hash) + getWeight();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10225,8 +9838,8 @@ public final class RouteRuleOuterClass {
           destination_ = null;
           destinationBuilder_ = null;
         }
-        weight_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        WeightCase_ = 0;
+        Weight_ = null;
         return this;
       }
 
@@ -10253,53 +9866,50 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination buildPartial() {
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRouteDestination(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (destinationBuilder_ == null) {
           result.destination_ = destination_;
         } else {
           result.destination_ = destinationBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.weight_ = weight_;
-          to_bitField0_ |= 0x00000001;
+        if (WeightCase_ == 2) {
+          result.Weight_ = Weight_;
         }
-        result.bitField0_ = to_bitField0_;
+        result.WeightCase_ = WeightCase_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10316,8 +9926,14 @@ public final class RouteRuleOuterClass {
         if (other.hasDestination()) {
           mergeDestination(other.getDestination());
         }
-        if (other.hasWeight()) {
-          setWeight(other.getWeight());
+        switch (other.getWeightCase()) {
+          case WEIGHT: {
+            setWeight(other.getWeight());
+            break;
+          }
+          case WEIGHT_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10347,21 +9963,33 @@ public final class RouteRuleOuterClass {
         }
         return this;
       }
-      private int bitField0_;
+      private int WeightCase_ = 0;
+      private java.lang.Object Weight_;
+      public WeightCase
+          getWeightCase() {
+        return WeightCase.forNumber(
+            WeightCase_);
+      }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination destination_;
+      public Builder clearWeight() {
+        WeightCase_ = 0;
+        Weight_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination destination_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.DestinationOrBuilder> destinationBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
-       * @return Whether the destination field is set.
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public boolean hasDestination() {
         return destinationBuilder_ != null || destination_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
-       * @return The destination.
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination getDestination() {
         if (destinationBuilder_ == null) {
@@ -10371,7 +9999,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public Builder setDestination(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination value) {
         if (destinationBuilder_ == null) {
@@ -10387,7 +10015,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public Builder setDestination(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination.Builder builderForValue) {
@@ -10401,7 +10029,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public Builder mergeDestination(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination value) {
         if (destinationBuilder_ == null) {
@@ -10419,7 +10047,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public Builder clearDestination() {
         if (destinationBuilder_ == null) {
@@ -10433,7 +10061,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination.Builder getDestinationBuilder() {
         
@@ -10441,7 +10069,7 @@ public final class RouteRuleOuterClass {
         return getDestinationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.DestinationOrBuilder getDestinationOrBuilder() {
         if (destinationBuilder_ != null) {
@@ -10452,7 +10080,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.Destination destination = 1 [json_name = "destination"];</code>
+       * <code>.lhotse.networking.v1alpha1.Destination destination = 1[json_name = "destination"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.DestinationOrBuilder> 
@@ -10468,48 +10096,39 @@ public final class RouteRuleOuterClass {
         return destinationBuilder_;
       }
 
-      private int weight_ ;
       /**
-       * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-       * @return Whether the weight field is set.
+       * <code>int32 weight = 2[json_name = "weight"];</code>
        */
-      @java.lang.Override
-      public boolean hasWeight() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-       * @return The weight.
-       */
-      @java.lang.Override
       public int getWeight() {
-        return weight_;
+        if (WeightCase_ == 2) {
+          return (java.lang.Integer) Weight_;
+        }
+        return 0;
       }
       /**
-       * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-       * @param value The weight to set.
-       * @return This builder for chaining.
+       * <code>int32 weight = 2[json_name = "weight"];</code>
        */
       public Builder setWeight(int value) {
-        bitField0_ |= 0x00000001;
-        weight_ = value;
+        WeightCase_ = 2;
+        Weight_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 weight = 2 [json_name = "weight"];</code>
-       * @return This builder for chaining.
+       * <code>int32 weight = 2[json_name = "weight"];</code>
        */
       public Builder clearWeight() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        weight_ = 0;
-        onChanged();
+        if (WeightCase_ == 2) {
+          WeightCase_ = 0;
+          Weight_ = null;
+          onChanged();
+        }
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -10564,13 +10183,11 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string subset = 1 [json_name = "subset"];</code>
-     * @return The subset.
+     * <code>string subset = 1[json_name = "subset"];</code>
      */
     java.lang.String getSubset();
     /**
-     * <code>string subset = 1 [json_name = "subset"];</code>
-     * @return The bytes for subset.
+     * <code>string subset = 1[json_name = "subset"];</code>
      */
     com.google.protobuf.ByteString
         getSubsetBytes();
@@ -10578,7 +10195,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.Destination}
    */
-  public static final class Destination extends
+  public  static final class Destination extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.Destination)
       DestinationOrBuilder {
@@ -10589,13 +10206,6 @@ public final class RouteRuleOuterClass {
     }
     private Destination() {
       subset_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Destination();
     }
 
     @java.lang.Override
@@ -10611,6 +10221,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10628,7 +10239,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10662,10 +10273,8 @@ public final class RouteRuleOuterClass {
     public static final int SUBSET_FIELD_NUMBER = 1;
     private volatile java.lang.Object subset_;
     /**
-     * <code>string subset = 1 [json_name = "subset"];</code>
-     * @return The subset.
+     * <code>string subset = 1[json_name = "subset"];</code>
      */
-    @java.lang.Override
     public java.lang.String getSubset() {
       java.lang.Object ref = subset_;
       if (ref instanceof java.lang.String) {
@@ -10679,10 +10288,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string subset = 1 [json_name = "subset"];</code>
-     * @return The bytes for subset.
+     * <code>string subset = 1[json_name = "subset"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getSubsetBytes() {
       java.lang.Object ref = subset_;
@@ -10741,10 +10348,11 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Destination) obj;
 
-      if (!getSubset()
-          .equals(other.getSubset())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getSubset()
+          .equals(other.getSubset());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -10924,35 +10532,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11001,8 +10609,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object subset_ = "";
       /**
-       * <code>string subset = 1 [json_name = "subset"];</code>
-       * @return The subset.
+       * <code>string subset = 1[json_name = "subset"];</code>
        */
       public java.lang.String getSubset() {
         java.lang.Object ref = subset_;
@@ -11017,8 +10624,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string subset = 1 [json_name = "subset"];</code>
-       * @return The bytes for subset.
+       * <code>string subset = 1[json_name = "subset"];</code>
        */
       public com.google.protobuf.ByteString
           getSubsetBytes() {
@@ -11034,9 +10640,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string subset = 1 [json_name = "subset"];</code>
-       * @param value The subset to set.
-       * @return This builder for chaining.
+       * <code>string subset = 1[json_name = "subset"];</code>
        */
       public Builder setSubset(
           java.lang.String value) {
@@ -11049,8 +10653,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string subset = 1 [json_name = "subset"];</code>
-       * @return This builder for chaining.
+       * <code>string subset = 1[json_name = "subset"];</code>
        */
       public Builder clearSubset() {
         
@@ -11059,9 +10662,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string subset = 1 [json_name = "subset"];</code>
-       * @param value The bytes for subset to set.
-       * @return This builder for chaining.
+       * <code>string subset = 1[json_name = "subset"];</code>
        */
       public Builder setSubsetBytes(
           com.google.protobuf.ByteString value) {
@@ -11077,7 +10678,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -11132,55 +10733,46 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
     java.lang.String getUri();
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The bytes for uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
     com.google.protobuf.ByteString
         getUriBytes();
 
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
     java.lang.String getAuthority();
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
     com.google.protobuf.ByteString
         getAuthorityBytes();
 
     /**
-     * <code>int32 port = 3 [json_name = "port"];</code>
-     * @return The port.
+     * <code>int32 port = 3[json_name = "port"];</code>
      */
     int getPort();
 
     /**
-     * <code>string scheme = 4 [json_name = "scheme"];</code>
-     * @return The scheme.
+     * <code>string scheme = 4[json_name = "scheme"];</code>
      */
     java.lang.String getScheme();
     /**
-     * <code>string scheme = 4 [json_name = "scheme"];</code>
-     * @return The bytes for scheme.
+     * <code>string scheme = 4[json_name = "scheme"];</code>
      */
     com.google.protobuf.ByteString
         getSchemeBytes();
 
     /**
-     * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-     * @return The redirectCode.
+     * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
      */
     java.lang.String getRedirectCode();
     /**
-     * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-     * @return The bytes for redirectCode.
+     * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
      */
     com.google.protobuf.ByteString
         getRedirectCodeBytes();
@@ -11188,7 +10780,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.HttpRedirect}
    */
-  public static final class HttpRedirect extends
+  public  static final class HttpRedirect extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.HttpRedirect)
       HttpRedirectOrBuilder {
@@ -11200,15 +10792,9 @@ public final class RouteRuleOuterClass {
     private HttpRedirect() {
       uri_ = "";
       authority_ = "";
+      port_ = 0;
       scheme_ = "";
       redirectCode_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HttpRedirect();
     }
 
     @java.lang.Override
@@ -11224,6 +10810,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11264,7 +10851,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11298,10 +10885,8 @@ public final class RouteRuleOuterClass {
     public static final int URI_FIELD_NUMBER = 1;
     private volatile java.lang.Object uri_;
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -11315,10 +10900,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The bytes for uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -11336,10 +10919,8 @@ public final class RouteRuleOuterClass {
     public static final int AUTHORITY_FIELD_NUMBER = 2;
     private volatile java.lang.Object authority_;
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public java.lang.String getAuthority() {
       java.lang.Object ref = authority_;
       if (ref instanceof java.lang.String) {
@@ -11353,10 +10934,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAuthorityBytes() {
       java.lang.Object ref = authority_;
@@ -11374,10 +10953,8 @@ public final class RouteRuleOuterClass {
     public static final int PORT_FIELD_NUMBER = 3;
     private int port_;
     /**
-     * <code>int32 port = 3 [json_name = "port"];</code>
-     * @return The port.
+     * <code>int32 port = 3[json_name = "port"];</code>
      */
-    @java.lang.Override
     public int getPort() {
       return port_;
     }
@@ -11385,10 +10962,8 @@ public final class RouteRuleOuterClass {
     public static final int SCHEME_FIELD_NUMBER = 4;
     private volatile java.lang.Object scheme_;
     /**
-     * <code>string scheme = 4 [json_name = "scheme"];</code>
-     * @return The scheme.
+     * <code>string scheme = 4[json_name = "scheme"];</code>
      */
-    @java.lang.Override
     public java.lang.String getScheme() {
       java.lang.Object ref = scheme_;
       if (ref instanceof java.lang.String) {
@@ -11402,10 +10977,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string scheme = 4 [json_name = "scheme"];</code>
-     * @return The bytes for scheme.
+     * <code>string scheme = 4[json_name = "scheme"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getSchemeBytes() {
       java.lang.Object ref = scheme_;
@@ -11423,10 +10996,8 @@ public final class RouteRuleOuterClass {
     public static final int REDIRECT_CODE_FIELD_NUMBER = 5;
     private volatile java.lang.Object redirectCode_;
     /**
-     * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-     * @return The redirectCode.
+     * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
      */
-    @java.lang.Override
     public java.lang.String getRedirectCode() {
       java.lang.Object ref = redirectCode_;
       if (ref instanceof java.lang.String) {
@@ -11440,10 +11011,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-     * @return The bytes for redirectCode.
+     * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getRedirectCodeBytes() {
       java.lang.Object ref = redirectCode_;
@@ -11527,18 +11096,19 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRedirect) obj;
 
-      if (!getUri()
-          .equals(other.getUri())) return false;
-      if (!getAuthority()
-          .equals(other.getAuthority())) return false;
-      if (getPort()
-          != other.getPort()) return false;
-      if (!getScheme()
-          .equals(other.getScheme())) return false;
-      if (!getRedirectCode()
-          .equals(other.getRedirectCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getUri()
+          .equals(other.getUri());
+      result = result && getAuthority()
+          .equals(other.getAuthority());
+      result = result && (getPort()
+          == other.getPort());
+      result = result && getScheme()
+          .equals(other.getScheme());
+      result = result && getRedirectCode()
+          .equals(other.getRedirectCode());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -11738,35 +11308,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11830,8 +11400,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @return The uri.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -11846,8 +11415,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @return The bytes for uri.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -11863,9 +11431,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @param value The uri to set.
-       * @return This builder for chaining.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public Builder setUri(
           java.lang.String value) {
@@ -11878,8 +11444,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @return This builder for chaining.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public Builder clearUri() {
         
@@ -11888,9 +11453,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @param value The bytes for uri to set.
-       * @return This builder for chaining.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -11906,8 +11469,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object authority_ = "";
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @return The authority.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public java.lang.String getAuthority() {
         java.lang.Object ref = authority_;
@@ -11922,8 +11484,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @return The bytes for authority.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public com.google.protobuf.ByteString
           getAuthorityBytes() {
@@ -11939,9 +11500,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @param value The authority to set.
-       * @return This builder for chaining.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public Builder setAuthority(
           java.lang.String value) {
@@ -11954,8 +11513,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @return This builder for chaining.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public Builder clearAuthority() {
         
@@ -11964,9 +11522,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @param value The bytes for authority to set.
-       * @return This builder for chaining.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public Builder setAuthorityBytes(
           com.google.protobuf.ByteString value) {
@@ -11982,17 +11538,13 @@ public final class RouteRuleOuterClass {
 
       private int port_ ;
       /**
-       * <code>int32 port = 3 [json_name = "port"];</code>
-       * @return The port.
+       * <code>int32 port = 3[json_name = "port"];</code>
        */
-      @java.lang.Override
       public int getPort() {
         return port_;
       }
       /**
-       * <code>int32 port = 3 [json_name = "port"];</code>
-       * @param value The port to set.
-       * @return This builder for chaining.
+       * <code>int32 port = 3[json_name = "port"];</code>
        */
       public Builder setPort(int value) {
         
@@ -12001,8 +11553,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>int32 port = 3 [json_name = "port"];</code>
-       * @return This builder for chaining.
+       * <code>int32 port = 3[json_name = "port"];</code>
        */
       public Builder clearPort() {
         
@@ -12013,8 +11564,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object scheme_ = "";
       /**
-       * <code>string scheme = 4 [json_name = "scheme"];</code>
-       * @return The scheme.
+       * <code>string scheme = 4[json_name = "scheme"];</code>
        */
       public java.lang.String getScheme() {
         java.lang.Object ref = scheme_;
@@ -12029,8 +11579,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string scheme = 4 [json_name = "scheme"];</code>
-       * @return The bytes for scheme.
+       * <code>string scheme = 4[json_name = "scheme"];</code>
        */
       public com.google.protobuf.ByteString
           getSchemeBytes() {
@@ -12046,9 +11595,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string scheme = 4 [json_name = "scheme"];</code>
-       * @param value The scheme to set.
-       * @return This builder for chaining.
+       * <code>string scheme = 4[json_name = "scheme"];</code>
        */
       public Builder setScheme(
           java.lang.String value) {
@@ -12061,8 +11608,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string scheme = 4 [json_name = "scheme"];</code>
-       * @return This builder for chaining.
+       * <code>string scheme = 4[json_name = "scheme"];</code>
        */
       public Builder clearScheme() {
         
@@ -12071,9 +11617,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string scheme = 4 [json_name = "scheme"];</code>
-       * @param value The bytes for scheme to set.
-       * @return This builder for chaining.
+       * <code>string scheme = 4[json_name = "scheme"];</code>
        */
       public Builder setSchemeBytes(
           com.google.protobuf.ByteString value) {
@@ -12089,8 +11633,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object redirectCode_ = "";
       /**
-       * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-       * @return The redirectCode.
+       * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
        */
       public java.lang.String getRedirectCode() {
         java.lang.Object ref = redirectCode_;
@@ -12105,8 +11648,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-       * @return The bytes for redirectCode.
+       * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
        */
       public com.google.protobuf.ByteString
           getRedirectCodeBytes() {
@@ -12122,9 +11664,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-       * @param value The redirectCode to set.
-       * @return This builder for chaining.
+       * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
        */
       public Builder setRedirectCode(
           java.lang.String value) {
@@ -12137,8 +11677,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-       * @return This builder for chaining.
+       * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
        */
       public Builder clearRedirectCode() {
         
@@ -12147,9 +11686,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string redirect_code = 5 [json_name = "redirectCode"];</code>
-       * @param value The bytes for redirectCode to set.
-       * @return This builder for chaining.
+       * <code>string redirect_code = 5[json_name = "redirectCode"];</code>
        */
       public Builder setRedirectCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -12165,7 +11702,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -12220,25 +11757,21 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
     java.lang.String getUri();
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The bytes for uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
     com.google.protobuf.ByteString
         getUriBytes();
 
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
     java.lang.String getAuthority();
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
     com.google.protobuf.ByteString
         getAuthorityBytes();
@@ -12246,7 +11779,7 @@ public final class RouteRuleOuterClass {
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.HttpRewrite}
    */
-  public static final class HttpRewrite extends
+  public  static final class HttpRewrite extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.HttpRewrite)
       HttpRewriteOrBuilder {
@@ -12258,13 +11791,6 @@ public final class RouteRuleOuterClass {
     private HttpRewrite() {
       uri_ = "";
       authority_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HttpRewrite();
     }
 
     @java.lang.Override
@@ -12280,6 +11806,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12303,7 +11830,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12337,10 +11864,8 @@ public final class RouteRuleOuterClass {
     public static final int URI_FIELD_NUMBER = 1;
     private volatile java.lang.Object uri_;
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
       if (ref instanceof java.lang.String) {
@@ -12354,10 +11879,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string uri = 1 [json_name = "uri"];</code>
-     * @return The bytes for uri.
+     * <code>string uri = 1[json_name = "uri"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getUriBytes() {
       java.lang.Object ref = uri_;
@@ -12375,10 +11898,8 @@ public final class RouteRuleOuterClass {
     public static final int AUTHORITY_FIELD_NUMBER = 2;
     private volatile java.lang.Object authority_;
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public java.lang.String getAuthority() {
       java.lang.Object ref = authority_;
       if (ref instanceof java.lang.String) {
@@ -12392,10 +11913,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string authority = 2 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string authority = 2[json_name = "authority"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAuthorityBytes() {
       java.lang.Object ref = authority_;
@@ -12460,12 +11979,13 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.HttpRewrite) obj;
 
-      if (!getUri()
-          .equals(other.getUri())) return false;
-      if (!getAuthority()
-          .equals(other.getAuthority())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getUri()
+          .equals(other.getUri());
+      result = result && getAuthority()
+          .equals(other.getAuthority());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -12650,35 +12170,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12731,8 +12251,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @return The uri.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public java.lang.String getUri() {
         java.lang.Object ref = uri_;
@@ -12747,8 +12266,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @return The bytes for uri.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public com.google.protobuf.ByteString
           getUriBytes() {
@@ -12764,9 +12282,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @param value The uri to set.
-       * @return This builder for chaining.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public Builder setUri(
           java.lang.String value) {
@@ -12779,8 +12295,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @return This builder for chaining.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public Builder clearUri() {
         
@@ -12789,9 +12304,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string uri = 1 [json_name = "uri"];</code>
-       * @param value The bytes for uri to set.
-       * @return This builder for chaining.
+       * <code>string uri = 1[json_name = "uri"];</code>
        */
       public Builder setUriBytes(
           com.google.protobuf.ByteString value) {
@@ -12807,8 +12320,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object authority_ = "";
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @return The authority.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public java.lang.String getAuthority() {
         java.lang.Object ref = authority_;
@@ -12823,8 +12335,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @return The bytes for authority.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public com.google.protobuf.ByteString
           getAuthorityBytes() {
@@ -12840,9 +12351,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @param value The authority to set.
-       * @return This builder for chaining.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public Builder setAuthority(
           java.lang.String value) {
@@ -12855,8 +12364,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @return This builder for chaining.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public Builder clearAuthority() {
         
@@ -12865,9 +12373,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string authority = 2 [json_name = "authority"];</code>
-       * @param value The bytes for authority to set.
-       * @return This builder for chaining.
+       * <code>string authority = 2[json_name = "authority"];</code>
        */
       public Builder setAuthorityBytes(
           com.google.protobuf.ByteString value) {
@@ -12883,7 +12389,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -12938,24 +12444,22 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
-     * @return Whether the loadBalancer field is set.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
      */
     boolean hasLoadBalancer();
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
-     * @return The loadBalancer.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings getLoadBalancer();
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettingsOrBuilder getLoadBalancerOrBuilder();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.TrafficPolicy}
    */
-  public static final class TrafficPolicy extends
+  public  static final class TrafficPolicy extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.TrafficPolicy)
       TrafficPolicyOrBuilder {
@@ -12965,13 +12469,6 @@ public final class RouteRuleOuterClass {
       super(builder);
     }
     private TrafficPolicy() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TrafficPolicy();
     }
 
     @java.lang.Override
@@ -12987,6 +12484,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13011,7 +12509,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13045,25 +12543,20 @@ public final class RouteRuleOuterClass {
     public static final int LOAD_BALANCER_FIELD_NUMBER = 1;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings loadBalancer_;
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
-     * @return Whether the loadBalancer field is set.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
      */
-    @java.lang.Override
     public boolean hasLoadBalancer() {
       return loadBalancer_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
-     * @return The loadBalancer.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings getLoadBalancer() {
       return loadBalancer_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.getDefaultInstance() : loadBalancer_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettingsOrBuilder getLoadBalancerOrBuilder() {
       return getLoadBalancer();
     }
@@ -13113,13 +12606,14 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.TrafficPolicy) obj;
 
-      if (hasLoadBalancer() != other.hasLoadBalancer()) return false;
+      boolean result = true;
+      result = result && (hasLoadBalancer() == other.hasLoadBalancer());
       if (hasLoadBalancer()) {
-        if (!getLoadBalancer()
-            .equals(other.getLoadBalancer())) return false;
+        result = result && getLoadBalancer()
+            .equals(other.getLoadBalancer());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -13309,35 +12803,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13383,19 +12877,17 @@ public final class RouteRuleOuterClass {
         return this;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings loadBalancer_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings loadBalancer_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettingsOrBuilder> loadBalancerBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
-       * @return Whether the loadBalancer field is set.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public boolean hasLoadBalancer() {
         return loadBalancerBuilder_ != null || loadBalancer_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
-       * @return The loadBalancer.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings getLoadBalancer() {
         if (loadBalancerBuilder_ == null) {
@@ -13405,7 +12897,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public Builder setLoadBalancer(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings value) {
         if (loadBalancerBuilder_ == null) {
@@ -13421,7 +12913,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public Builder setLoadBalancer(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.Builder builderForValue) {
@@ -13435,7 +12927,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public Builder mergeLoadBalancer(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings value) {
         if (loadBalancerBuilder_ == null) {
@@ -13453,7 +12945,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public Builder clearLoadBalancer() {
         if (loadBalancerBuilder_ == null) {
@@ -13467,7 +12959,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.Builder getLoadBalancerBuilder() {
         
@@ -13475,7 +12967,7 @@ public final class RouteRuleOuterClass {
         return getLoadBalancerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettingsOrBuilder getLoadBalancerOrBuilder() {
         if (loadBalancerBuilder_ != null) {
@@ -13486,7 +12978,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1 [json_name = "loadBalancer"];</code>
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings load_balancer = 1[json_name = "loadBalancer"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettingsOrBuilder> 
@@ -13504,7 +12996,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -13559,35 +13051,31 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-     * @return The enum numeric value on the wire for simple.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
      */
     int getSimpleValue();
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-     * @return The simple.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB getSimple();
 
     /**
-     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
-     * @return Whether the consistentHash field is set.
+     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
      */
     boolean hasConsistentHash();
     /**
-     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
-     * @return The consistentHash.
+     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb getConsistentHash();
     /**
-     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
      */
     com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLbOrBuilder getConsistentHashOrBuilder();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.LoadBalancerSettings}
    */
-  public static final class LoadBalancerSettings extends
+  public  static final class LoadBalancerSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.LoadBalancerSettings)
       LoadBalancerSettingsOrBuilder {
@@ -13598,13 +13086,6 @@ public final class RouteRuleOuterClass {
     }
     private LoadBalancerSettings() {
       simple_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LoadBalancerSettings();
     }
 
     @java.lang.Override
@@ -13620,6 +13101,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -13650,7 +13132,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13732,8 +13214,6 @@ public final class RouteRuleOuterClass {
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -13741,10 +13221,6 @@ public final class RouteRuleOuterClass {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static SimpleLB forNumber(int value) {
         switch (value) {
           case 0: return ROUND_ROBIN;
@@ -13769,10 +13245,6 @@ public final class RouteRuleOuterClass {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -13810,17 +13282,15 @@ public final class RouteRuleOuterClass {
     public static final int SIMPLE_FIELD_NUMBER = 1;
     private int simple_;
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-     * @return The enum numeric value on the wire for simple.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
      */
-    @java.lang.Override public int getSimpleValue() {
+    public int getSimpleValue() {
       return simple_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-     * @return The simple.
+     * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
      */
-    @java.lang.Override public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB getSimple() {
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB getSimple() {
       @SuppressWarnings("deprecation")
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB.valueOf(simple_);
       return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB.UNRECOGNIZED : result;
@@ -13829,25 +13299,20 @@ public final class RouteRuleOuterClass {
     public static final int CONSISTENT_HASH_FIELD_NUMBER = 2;
     private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb consistentHash_;
     /**
-     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
-     * @return Whether the consistentHash field is set.
+     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
      */
-    @java.lang.Override
     public boolean hasConsistentHash() {
       return consistentHash_ != null;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
-     * @return The consistentHash.
+     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb getConsistentHash() {
       return consistentHash_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb.getDefaultInstance() : consistentHash_;
     }
     /**
-     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+     * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
      */
-    @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLbOrBuilder getConsistentHashOrBuilder() {
       return getConsistentHash();
     }
@@ -13904,14 +13369,15 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings) obj;
 
-      if (simple_ != other.simple_) return false;
-      if (hasConsistentHash() != other.hasConsistentHash()) return false;
+      boolean result = true;
+      result = result && simple_ == other.simple_;
+      result = result && (hasConsistentHash() == other.hasConsistentHash());
       if (hasConsistentHash()) {
-        if (!getConsistentHash()
-            .equals(other.getConsistentHash())) return false;
+        result = result && getConsistentHash()
+            .equals(other.getConsistentHash());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -14106,35 +13572,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14185,37 +13651,29 @@ public final class RouteRuleOuterClass {
 
       private int simple_ = 0;
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-       * @return The enum numeric value on the wire for simple.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
        */
-      @java.lang.Override public int getSimpleValue() {
+      public int getSimpleValue() {
         return simple_;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-       * @param value The enum numeric value on the wire for simple to set.
-       * @return This builder for chaining.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
        */
       public Builder setSimpleValue(int value) {
-        
         simple_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-       * @return The simple.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
        */
-      @java.lang.Override
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB getSimple() {
         @SuppressWarnings("deprecation")
         com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB.valueOf(simple_);
         return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB.UNRECOGNIZED : result;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-       * @param value The simple to set.
-       * @return This builder for chaining.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
        */
       public Builder setSimple(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.LoadBalancerSettings.SimpleLB value) {
         if (value == null) {
@@ -14227,8 +13685,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1 [json_name = "simple"];</code>
-       * @return This builder for chaining.
+       * <code>.lhotse.networking.v1alpha1.LoadBalancerSettings.SimpleLB simple = 1[json_name = "simple"];</code>
        */
       public Builder clearSimple() {
         
@@ -14237,19 +13694,17 @@ public final class RouteRuleOuterClass {
         return this;
       }
 
-      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb consistentHash_;
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb consistentHash_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLbOrBuilder> consistentHashBuilder_;
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
-       * @return Whether the consistentHash field is set.
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public boolean hasConsistentHash() {
         return consistentHashBuilder_ != null || consistentHash_ != null;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
-       * @return The consistentHash.
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb getConsistentHash() {
         if (consistentHashBuilder_ == null) {
@@ -14259,7 +13714,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public Builder setConsistentHash(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb value) {
         if (consistentHashBuilder_ == null) {
@@ -14275,7 +13730,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public Builder setConsistentHash(
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb.Builder builderForValue) {
@@ -14289,7 +13744,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public Builder mergeConsistentHash(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb value) {
         if (consistentHashBuilder_ == null) {
@@ -14307,7 +13762,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public Builder clearConsistentHash() {
         if (consistentHashBuilder_ == null) {
@@ -14321,7 +13776,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb.Builder getConsistentHashBuilder() {
         
@@ -14329,7 +13784,7 @@ public final class RouteRuleOuterClass {
         return getConsistentHashFieldBuilder().getBuilder();
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLbOrBuilder getConsistentHashOrBuilder() {
         if (consistentHashBuilder_ != null) {
@@ -14340,7 +13795,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2 [json_name = "consistentHash"];</code>
+       * <code>.lhotse.networking.v1alpha1.ConsistentHashLb consistent_hash = 2[json_name = "consistentHash"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLbOrBuilder> 
@@ -14358,7 +13813,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -14413,45 +13868,39 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-     * @return The httpHeaderName.
+     * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
      */
     java.lang.String getHttpHeaderName();
     /**
-     * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-     * @return The bytes for httpHeaderName.
+     * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
      */
     com.google.protobuf.ByteString
         getHttpHeaderNameBytes();
 
     /**
-     * <code>bool use_source_ip = 2 [json_name = "useSourceIp"];</code>
-     * @return The useSourceIp.
+     * <code>bool use_source_ip = 2[json_name = "useSourceIp"];</code>
      */
     boolean getUseSourceIp();
 
     /**
-     * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-     * @return The httpQueryParameterName.
+     * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
      */
     java.lang.String getHttpQueryParameterName();
     /**
-     * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-     * @return The bytes for httpQueryParameterName.
+     * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
      */
     com.google.protobuf.ByteString
         getHttpQueryParameterNameBytes();
 
     /**
-     * <code>int32 minimum_ring_size = 4 [json_name = "minimumRingSize"];</code>
-     * @return The minimumRingSize.
+     * <code>int32 minimum_ring_size = 4[json_name = "minimumRingSize"];</code>
      */
     int getMinimumRingSize();
   }
   /**
    * Protobuf type {@code lhotse.networking.v1alpha1.ConsistentHashLb}
    */
-  public static final class ConsistentHashLb extends
+  public  static final class ConsistentHashLb extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.ConsistentHashLb)
       ConsistentHashLbOrBuilder {
@@ -14462,14 +13911,9 @@ public final class RouteRuleOuterClass {
     }
     private ConsistentHashLb() {
       httpHeaderName_ = "";
+      useSourceIp_ = false;
       httpQueryParameterName_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ConsistentHashLb();
+      minimumRingSize_ = 0;
     }
 
     @java.lang.Override
@@ -14485,6 +13929,7 @@ public final class RouteRuleOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -14518,7 +13963,7 @@ public final class RouteRuleOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14552,10 +13997,8 @@ public final class RouteRuleOuterClass {
     public static final int HTTP_HEADER_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpHeaderName_;
     /**
-     * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-     * @return The httpHeaderName.
+     * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
      */
-    @java.lang.Override
     public java.lang.String getHttpHeaderName() {
       java.lang.Object ref = httpHeaderName_;
       if (ref instanceof java.lang.String) {
@@ -14569,10 +14012,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-     * @return The bytes for httpHeaderName.
+     * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpHeaderNameBytes() {
       java.lang.Object ref = httpHeaderName_;
@@ -14590,10 +14031,8 @@ public final class RouteRuleOuterClass {
     public static final int USE_SOURCE_IP_FIELD_NUMBER = 2;
     private boolean useSourceIp_;
     /**
-     * <code>bool use_source_ip = 2 [json_name = "useSourceIp"];</code>
-     * @return The useSourceIp.
+     * <code>bool use_source_ip = 2[json_name = "useSourceIp"];</code>
      */
-    @java.lang.Override
     public boolean getUseSourceIp() {
       return useSourceIp_;
     }
@@ -14601,10 +14040,8 @@ public final class RouteRuleOuterClass {
     public static final int HTTP_QUERY_PARAMETER_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object httpQueryParameterName_;
     /**
-     * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-     * @return The httpQueryParameterName.
+     * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
      */
-    @java.lang.Override
     public java.lang.String getHttpQueryParameterName() {
       java.lang.Object ref = httpQueryParameterName_;
       if (ref instanceof java.lang.String) {
@@ -14618,10 +14055,8 @@ public final class RouteRuleOuterClass {
       }
     }
     /**
-     * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-     * @return The bytes for httpQueryParameterName.
+     * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getHttpQueryParameterNameBytes() {
       java.lang.Object ref = httpQueryParameterName_;
@@ -14639,10 +14074,8 @@ public final class RouteRuleOuterClass {
     public static final int MINIMUM_RING_SIZE_FIELD_NUMBER = 4;
     private int minimumRingSize_;
     /**
-     * <code>int32 minimum_ring_size = 4 [json_name = "minimumRingSize"];</code>
-     * @return The minimumRingSize.
+     * <code>int32 minimum_ring_size = 4[json_name = "minimumRingSize"];</code>
      */
-    @java.lang.Override
     public int getMinimumRingSize() {
       return minimumRingSize_;
     }
@@ -14711,16 +14144,17 @@ public final class RouteRuleOuterClass {
       }
       com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ConsistentHashLb) obj;
 
-      if (!getHttpHeaderName()
-          .equals(other.getHttpHeaderName())) return false;
-      if (getUseSourceIp()
-          != other.getUseSourceIp()) return false;
-      if (!getHttpQueryParameterName()
-          .equals(other.getHttpQueryParameterName())) return false;
-      if (getMinimumRingSize()
-          != other.getMinimumRingSize()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getHttpHeaderName()
+          .equals(other.getHttpHeaderName());
+      result = result && (getUseSourceIp()
+          == other.getUseSourceIp());
+      result = result && getHttpQueryParameterName()
+          .equals(other.getHttpQueryParameterName());
+      result = result && (getMinimumRingSize()
+          == other.getMinimumRingSize());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -14916,35 +14350,35 @@ public final class RouteRuleOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15003,8 +14437,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object httpHeaderName_ = "";
       /**
-       * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-       * @return The httpHeaderName.
+       * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
        */
       public java.lang.String getHttpHeaderName() {
         java.lang.Object ref = httpHeaderName_;
@@ -15019,8 +14452,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-       * @return The bytes for httpHeaderName.
+       * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
        */
       public com.google.protobuf.ByteString
           getHttpHeaderNameBytes() {
@@ -15036,9 +14468,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-       * @param value The httpHeaderName to set.
-       * @return This builder for chaining.
+       * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
        */
       public Builder setHttpHeaderName(
           java.lang.String value) {
@@ -15051,8 +14481,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-       * @return This builder for chaining.
+       * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
        */
       public Builder clearHttpHeaderName() {
         
@@ -15061,9 +14490,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string http_header_name = 1 [json_name = "httpHeaderName"];</code>
-       * @param value The bytes for httpHeaderName to set.
-       * @return This builder for chaining.
+       * <code>string http_header_name = 1[json_name = "httpHeaderName"];</code>
        */
       public Builder setHttpHeaderNameBytes(
           com.google.protobuf.ByteString value) {
@@ -15079,17 +14506,13 @@ public final class RouteRuleOuterClass {
 
       private boolean useSourceIp_ ;
       /**
-       * <code>bool use_source_ip = 2 [json_name = "useSourceIp"];</code>
-       * @return The useSourceIp.
+       * <code>bool use_source_ip = 2[json_name = "useSourceIp"];</code>
        */
-      @java.lang.Override
       public boolean getUseSourceIp() {
         return useSourceIp_;
       }
       /**
-       * <code>bool use_source_ip = 2 [json_name = "useSourceIp"];</code>
-       * @param value The useSourceIp to set.
-       * @return This builder for chaining.
+       * <code>bool use_source_ip = 2[json_name = "useSourceIp"];</code>
        */
       public Builder setUseSourceIp(boolean value) {
         
@@ -15098,8 +14521,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>bool use_source_ip = 2 [json_name = "useSourceIp"];</code>
-       * @return This builder for chaining.
+       * <code>bool use_source_ip = 2[json_name = "useSourceIp"];</code>
        */
       public Builder clearUseSourceIp() {
         
@@ -15110,8 +14532,7 @@ public final class RouteRuleOuterClass {
 
       private java.lang.Object httpQueryParameterName_ = "";
       /**
-       * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-       * @return The httpQueryParameterName.
+       * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
        */
       public java.lang.String getHttpQueryParameterName() {
         java.lang.Object ref = httpQueryParameterName_;
@@ -15126,8 +14547,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-       * @return The bytes for httpQueryParameterName.
+       * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
        */
       public com.google.protobuf.ByteString
           getHttpQueryParameterNameBytes() {
@@ -15143,9 +14563,7 @@ public final class RouteRuleOuterClass {
         }
       }
       /**
-       * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-       * @param value The httpQueryParameterName to set.
-       * @return This builder for chaining.
+       * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
        */
       public Builder setHttpQueryParameterName(
           java.lang.String value) {
@@ -15158,8 +14576,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-       * @return This builder for chaining.
+       * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
        */
       public Builder clearHttpQueryParameterName() {
         
@@ -15168,9 +14585,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>string http_query_parameter_name = 3 [json_name = "httpQueryParameterName"];</code>
-       * @param value The bytes for httpQueryParameterName to set.
-       * @return This builder for chaining.
+       * <code>string http_query_parameter_name = 3[json_name = "httpQueryParameterName"];</code>
        */
       public Builder setHttpQueryParameterNameBytes(
           com.google.protobuf.ByteString value) {
@@ -15186,17 +14601,13 @@ public final class RouteRuleOuterClass {
 
       private int minimumRingSize_ ;
       /**
-       * <code>int32 minimum_ring_size = 4 [json_name = "minimumRingSize"];</code>
-       * @return The minimumRingSize.
+       * <code>int32 minimum_ring_size = 4[json_name = "minimumRingSize"];</code>
        */
-      @java.lang.Override
       public int getMinimumRingSize() {
         return minimumRingSize_;
       }
       /**
-       * <code>int32 minimum_ring_size = 4 [json_name = "minimumRingSize"];</code>
-       * @param value The minimumRingSize to set.
-       * @return This builder for chaining.
+       * <code>int32 minimum_ring_size = 4[json_name = "minimumRingSize"];</code>
        */
       public Builder setMinimumRingSize(int value) {
         
@@ -15205,8 +14616,7 @@ public final class RouteRuleOuterClass {
         return this;
       }
       /**
-       * <code>int32 minimum_ring_size = 4 [json_name = "minimumRingSize"];</code>
-       * @return This builder for chaining.
+       * <code>int32 minimum_ring_size = 4[json_name = "minimumRingSize"];</code>
        */
       public Builder clearMinimumRingSize() {
         
@@ -15217,7 +14627,7 @@ public final class RouteRuleOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -15421,38 +14831,46 @@ public final class RouteRuleOuterClass {
       "lpha1.StringMatchR\005value:\0028\001\"g\n\013StringMa" +
       "tch\022\026\n\005exact\030\001 \001(\tH\000R\005exact\022\030\n\006prefix\030\002 " +
       "\001(\tH\000R\006prefix\022\026\n\005regex\030\003 \001(\tH\000R\005regexB\016\n" +
-      "\014string_match\"\211\001\n\024HttpRouteDestination\022I" +
+      "\014string_match\"\206\001\n\024HttpRouteDestination\022I" +
       "\n\013destination\030\001 \001(\0132\'.lhotse.networking." +
-      "v1alpha1.DestinationR\013destination\022\033\n\006wei" +
-      "ght\030\002 \001(\005H\000R\006weight\210\001\001B\t\n\007_weight\"%\n\013Des" +
-      "tination\022\026\n\006subset\030\001 \001(\tR\006subset\"\217\001\n\014Htt" +
-      "pRedirect\022\020\n\003uri\030\001 \001(\tR\003uri\022\034\n\tauthority" +
-      "\030\002 \001(\tR\tauthority\022\022\n\004port\030\003 \001(\005R\004port\022\026\n" +
-      "\006scheme\030\004 \001(\tR\006scheme\022#\n\rredirect_code\030\005" +
-      " \001(\tR\014redirectCode\"=\n\013HttpRewrite\022\020\n\003uri" +
-      "\030\001 \001(\tR\003uri\022\034\n\tauthority\030\002 \001(\tR\tauthorit" +
-      "y\"f\n\rTrafficPolicy\022U\n\rload_balancer\030\001 \001(" +
-      "\01320.lhotse.networking.v1alpha1.LoadBalan" +
-      "cerSettingsR\014loadBalancer\"\213\002\n\024LoadBalanc" +
-      "erSettings\022Q\n\006simple\030\001 \001(\01629.lhotse.netw" +
-      "orking.v1alpha1.LoadBalancerSettings.Sim" +
-      "pleLBR\006simple\022U\n\017consistent_hash\030\002 \001(\0132," +
-      ".lhotse.networking.v1alpha1.ConsistentHa" +
-      "shLbR\016consistentHash\"I\n\010SimpleLB\022\017\n\013ROUN" +
-      "D_ROBIN\020\000\022\016\n\nLEAST_CONN\020\001\022\n\n\006RANDOM\020\002\022\020\n" +
-      "\014PASS_THROUGH\020\003\"\307\001\n\020ConsistentHashLb\022(\n\020" +
-      "http_header_name\030\001 \001(\tR\016httpHeaderName\022\"" +
-      "\n\ruse_source_ip\030\002 \001(\010R\013useSourceIp\0229\n\031ht" +
-      "tp_query_parameter_name\030\003 \001(\tR\026httpQuery" +
-      "ParameterName\022*\n\021minimum_ring_size\030\004 \001(\005" +
-      "R\017minimumRingSizeBD\n\"com.lhotse.api.netw" +
-      "orking.v1alpha1Z\036lhotse/api/networking/v" +
-      "1alpha1b\006proto3"
+      "v1alpha1.DestinationR\013destination\022\030\n\006wei" +
+      "ght\030\002 \001(\005H\000R\006weightB\t\n\007_weight\"%\n\013Destin" +
+      "ation\022\026\n\006subset\030\001 \001(\tR\006subset\"\217\001\n\014HttpRe" +
+      "direct\022\020\n\003uri\030\001 \001(\tR\003uri\022\034\n\tauthority\030\002 " +
+      "\001(\tR\tauthority\022\022\n\004port\030\003 \001(\005R\004port\022\026\n\006sc" +
+      "heme\030\004 \001(\tR\006scheme\022#\n\rredirect_code\030\005 \001(" +
+      "\tR\014redirectCode\"=\n\013HttpRewrite\022\020\n\003uri\030\001 " +
+      "\001(\tR\003uri\022\034\n\tauthority\030\002 \001(\tR\tauthority\"f" +
+      "\n\rTrafficPolicy\022U\n\rload_balancer\030\001 \001(\01320" +
+      ".lhotse.networking.v1alpha1.LoadBalancer" +
+      "SettingsR\014loadBalancer\"\213\002\n\024LoadBalancerS" +
+      "ettings\022Q\n\006simple\030\001 \001(\01629.lhotse.network" +
+      "ing.v1alpha1.LoadBalancerSettings.Simple" +
+      "LBR\006simple\022U\n\017consistent_hash\030\002 \001(\0132,.lh" +
+      "otse.networking.v1alpha1.ConsistentHashL" +
+      "bR\016consistentHash\"I\n\010SimpleLB\022\017\n\013ROUND_R" +
+      "OBIN\020\000\022\016\n\nLEAST_CONN\020\001\022\n\n\006RANDOM\020\002\022\020\n\014PA" +
+      "SS_THROUGH\020\003\"\307\001\n\020ConsistentHashLb\022(\n\020htt" +
+      "p_header_name\030\001 \001(\tR\016httpHeaderName\022\"\n\ru" +
+      "se_source_ip\030\002 \001(\010R\013useSourceIp\0229\n\031http_" +
+      "query_parameter_name\030\003 \001(\tR\026httpQueryPar" +
+      "ameterName\022*\n\021minimum_ring_size\030\004 \001(\005R\017m" +
+      "inimumRingSizeBD\n\"com.lhotse.api.network" +
+      "ing.v1alpha1Z\036lhotse/api/networking/v1al" +
+      "pha1b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_lhotse_networking_v1alpha1_Service_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_lhotse_networking_v1alpha1_Service_fieldAccessorTable = new

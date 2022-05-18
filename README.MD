@@ -4,6 +4,7 @@
 安装buf工具
 ```shell
 brew install bufbuild/buf/buf
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 
 ## protobuf gen
