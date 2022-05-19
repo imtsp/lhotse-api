@@ -12,6 +12,32 @@ message Service {
     repeated RouteRule rules = 4;
 }
 
+enum ModifyType {
+    ADD = 0;
+    UPDATE = 1;
+    REMOVE = 2;
+}
+
+message ServiceDiscovery {
+    ModifyType action = 1;
+    string service_name = 2;
+    Service service_detail = 3;
+}
+
+message ClusterDiscovery {
+    ModifyType action = 1;
+    string service_name = 2;
+    string cluster_name = 3;
+    Cluster cluster_detail = 4;
+}
+
+message EndpointDiscovery {
+    ModifyType action = 1;
+    string service_name = 2;
+    repeated string cluster_names = 3;
+    Endpoint endpoint_detail = 4;
+}
+
 message Cluster {
     string cluster_name = 1;
     repeated Endpoint endpoints = 2;
