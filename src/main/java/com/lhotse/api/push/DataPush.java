@@ -159,29 +159,29 @@ public final class DataPush {
   }
 
   /**
-   * Protobuf enum {@code lhotse.networking.v1alpha1.PushStatus}
+   * Protobuf enum {@code lhotse.networking.v1alpha1.RespStatus}
    */
-  public enum PushStatus
+  public enum RespStatus
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>PUSH_STATUS_OK = 0;</code>
+     * <code>STATUS_OK = 0;</code>
      */
-    PUSH_STATUS_OK(0),
+    STATUS_OK(0),
     /**
-     * <code>PUSH_STATUS_FAIL = 1;</code>
+     * <code>STATUS_FAIL = 1;</code>
      */
-    PUSH_STATUS_FAIL(1),
+    STATUS_FAIL(1),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>PUSH_STATUS_OK = 0;</code>
+     * <code>STATUS_OK = 0;</code>
      */
-    public static final int PUSH_STATUS_OK_VALUE = 0;
+    public static final int STATUS_OK_VALUE = 0;
     /**
-     * <code>PUSH_STATUS_FAIL = 1;</code>
+     * <code>STATUS_FAIL = 1;</code>
      */
-    public static final int PUSH_STATUS_FAIL_VALUE = 1;
+    public static final int STATUS_FAIL_VALUE = 1;
 
 
     public final int getNumber() {
@@ -198,7 +198,7 @@ public final class DataPush {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static PushStatus valueOf(int value) {
+    public static RespStatus valueOf(int value) {
       return forNumber(value);
     }
 
@@ -206,23 +206,23 @@ public final class DataPush {
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static PushStatus forNumber(int value) {
+    public static RespStatus forNumber(int value) {
       switch (value) {
-        case 0: return PUSH_STATUS_OK;
-        case 1: return PUSH_STATUS_FAIL;
+        case 0: return STATUS_OK;
+        case 1: return STATUS_FAIL;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<PushStatus>
+    public static com.google.protobuf.Internal.EnumLiteMap<RespStatus>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        PushStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PushStatus>() {
-            public PushStatus findValueByNumber(int number) {
-              return PushStatus.forNumber(number);
+        RespStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RespStatus>() {
+            public RespStatus findValueByNumber(int number) {
+              return RespStatus.forNumber(number);
             }
           };
 
@@ -243,9 +243,9 @@ public final class DataPush {
       return com.lhotse.api.push.DataPush.getDescriptor().getEnumTypes().get(1);
     }
 
-    private static final PushStatus[] VALUES = values();
+    private static final RespStatus[] VALUES = values();
 
-    public static PushStatus valueOf(
+    public static RespStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -259,11 +259,11 @@ public final class DataPush {
 
     private final int value;
 
-    private PushStatus(int value) {
+    private RespStatus(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:lhotse.networking.v1alpha1.PushStatus)
+    // @@protoc_insertion_point(enum_scope:lhotse.networking.v1alpha1.RespStatus)
   }
 
   /**
@@ -392,6 +392,164 @@ public final class DataPush {
     }
 
     // @@protoc_insertion_point(enum_scope:lhotse.networking.v1alpha1.PushAction)
+  }
+
+  /**
+   * Protobuf enum {@code lhotse.networking.v1alpha1.AppStatus}
+   */
+  public enum AppStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * 正在启动
+     * </pre>
+     *
+     * <code>STARTING = 0;</code>
+     */
+    STARTING(0),
+    /**
+     * <pre>
+     * 终止中
+     * </pre>
+     *
+     * <code>TERMINATING = 1;</code>
+     */
+    TERMINATING(1),
+    /**
+     * <pre>
+     * 已终止
+     * </pre>
+     *
+     * <code>TERMINATED = 2;</code>
+     */
+    TERMINATED(2),
+    /**
+     * <pre>
+     * 运行中
+     * </pre>
+     *
+     * <code>RUNNING = 4;</code>
+     */
+    RUNNING(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * 正在启动
+     * </pre>
+     *
+     * <code>STARTING = 0;</code>
+     */
+    public static final int STARTING_VALUE = 0;
+    /**
+     * <pre>
+     * 终止中
+     * </pre>
+     *
+     * <code>TERMINATING = 1;</code>
+     */
+    public static final int TERMINATING_VALUE = 1;
+    /**
+     * <pre>
+     * 已终止
+     * </pre>
+     *
+     * <code>TERMINATED = 2;</code>
+     */
+    public static final int TERMINATED_VALUE = 2;
+    /**
+     * <pre>
+     * 运行中
+     * </pre>
+     *
+     * <code>RUNNING = 4;</code>
+     */
+    public static final int RUNNING_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AppStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AppStatus forNumber(int value) {
+      switch (value) {
+        case 0: return STARTING;
+        case 1: return TERMINATING;
+        case 2: return TERMINATED;
+        case 4: return RUNNING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AppStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AppStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AppStatus>() {
+            public AppStatus findValueByNumber(int number) {
+              return AppStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final AppStatus[] VALUES = values();
+
+    public static AppStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AppStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:lhotse.networking.v1alpha1.AppStatus)
   }
 
   public interface DataPushRequestOrBuilder extends
@@ -2431,7 +2589,7 @@ public final class DataPush {
      * 状态
      * </pre>
      *
-     * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
@@ -2440,10 +2598,10 @@ public final class DataPush {
      * 状态
      * </pre>
      *
-     * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    com.lhotse.api.push.DataPush.PushStatus getStatus();
+    com.lhotse.api.push.DataPush.RespStatus getStatus();
 
     /**
      * <pre>
@@ -2567,7 +2725,7 @@ public final class DataPush {
      * 状态
      * </pre>
      *
-     * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
@@ -2578,13 +2736,13 @@ public final class DataPush {
      * 状态
      * </pre>
      *
-     * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    @java.lang.Override public com.lhotse.api.push.DataPush.PushStatus getStatus() {
+    @java.lang.Override public com.lhotse.api.push.DataPush.RespStatus getStatus() {
       @SuppressWarnings("deprecation")
-      com.lhotse.api.push.DataPush.PushStatus result = com.lhotse.api.push.DataPush.PushStatus.valueOf(status_);
-      return result == null ? com.lhotse.api.push.DataPush.PushStatus.UNRECOGNIZED : result;
+      com.lhotse.api.push.DataPush.RespStatus result = com.lhotse.api.push.DataPush.RespStatus.valueOf(status_);
+      return result == null ? com.lhotse.api.push.DataPush.RespStatus.UNRECOGNIZED : result;
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 2;
@@ -2647,7 +2805,7 @@ public final class DataPush {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (status_ != com.lhotse.api.push.DataPush.PushStatus.PUSH_STATUS_OK.getNumber()) {
+      if (status_ != com.lhotse.api.push.DataPush.RespStatus.STATUS_OK.getNumber()) {
         output.writeEnum(1, status_);
       }
       if (!getMessageBytes().isEmpty()) {
@@ -2662,7 +2820,7 @@ public final class DataPush {
       if (size != -1) return size;
 
       size = 0;
-      if (status_ != com.lhotse.api.push.DataPush.PushStatus.PUSH_STATUS_OK.getNumber()) {
+      if (status_ != com.lhotse.api.push.DataPush.RespStatus.STATUS_OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, status_);
       }
@@ -2961,7 +3119,7 @@ public final class DataPush {
        * 状态
        * </pre>
        *
-       * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
@@ -2972,7 +3130,7 @@ public final class DataPush {
        * 状态
        * </pre>
        *
-       * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -2987,25 +3145,25 @@ public final class DataPush {
        * 状态
        * </pre>
        *
-       * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
        * @return The status.
        */
       @java.lang.Override
-      public com.lhotse.api.push.DataPush.PushStatus getStatus() {
+      public com.lhotse.api.push.DataPush.RespStatus getStatus() {
         @SuppressWarnings("deprecation")
-        com.lhotse.api.push.DataPush.PushStatus result = com.lhotse.api.push.DataPush.PushStatus.valueOf(status_);
-        return result == null ? com.lhotse.api.push.DataPush.PushStatus.UNRECOGNIZED : result;
+        com.lhotse.api.push.DataPush.RespStatus result = com.lhotse.api.push.DataPush.RespStatus.valueOf(status_);
+        return result == null ? com.lhotse.api.push.DataPush.RespStatus.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * 状态
        * </pre>
        *
-       * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.lhotse.api.push.DataPush.PushStatus value) {
+      public Builder setStatus(com.lhotse.api.push.DataPush.RespStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3019,7 +3177,7 @@ public final class DataPush {
        * 状态
        * </pre>
        *
-       * <code>.lhotse.networking.v1alpha1.PushStatus status = 1 [json_name = "status"];</code>
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -3204,6 +3362,18 @@ public final class DataPush {
      */
     com.google.protobuf.ByteString
         getVersionBytes();
+
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The proxyAppId.
+     */
+    java.lang.String getProxyAppId();
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The bytes for proxyAppId.
+     */
+    com.google.protobuf.ByteString
+        getProxyAppIdBytes();
   }
   /**
    * <pre>
@@ -3224,6 +3394,7 @@ public final class DataPush {
     private AgentRegisterRequest() {
       agentId_ = "";
       version_ = "";
+      proxyAppId_ = "";
     }
 
     @java.lang.Override
@@ -3266,6 +3437,12 @@ public final class DataPush {
               java.lang.String s = input.readStringRequireUtf8();
 
               version_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              proxyAppId_ = s;
               break;
             }
             default: {
@@ -3376,6 +3553,44 @@ public final class DataPush {
       }
     }
 
+    public static final int PROXY_APP_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object proxyAppId_;
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The proxyAppId.
+     */
+    @java.lang.Override
+    public java.lang.String getProxyAppId() {
+      java.lang.Object ref = proxyAppId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proxyAppId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The bytes for proxyAppId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProxyAppIdBytes() {
+      java.lang.Object ref = proxyAppId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proxyAppId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3396,6 +3611,9 @@ public final class DataPush {
       if (!getVersionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
       }
+      if (!getProxyAppIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, proxyAppId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3410,6 +3628,9 @@ public final class DataPush {
       }
       if (!getVersionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
+      }
+      if (!getProxyAppIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, proxyAppId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3430,6 +3651,8 @@ public final class DataPush {
           .equals(other.getAgentId())) return false;
       if (!getVersion()
           .equals(other.getVersion())) return false;
+      if (!getProxyAppId()
+          .equals(other.getProxyAppId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3445,6 +3668,8 @@ public final class DataPush {
       hash = (53 * hash) + getAgentId().hashCode();
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + PROXY_APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProxyAppId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3586,6 +3811,8 @@ public final class DataPush {
 
         version_ = "";
 
+        proxyAppId_ = "";
+
         return this;
       }
 
@@ -3614,6 +3841,7 @@ public final class DataPush {
         com.lhotse.api.push.DataPush.AgentRegisterRequest result = new com.lhotse.api.push.DataPush.AgentRegisterRequest(this);
         result.agentId_ = agentId_;
         result.version_ = version_;
+        result.proxyAppId_ = proxyAppId_;
         onBuilt();
         return result;
       }
@@ -3668,6 +3896,10 @@ public final class DataPush {
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          onChanged();
+        }
+        if (!other.getProxyAppId().isEmpty()) {
+          proxyAppId_ = other.proxyAppId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3850,6 +4082,82 @@ public final class DataPush {
         onChanged();
         return this;
       }
+
+      private java.lang.Object proxyAppId_ = "";
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @return The proxyAppId.
+       */
+      public java.lang.String getProxyAppId() {
+        java.lang.Object ref = proxyAppId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proxyAppId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @return The bytes for proxyAppId.
+       */
+      public com.google.protobuf.ByteString
+          getProxyAppIdBytes() {
+        java.lang.Object ref = proxyAppId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proxyAppId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @param value The proxyAppId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxyAppId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        proxyAppId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProxyAppId() {
+        
+        proxyAppId_ = getDefaultInstance().getProxyAppId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @param value The bytes for proxyAppId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxyAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        proxyAppId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3903,6 +4211,3198 @@ public final class DataPush {
 
   }
 
+  public interface AgentRegisterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.AgentRegisterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string checksum = 1 [json_name = "checksum"];</code>
+     * @return The checksum.
+     */
+    java.lang.String getChecksum();
+    /**
+     * <code>string checksum = 1 [json_name = "checksum"];</code>
+     * @return The bytes for checksum.
+     */
+    com.google.protobuf.ByteString
+        getChecksumBytes();
+
+    /**
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+     * @return Whether the data field is set.
+     */
+    boolean hasData();
+    /**
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.Any getData();
+    /**
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.AgentRegisterResponse}
+   */
+  public static final class AgentRegisterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.AgentRegisterResponse)
+      AgentRegisterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AgentRegisterResponse.newBuilder() to construct.
+    private AgentRegisterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AgentRegisterResponse() {
+      checksum_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentRegisterResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AgentRegisterResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              checksum_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Any.Builder subBuilder = null;
+              if (data_ != null) {
+                subBuilder = data_.toBuilder();
+              }
+              data_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(data_);
+                data_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.push.DataPush.AgentRegisterResponse.class, com.lhotse.api.push.DataPush.AgentRegisterResponse.Builder.class);
+    }
+
+    public static final int CHECKSUM_FIELD_NUMBER = 1;
+    private volatile java.lang.Object checksum_;
+    /**
+     * <code>string checksum = 1 [json_name = "checksum"];</code>
+     * @return The checksum.
+     */
+    @java.lang.Override
+    public java.lang.String getChecksum() {
+      java.lang.Object ref = checksum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        checksum_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string checksum = 1 [json_name = "checksum"];</code>
+     * @return The bytes for checksum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChecksumBytes() {
+      java.lang.Object ref = checksum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        checksum_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.Any data_;
+    /**
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+     * @return Whether the data field is set.
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return data_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getData() {
+      return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+    }
+    /**
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+      return getData();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getChecksumBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, checksum_);
+      }
+      if (data_ != null) {
+        output.writeMessage(2, getData());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getChecksumBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, checksum_);
+      }
+      if (data_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getData());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.push.DataPush.AgentRegisterResponse)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.push.DataPush.AgentRegisterResponse other = (com.lhotse.api.push.DataPush.AgentRegisterResponse) obj;
+
+      if (!getChecksum()
+          .equals(other.getChecksum())) return false;
+      if (hasData() != other.hasData()) return false;
+      if (hasData()) {
+        if (!getData()
+            .equals(other.getData())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
+      hash = (53 * hash) + getChecksum().hashCode();
+      if (hasData()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.push.DataPush.AgentRegisterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.AgentRegisterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.AgentRegisterResponse)
+        com.lhotse.api.push.DataPush.AgentRegisterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.push.DataPush.AgentRegisterResponse.class, com.lhotse.api.push.DataPush.AgentRegisterResponse.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.push.DataPush.AgentRegisterResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        checksum_ = "";
+
+        if (dataBuilder_ == null) {
+          data_ = null;
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AgentRegisterResponse getDefaultInstanceForType() {
+        return com.lhotse.api.push.DataPush.AgentRegisterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AgentRegisterResponse build() {
+        com.lhotse.api.push.DataPush.AgentRegisterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AgentRegisterResponse buildPartial() {
+        com.lhotse.api.push.DataPush.AgentRegisterResponse result = new com.lhotse.api.push.DataPush.AgentRegisterResponse(this);
+        result.checksum_ = checksum_;
+        if (dataBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = dataBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.push.DataPush.AgentRegisterResponse) {
+          return mergeFrom((com.lhotse.api.push.DataPush.AgentRegisterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.push.DataPush.AgentRegisterResponse other) {
+        if (other == com.lhotse.api.push.DataPush.AgentRegisterResponse.getDefaultInstance()) return this;
+        if (!other.getChecksum().isEmpty()) {
+          checksum_ = other.checksum_;
+          onChanged();
+        }
+        if (other.hasData()) {
+          mergeData(other.getData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.push.DataPush.AgentRegisterResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.push.DataPush.AgentRegisterResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object checksum_ = "";
+      /**
+       * <code>string checksum = 1 [json_name = "checksum"];</code>
+       * @return The checksum.
+       */
+      public java.lang.String getChecksum() {
+        java.lang.Object ref = checksum_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          checksum_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string checksum = 1 [json_name = "checksum"];</code>
+       * @return The bytes for checksum.
+       */
+      public com.google.protobuf.ByteString
+          getChecksumBytes() {
+        java.lang.Object ref = checksum_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          checksum_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string checksum = 1 [json_name = "checksum"];</code>
+       * @param value The checksum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksum(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        checksum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string checksum = 1 [json_name = "checksum"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChecksum() {
+        
+        checksum_ = getDefaultInstance().getChecksum();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string checksum = 1 [json_name = "checksum"];</code>
+       * @param value The bytes for checksum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksumBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        checksum_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any data_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       * @return Whether the data field is set.
+       */
+      public boolean hasData() {
+        return dataBuilder_ != null || data_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       * @return The data.
+       */
+      public com.google.protobuf.Any getData() {
+        if (dataBuilder_ == null) {
+          return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+        } else {
+          return dataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Any value) {
+        if (dataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      public Builder setData(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (dataBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      public Builder mergeData(com.google.protobuf.Any value) {
+        if (dataBuilder_ == null) {
+          if (data_ != null) {
+            data_ =
+              com.google.protobuf.Any.newBuilder(data_).mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          dataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      public Builder clearData() {
+        if (dataBuilder_ == null) {
+          data_ = null;
+          onChanged();
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      public com.google.protobuf.Any.Builder getDataBuilder() {
+        
+        onChanged();
+        return getDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+        if (dataBuilder_ != null) {
+          return dataBuilder_.getMessageOrBuilder();
+        } else {
+          return data_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : data_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getDataFieldBuilder() {
+        if (dataBuilder_ == null) {
+          dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getData(),
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        return dataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.AgentRegisterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.AgentRegisterResponse)
+    private static final com.lhotse.api.push.DataPush.AgentRegisterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.push.DataPush.AgentRegisterResponse();
+    }
+
+    public static com.lhotse.api.push.DataPush.AgentRegisterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AgentRegisterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AgentRegisterResponse>() {
+      @java.lang.Override
+      public AgentRegisterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AgentRegisterResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AgentRegisterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AgentRegisterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.AgentRegisterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.UploadStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The agentId.
+     */
+    java.lang.String getAgentId();
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The bytes for agentId.
+     */
+    com.google.protobuf.ByteString
+        getAgentIdBytes();
+
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The proxyAppId.
+     */
+    java.lang.String getProxyAppId();
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The bytes for proxyAppId.
+     */
+    com.google.protobuf.ByteString
+        getProxyAppIdBytes();
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+     * @return Whether the proxyAppHealthCheck field is set.
+     */
+    boolean hasProxyAppHealthCheck();
+    /**
+     * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+     * @return The proxyAppHealthCheck.
+     */
+    com.lhotse.api.push.DataPush.ProxyAppHealthCheck getProxyAppHealthCheck();
+    /**
+     * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+     */
+    com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder getProxyAppHealthCheckOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.UploadStatusRequest}
+   */
+  public static final class UploadStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.UploadStatusRequest)
+      UploadStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadStatusRequest.newBuilder() to construct.
+    private UploadStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadStatusRequest() {
+      agentId_ = "";
+      version_ = "";
+      proxyAppId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadStatusRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadStatusRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              agentId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              version_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              proxyAppId_ = s;
+              break;
+            }
+            case 34: {
+              com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder subBuilder = null;
+              if (proxyAppHealthCheck_ != null) {
+                subBuilder = proxyAppHealthCheck_.toBuilder();
+              }
+              proxyAppHealthCheck_ = input.readMessage(com.lhotse.api.push.DataPush.ProxyAppHealthCheck.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(proxyAppHealthCheck_);
+                proxyAppHealthCheck_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.push.DataPush.UploadStatusRequest.class, com.lhotse.api.push.DataPush.UploadStatusRequest.Builder.class);
+    }
+
+    public static final int AGENT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object agentId_;
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The agentId.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentId() {
+      java.lang.Object ref = agentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The bytes for agentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentIdBytes() {
+      java.lang.Object ref = agentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object version_;
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROXY_APP_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object proxyAppId_;
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The proxyAppId.
+     */
+    @java.lang.Override
+    public java.lang.String getProxyAppId() {
+      java.lang.Object ref = proxyAppId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proxyAppId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+     * @return The bytes for proxyAppId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProxyAppIdBytes() {
+      java.lang.Object ref = proxyAppId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proxyAppId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROXY_APP_HEALTH_CHECK_FIELD_NUMBER = 4;
+    private com.lhotse.api.push.DataPush.ProxyAppHealthCheck proxyAppHealthCheck_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+     * @return Whether the proxyAppHealthCheck field is set.
+     */
+    @java.lang.Override
+    public boolean hasProxyAppHealthCheck() {
+      return proxyAppHealthCheck_ != null;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+     * @return The proxyAppHealthCheck.
+     */
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.ProxyAppHealthCheck getProxyAppHealthCheck() {
+      return proxyAppHealthCheck_ == null ? com.lhotse.api.push.DataPush.ProxyAppHealthCheck.getDefaultInstance() : proxyAppHealthCheck_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+     */
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder getProxyAppHealthCheckOrBuilder() {
+      return getProxyAppHealthCheck();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAgentIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agentId_);
+      }
+      if (!getVersionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
+      }
+      if (!getProxyAppIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, proxyAppId_);
+      }
+      if (proxyAppHealthCheck_ != null) {
+        output.writeMessage(4, getProxyAppHealthCheck());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAgentIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agentId_);
+      }
+      if (!getVersionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
+      }
+      if (!getProxyAppIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, proxyAppId_);
+      }
+      if (proxyAppHealthCheck_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getProxyAppHealthCheck());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.push.DataPush.UploadStatusRequest)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.push.DataPush.UploadStatusRequest other = (com.lhotse.api.push.DataPush.UploadStatusRequest) obj;
+
+      if (!getAgentId()
+          .equals(other.getAgentId())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!getProxyAppId()
+          .equals(other.getProxyAppId())) return false;
+      if (hasProxyAppHealthCheck() != other.hasProxyAppHealthCheck()) return false;
+      if (hasProxyAppHealthCheck()) {
+        if (!getProxyAppHealthCheck()
+            .equals(other.getProxyAppHealthCheck())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AGENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentId().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + PROXY_APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProxyAppId().hashCode();
+      if (hasProxyAppHealthCheck()) {
+        hash = (37 * hash) + PROXY_APP_HEALTH_CHECK_FIELD_NUMBER;
+        hash = (53 * hash) + getProxyAppHealthCheck().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.push.DataPush.UploadStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.UploadStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.UploadStatusRequest)
+        com.lhotse.api.push.DataPush.UploadStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.push.DataPush.UploadStatusRequest.class, com.lhotse.api.push.DataPush.UploadStatusRequest.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.push.DataPush.UploadStatusRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        agentId_ = "";
+
+        version_ = "";
+
+        proxyAppId_ = "";
+
+        if (proxyAppHealthCheckBuilder_ == null) {
+          proxyAppHealthCheck_ = null;
+        } else {
+          proxyAppHealthCheck_ = null;
+          proxyAppHealthCheckBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.UploadStatusRequest getDefaultInstanceForType() {
+        return com.lhotse.api.push.DataPush.UploadStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.UploadStatusRequest build() {
+        com.lhotse.api.push.DataPush.UploadStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.UploadStatusRequest buildPartial() {
+        com.lhotse.api.push.DataPush.UploadStatusRequest result = new com.lhotse.api.push.DataPush.UploadStatusRequest(this);
+        result.agentId_ = agentId_;
+        result.version_ = version_;
+        result.proxyAppId_ = proxyAppId_;
+        if (proxyAppHealthCheckBuilder_ == null) {
+          result.proxyAppHealthCheck_ = proxyAppHealthCheck_;
+        } else {
+          result.proxyAppHealthCheck_ = proxyAppHealthCheckBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.push.DataPush.UploadStatusRequest) {
+          return mergeFrom((com.lhotse.api.push.DataPush.UploadStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.push.DataPush.UploadStatusRequest other) {
+        if (other == com.lhotse.api.push.DataPush.UploadStatusRequest.getDefaultInstance()) return this;
+        if (!other.getAgentId().isEmpty()) {
+          agentId_ = other.agentId_;
+          onChanged();
+        }
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
+          onChanged();
+        }
+        if (!other.getProxyAppId().isEmpty()) {
+          proxyAppId_ = other.proxyAppId_;
+          onChanged();
+        }
+        if (other.hasProxyAppHealthCheck()) {
+          mergeProxyAppHealthCheck(other.getProxyAppHealthCheck());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.push.DataPush.UploadStatusRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.push.DataPush.UploadStatusRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object agentId_ = "";
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @return The agentId.
+       */
+      public java.lang.String getAgentId() {
+        java.lang.Object ref = agentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          agentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @return The bytes for agentId.
+       */
+      public com.google.protobuf.ByteString
+          getAgentIdBytes() {
+        java.lang.Object ref = agentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          agentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @param value The agentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        agentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentId() {
+        
+        agentId_ = getDefaultInstance().getAgentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @param value The bytes for agentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        agentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        version_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proxyAppId_ = "";
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @return The proxyAppId.
+       */
+      public java.lang.String getProxyAppId() {
+        java.lang.Object ref = proxyAppId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proxyAppId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @return The bytes for proxyAppId.
+       */
+      public com.google.protobuf.ByteString
+          getProxyAppIdBytes() {
+        java.lang.Object ref = proxyAppId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proxyAppId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @param value The proxyAppId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxyAppId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        proxyAppId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProxyAppId() {
+        
+        proxyAppId_ = getDefaultInstance().getProxyAppId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proxy_app_id = 3 [json_name = "proxyAppId"];</code>
+       * @param value The bytes for proxyAppId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxyAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        proxyAppId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.lhotse.api.push.DataPush.ProxyAppHealthCheck proxyAppHealthCheck_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.push.DataPush.ProxyAppHealthCheck, com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder, com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder> proxyAppHealthCheckBuilder_;
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       * @return Whether the proxyAppHealthCheck field is set.
+       */
+      public boolean hasProxyAppHealthCheck() {
+        return proxyAppHealthCheckBuilder_ != null || proxyAppHealthCheck_ != null;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       * @return The proxyAppHealthCheck.
+       */
+      public com.lhotse.api.push.DataPush.ProxyAppHealthCheck getProxyAppHealthCheck() {
+        if (proxyAppHealthCheckBuilder_ == null) {
+          return proxyAppHealthCheck_ == null ? com.lhotse.api.push.DataPush.ProxyAppHealthCheck.getDefaultInstance() : proxyAppHealthCheck_;
+        } else {
+          return proxyAppHealthCheckBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      public Builder setProxyAppHealthCheck(com.lhotse.api.push.DataPush.ProxyAppHealthCheck value) {
+        if (proxyAppHealthCheckBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proxyAppHealthCheck_ = value;
+          onChanged();
+        } else {
+          proxyAppHealthCheckBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      public Builder setProxyAppHealthCheck(
+          com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder builderForValue) {
+        if (proxyAppHealthCheckBuilder_ == null) {
+          proxyAppHealthCheck_ = builderForValue.build();
+          onChanged();
+        } else {
+          proxyAppHealthCheckBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      public Builder mergeProxyAppHealthCheck(com.lhotse.api.push.DataPush.ProxyAppHealthCheck value) {
+        if (proxyAppHealthCheckBuilder_ == null) {
+          if (proxyAppHealthCheck_ != null) {
+            proxyAppHealthCheck_ =
+              com.lhotse.api.push.DataPush.ProxyAppHealthCheck.newBuilder(proxyAppHealthCheck_).mergeFrom(value).buildPartial();
+          } else {
+            proxyAppHealthCheck_ = value;
+          }
+          onChanged();
+        } else {
+          proxyAppHealthCheckBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      public Builder clearProxyAppHealthCheck() {
+        if (proxyAppHealthCheckBuilder_ == null) {
+          proxyAppHealthCheck_ = null;
+          onChanged();
+        } else {
+          proxyAppHealthCheck_ = null;
+          proxyAppHealthCheckBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      public com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder getProxyAppHealthCheckBuilder() {
+        
+        onChanged();
+        return getProxyAppHealthCheckFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      public com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder getProxyAppHealthCheckOrBuilder() {
+        if (proxyAppHealthCheckBuilder_ != null) {
+          return proxyAppHealthCheckBuilder_.getMessageOrBuilder();
+        } else {
+          return proxyAppHealthCheck_ == null ?
+              com.lhotse.api.push.DataPush.ProxyAppHealthCheck.getDefaultInstance() : proxyAppHealthCheck_;
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ProxyAppHealthCheck proxy_app_health_check = 4 [json_name = "proxyAppHealthCheck"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.push.DataPush.ProxyAppHealthCheck, com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder, com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder> 
+          getProxyAppHealthCheckFieldBuilder() {
+        if (proxyAppHealthCheckBuilder_ == null) {
+          proxyAppHealthCheckBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lhotse.api.push.DataPush.ProxyAppHealthCheck, com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder, com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder>(
+                  getProxyAppHealthCheck(),
+                  getParentForChildren(),
+                  isClean());
+          proxyAppHealthCheck_ = null;
+        }
+        return proxyAppHealthCheckBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.UploadStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.UploadStatusRequest)
+    private static final com.lhotse.api.push.DataPush.UploadStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.push.DataPush.UploadStatusRequest();
+    }
+
+    public static com.lhotse.api.push.DataPush.UploadStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UploadStatusRequest>() {
+      @java.lang.Override
+      public UploadStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadStatusRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.UploadStatusRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.UploadStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.lhotse.api.push.DataPush.RespStatus getStatus();
+
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.UploadStatusResponse}
+   */
+  public static final class UploadStatusResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.UploadStatusResponse)
+      UploadStatusResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadStatusResponse.newBuilder() to construct.
+    private UploadStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadStatusResponse() {
+      status_ = 0;
+      message_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadStatusResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadStatusResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.push.DataPush.UploadStatusResponse.class, com.lhotse.api.push.DataPush.UploadStatusResponse.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.lhotse.api.push.DataPush.RespStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.lhotse.api.push.DataPush.RespStatus result = com.lhotse.api.push.DataPush.RespStatus.valueOf(status_);
+      return result == null ? com.lhotse.api.push.DataPush.RespStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != com.lhotse.api.push.DataPush.RespStatus.STATUS_OK.getNumber()) {
+        output.writeEnum(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != com.lhotse.api.push.DataPush.RespStatus.STATUS_OK.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.push.DataPush.UploadStatusResponse)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.push.DataPush.UploadStatusResponse other = (com.lhotse.api.push.DataPush.UploadStatusResponse) obj;
+
+      if (status_ != other.status_) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.push.DataPush.UploadStatusResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.UploadStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.UploadStatusResponse)
+        com.lhotse.api.push.DataPush.UploadStatusResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.push.DataPush.UploadStatusResponse.class, com.lhotse.api.push.DataPush.UploadStatusResponse.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.push.DataPush.UploadStatusResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        message_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.UploadStatusResponse getDefaultInstanceForType() {
+        return com.lhotse.api.push.DataPush.UploadStatusResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.UploadStatusResponse build() {
+        com.lhotse.api.push.DataPush.UploadStatusResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.UploadStatusResponse buildPartial() {
+        com.lhotse.api.push.DataPush.UploadStatusResponse result = new com.lhotse.api.push.DataPush.UploadStatusResponse(this);
+        result.status_ = status_;
+        result.message_ = message_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.push.DataPush.UploadStatusResponse) {
+          return mergeFrom((com.lhotse.api.push.DataPush.UploadStatusResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.push.DataPush.UploadStatusResponse other) {
+        if (other == com.lhotse.api.push.DataPush.UploadStatusResponse.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.push.DataPush.UploadStatusResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.push.DataPush.UploadStatusResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.RespStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        com.lhotse.api.push.DataPush.RespStatus result = com.lhotse.api.push.DataPush.RespStatus.valueOf(status_);
+        return result == null ? com.lhotse.api.push.DataPush.RespStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.lhotse.api.push.DataPush.RespStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.RespStatus status = 1 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.UploadStatusResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.UploadStatusResponse)
+    private static final com.lhotse.api.push.DataPush.UploadStatusResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.push.DataPush.UploadStatusResponse();
+    }
+
+    public static com.lhotse.api.push.DataPush.UploadStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UploadStatusResponse>() {
+      @java.lang.Override
+      public UploadStatusResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadStatusResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadStatusResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadStatusResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.UploadStatusResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProxyAppHealthCheckOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.ProxyAppHealthCheck)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string app = 1 [json_name = "app"];</code>
+     * @return The app.
+     */
+    java.lang.String getApp();
+    /**
+     * <code>string app = 1 [json_name = "app"];</code>
+     * @return The bytes for app.
+     */
+    com.google.protobuf.ByteString
+        getAppBytes();
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.lhotse.api.push.DataPush.AppStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.ProxyAppHealthCheck}
+   */
+  public static final class ProxyAppHealthCheck extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.ProxyAppHealthCheck)
+      ProxyAppHealthCheckOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProxyAppHealthCheck.newBuilder() to construct.
+    private ProxyAppHealthCheck(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProxyAppHealthCheck() {
+      app_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProxyAppHealthCheck();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProxyAppHealthCheck(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              app_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.push.DataPush.ProxyAppHealthCheck.class, com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder.class);
+    }
+
+    public static final int APP_FIELD_NUMBER = 1;
+    private volatile java.lang.Object app_;
+    /**
+     * <code>string app = 1 [json_name = "app"];</code>
+     * @return The app.
+     */
+    @java.lang.Override
+    public java.lang.String getApp() {
+      java.lang.Object ref = app_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        app_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string app = 1 [json_name = "app"];</code>
+     * @return The bytes for app.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppBytes() {
+      java.lang.Object ref = app_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        app_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.lhotse.api.push.DataPush.AppStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.lhotse.api.push.DataPush.AppStatus result = com.lhotse.api.push.DataPush.AppStatus.valueOf(status_);
+      return result == null ? com.lhotse.api.push.DataPush.AppStatus.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAppBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, app_);
+      }
+      if (status_ != com.lhotse.api.push.DataPush.AppStatus.STARTING.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAppBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, app_);
+      }
+      if (status_ != com.lhotse.api.push.DataPush.AppStatus.STARTING.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.push.DataPush.ProxyAppHealthCheck)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.push.DataPush.ProxyAppHealthCheck other = (com.lhotse.api.push.DataPush.ProxyAppHealthCheck) obj;
+
+      if (!getApp()
+          .equals(other.getApp())) return false;
+      if (status_ != other.status_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_FIELD_NUMBER;
+      hash = (53 * hash) + getApp().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.push.DataPush.ProxyAppHealthCheck prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.ProxyAppHealthCheck}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.ProxyAppHealthCheck)
+        com.lhotse.api.push.DataPush.ProxyAppHealthCheckOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.push.DataPush.ProxyAppHealthCheck.class, com.lhotse.api.push.DataPush.ProxyAppHealthCheck.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.push.DataPush.ProxyAppHealthCheck.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        app_ = "";
+
+        status_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.ProxyAppHealthCheck getDefaultInstanceForType() {
+        return com.lhotse.api.push.DataPush.ProxyAppHealthCheck.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.ProxyAppHealthCheck build() {
+        com.lhotse.api.push.DataPush.ProxyAppHealthCheck result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.ProxyAppHealthCheck buildPartial() {
+        com.lhotse.api.push.DataPush.ProxyAppHealthCheck result = new com.lhotse.api.push.DataPush.ProxyAppHealthCheck(this);
+        result.app_ = app_;
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.push.DataPush.ProxyAppHealthCheck) {
+          return mergeFrom((com.lhotse.api.push.DataPush.ProxyAppHealthCheck)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.push.DataPush.ProxyAppHealthCheck other) {
+        if (other == com.lhotse.api.push.DataPush.ProxyAppHealthCheck.getDefaultInstance()) return this;
+        if (!other.getApp().isEmpty()) {
+          app_ = other.app_;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.push.DataPush.ProxyAppHealthCheck parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.push.DataPush.ProxyAppHealthCheck) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object app_ = "";
+      /**
+       * <code>string app = 1 [json_name = "app"];</code>
+       * @return The app.
+       */
+      public java.lang.String getApp() {
+        java.lang.Object ref = app_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          app_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string app = 1 [json_name = "app"];</code>
+       * @return The bytes for app.
+       */
+      public com.google.protobuf.ByteString
+          getAppBytes() {
+        java.lang.Object ref = app_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          app_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string app = 1 [json_name = "app"];</code>
+       * @param value The app to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        app_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string app = 1 [json_name = "app"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApp() {
+        
+        app_ = getDefaultInstance().getApp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string app = 1 [json_name = "app"];</code>
+       * @param value The bytes for app to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        app_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AppStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        com.lhotse.api.push.DataPush.AppStatus result = com.lhotse.api.push.DataPush.AppStatus.valueOf(status_);
+        return result == null ? com.lhotse.api.push.DataPush.AppStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.lhotse.api.push.DataPush.AppStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.AppStatus status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.ProxyAppHealthCheck)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.ProxyAppHealthCheck)
+    private static final com.lhotse.api.push.DataPush.ProxyAppHealthCheck DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.push.DataPush.ProxyAppHealthCheck();
+    }
+
+    public static com.lhotse.api.push.DataPush.ProxyAppHealthCheck getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProxyAppHealthCheck>
+        PARSER = new com.google.protobuf.AbstractParser<ProxyAppHealthCheck>() {
+      @java.lang.Override
+      public ProxyAppHealthCheck parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProxyAppHealthCheck(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProxyAppHealthCheck> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProxyAppHealthCheck> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.ProxyAppHealthCheck getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lhotse_networking_v1alpha1_DataPushRequest_descriptor;
   private static final 
@@ -3923,6 +7423,26 @@ public final class DataPush {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3943,22 +7463,44 @@ public final class DataPush {
       "ecksum\022\032\n\010revision\030\003 \001(\tR\010revision\022(\n\004da" +
       "ta\030\004 \001(\0132\024.google.protobuf.AnyR\004data\"l\n\020" +
       "DataPushResponse\022>\n\006status\030\001 \001(\0162&.lhots" +
-      "e.networking.v1alpha1.PushStatusR\006status" +
-      "\022\030\n\007message\030\002 \001(\tR\007message\"K\n\024AgentRegis" +
+      "e.networking.v1alpha1.RespStatusR\006status" +
+      "\022\030\n\007message\030\002 \001(\tR\007message\"m\n\024AgentRegis" +
       "terRequest\022\031\n\010agent_id\030\001 \001(\tR\007agentId\022\030\n" +
-      "\007version\030\002 \001(\tR\007version*\275\001\n\014DataCategory" +
+      "\007version\030\002 \001(\tR\007version\022 \n\014proxy_app_id\030" +
+      "\003 \001(\tR\nproxyAppId\"]\n\025AgentRegisterRespon" +
+      "se\022\032\n\010checksum\030\001 \001(\tR\010checksum\022(\n\004data\030\002" +
+      " \001(\0132\024.google.protobuf.AnyR\004data\"\322\001\n\023Upl" +
+      "oadStatusRequest\022\031\n\010agent_id\030\001 \001(\tR\007agen" +
+      "tId\022\030\n\007version\030\002 \001(\tR\007version\022 \n\014proxy_a" +
+      "pp_id\030\003 \001(\tR\nproxyAppId\022d\n\026proxy_app_hea" +
+      "lth_check\030\004 \001(\0132/.lhotse.networking.v1al" +
+      "pha1.ProxyAppHealthCheckR\023proxyAppHealth" +
+      "Check\"p\n\024UploadStatusResponse\022>\n\006status\030" +
+      "\001 \001(\0162&.lhotse.networking.v1alpha1.RespS" +
+      "tatusR\006status\022\030\n\007message\030\002 \001(\tR\007message\"" +
+      "f\n\023ProxyAppHealthCheck\022\020\n\003app\030\001 \001(\tR\003app" +
+      "\022=\n\006status\030\002 \001(\0162%.lhotse.networking.v1a" +
+      "lpha1.AppStatusR\006status*\275\001\n\014DataCategory" +
       "\022\031\n\025DATA_CATEGORY_SERVICE\020\000\022\031\n\025DATA_CATE" +
       "GORY_CLUSTER\020\001\022\032\n\026DATA_CATEGORY_ENDPOINT" +
       "\020\002\022\026\n\022DATA_CATEGORY_RULE\020\003\022\034\n\030DATA_CATEG" +
       "ORY_AGENT_META\020\004\022%\n!DATA_CATEGORY_AGENT_" +
-      "UPLOAD_STATUS\020\005*6\n\nPushStatus\022\022\n\016PUSH_ST" +
-      "ATUS_OK\020\000\022\024\n\020PUSH_STATUS_FAIL\020\001*=\n\nPushA" +
-      "ction\022\024\n\020PUSH_ACTION_FULL\020\000\022\031\n\025PUSH_ACTI" +
-      "ON_INCREMENT\020\0012x\n\013PushService\022i\n\010PushDat" +
-      "a\022+.lhotse.networking.v1alpha1.DataPushR" +
-      "equest\032,.lhotse.networking.v1alpha1.Data" +
-      "PushResponse(\0010\001B&\n\023com.lhotse.api.pushZ" +
-      "\017lhotse/api/pushb\006proto3"
+      "UPLOAD_STATUS\020\005*,\n\nRespStatus\022\r\n\tSTATUS_" +
+      "OK\020\000\022\017\n\013STATUS_FAIL\020\001*=\n\nPushAction\022\024\n\020P" +
+      "USH_ACTION_FULL\020\000\022\031\n\025PUSH_ACTION_INCREME" +
+      "NT\020\001*G\n\tAppStatus\022\014\n\010STARTING\020\000\022\017\n\013TERMI" +
+      "NATING\020\001\022\016\n\nTERMINATED\020\002\022\013\n\007RUNNING\020\0042x\n" +
+      "\013PushService\022i\n\010PushData\022+.lhotse.networ" +
+      "king.v1alpha1.DataPushRequest\032,.lhotse.n" +
+      "etworking.v1alpha1.DataPushResponse(\0010\0012" +
+      "\362\001\n\014AgentService\022o\n\010Register\0220.lhotse.ne" +
+      "tworking.v1alpha1.AgentRegisterRequest\0321" +
+      ".lhotse.networking.v1alpha1.AgentRegiste" +
+      "rResponse\022q\n\014UploadStatus\022/.lhotse.netwo" +
+      "rking.v1alpha1.UploadStatusRequest\0320.lho" +
+      "tse.networking.v1alpha1.UploadStatusResp" +
+      "onseB&\n\023com.lhotse.api.pushZ\017lhotse/api/" +
+      "pushb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3988,7 +7530,31 @@ public final class DataPush {
     internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor,
-        new java.lang.String[] { "AgentId", "Version", });
+        new java.lang.String[] { "AgentId", "Version", "ProxyAppId", });
+    internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_AgentRegisterResponse_descriptor,
+        new java.lang.String[] { "Checksum", "Data", });
+    internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_UploadStatusRequest_descriptor,
+        new java.lang.String[] { "AgentId", "Version", "ProxyAppId", "ProxyAppHealthCheck", });
+    internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_UploadStatusResponse_descriptor,
+        new java.lang.String[] { "Status", "Message", });
+    internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_ProxyAppHealthCheck_descriptor,
+        new java.lang.String[] { "App", "Status", });
     com.google.protobuf.AnyProto.getDescriptor();
   }
 

@@ -137,3 +137,129 @@ var PushService_ServiceDesc = grpc.ServiceDesc{
 	},
 	Metadata: "push/DataPush.proto",
 }
+
+// AgentServiceClient is the client API for AgentService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type AgentServiceClient interface {
+	// Agent注册
+	Register(ctx context.Context, in *AgentRegisterRequest, opts ...grpc.CallOption) (*AgentRegisterResponse, error)
+	// Agent上报状态
+	UploadStatus(ctx context.Context, in *UploadStatusRequest, opts ...grpc.CallOption) (*UploadStatusResponse, error)
+}
+
+type agentServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewAgentServiceClient(cc grpc.ClientConnInterface) AgentServiceClient {
+	return &agentServiceClient{cc}
+}
+
+func (c *agentServiceClient) Register(ctx context.Context, in *AgentRegisterRequest, opts ...grpc.CallOption) (*AgentRegisterResponse, error) {
+	out := new(AgentRegisterResponse)
+	err := c.cc.Invoke(ctx, "/lhotse.networking.v1alpha1.AgentService/Register", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *agentServiceClient) UploadStatus(ctx context.Context, in *UploadStatusRequest, opts ...grpc.CallOption) (*UploadStatusResponse, error) {
+	out := new(UploadStatusResponse)
+	err := c.cc.Invoke(ctx, "/lhotse.networking.v1alpha1.AgentService/UploadStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// AgentServiceServer is the server API for AgentService service.
+// All implementations must embed UnimplementedAgentServiceServer
+// for forward compatibility
+type AgentServiceServer interface {
+	// Agent注册
+	Register(context.Context, *AgentRegisterRequest) (*AgentRegisterResponse, error)
+	// Agent上报状态
+	UploadStatus(context.Context, *UploadStatusRequest) (*UploadStatusResponse, error)
+	mustEmbedUnimplementedAgentServiceServer()
+}
+
+// UnimplementedAgentServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedAgentServiceServer struct {
+}
+
+func (UnimplementedAgentServiceServer) Register(context.Context, *AgentRegisterRequest) (*AgentRegisterResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
+}
+func (UnimplementedAgentServiceServer) UploadStatus(context.Context, *UploadStatusRequest) (*UploadStatusResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UploadStatus not implemented")
+}
+func (UnimplementedAgentServiceServer) mustEmbedUnimplementedAgentServiceServer() {}
+
+// UnsafeAgentServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to AgentServiceServer will
+// result in compilation errors.
+type UnsafeAgentServiceServer interface {
+	mustEmbedUnimplementedAgentServiceServer()
+}
+
+func RegisterAgentServiceServer(s grpc.ServiceRegistrar, srv AgentServiceServer) {
+	s.RegisterService(&AgentService_ServiceDesc, srv)
+}
+
+func _AgentService_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AgentRegisterRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AgentServiceServer).Register(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/lhotse.networking.v1alpha1.AgentService/Register",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AgentServiceServer).Register(ctx, req.(*AgentRegisterRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AgentService_UploadStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UploadStatusRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AgentServiceServer).UploadStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/lhotse.networking.v1alpha1.AgentService/UploadStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AgentServiceServer).UploadStatus(ctx, req.(*UploadStatusRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// AgentService_ServiceDesc is the grpc.ServiceDesc for AgentService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var AgentService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "lhotse.networking.v1alpha1.AgentService",
+	HandlerType: (*AgentServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "Register",
+			Handler:    _AgentService_Register_Handler,
+		},
+		{
+			MethodName: "UploadStatus",
+			Handler:    _AgentService_UploadStatus_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "push/DataPush.proto",
+}
