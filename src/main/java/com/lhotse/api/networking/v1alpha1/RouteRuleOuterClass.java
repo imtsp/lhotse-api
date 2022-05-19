@@ -14,6 +14,123 @@ public final class RouteRuleOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code lhotse.networking.v1alpha1.ModifyType}
+   */
+  public enum ModifyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ADD = 0;</code>
+     */
+    ADD(0),
+    /**
+     * <code>UPDATE = 1;</code>
+     */
+    UPDATE(1),
+    /**
+     * <code>REMOVE = 2;</code>
+     */
+    REMOVE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ADD = 0;</code>
+     */
+    public static final int ADD_VALUE = 0;
+    /**
+     * <code>UPDATE = 1;</code>
+     */
+    public static final int UPDATE_VALUE = 1;
+    /**
+     * <code>REMOVE = 2;</code>
+     */
+    public static final int REMOVE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ModifyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ModifyType forNumber(int value) {
+      switch (value) {
+        case 0: return ADD;
+        case 1: return UPDATE;
+        case 2: return REMOVE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ModifyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ModifyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ModifyType>() {
+            public ModifyType findValueByNumber(int number) {
+              return ModifyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ModifyType[] VALUES = values();
+
+    public static ModifyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ModifyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:lhotse.networking.v1alpha1.ModifyType)
+  }
+
   public interface ServiceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.Service)
       com.google.protobuf.MessageOrBuilder {
@@ -1541,6 +1658,3010 @@ public final class RouteRuleOuterClass {
 
     @java.lang.Override
     public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServiceDiscoveryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.ServiceDiscovery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction();
+
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+     * @return Whether the serviceDetail field is set.
+     */
+    boolean hasServiceDetail();
+    /**
+     * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+     * @return The serviceDetail.
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service getServiceDetail();
+    /**
+     * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceOrBuilder getServiceDetailOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.ServiceDiscovery}
+   */
+  public static final class ServiceDiscovery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.ServiceDiscovery)
+      ServiceDiscoveryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceDiscovery.newBuilder() to construct.
+    private ServiceDiscovery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceDiscovery() {
+      action_ = 0;
+      serviceName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceDiscovery();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServiceDiscovery(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              action_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceName_ = s;
+              break;
+            }
+            case 26: {
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder subBuilder = null;
+              if (serviceDetail_ != null) {
+                subBuilder = serviceDetail_.toBuilder();
+              }
+              serviceDetail_ = input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(serviceDetail_);
+                serviceDetail_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @java.lang.Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    @java.lang.Override public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction() {
+      @SuppressWarnings("deprecation")
+      com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.valueOf(action_);
+      return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.UNRECOGNIZED : result;
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceName_;
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_DETAIL_FIELD_NUMBER = 3;
+    private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service serviceDetail_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+     * @return Whether the serviceDetail field is set.
+     */
+    @java.lang.Override
+    public boolean hasServiceDetail() {
+      return serviceDetail_ != null;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+     * @return The serviceDetail.
+     */
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service getServiceDetail() {
+      return serviceDetail_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.getDefaultInstance() : serviceDetail_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+     */
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceOrBuilder getServiceDetailOrBuilder() {
+      return getServiceDetail();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.ADD.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceName_);
+      }
+      if (serviceDetail_ != null) {
+        output.writeMessage(3, getServiceDetail());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.ADD.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceName_);
+      }
+      if (serviceDetail_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getServiceDetail());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery) obj;
+
+      if (action_ != other.action_) return false;
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (hasServiceDetail() != other.hasServiceDetail()) return false;
+      if (hasServiceDetail()) {
+        if (!getServiceDetail()
+            .equals(other.getServiceDetail())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      if (hasServiceDetail()) {
+        hash = (37 * hash) + SERVICE_DETAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceDetail().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.ServiceDiscovery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.ServiceDiscovery)
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscoveryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = 0;
+
+        serviceName_ = "";
+
+        if (serviceDetailBuilder_ == null) {
+          serviceDetail_ = null;
+        } else {
+          serviceDetail_ = null;
+          serviceDetailBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery getDefaultInstanceForType() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery build() {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery buildPartial() {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery(this);
+        result.action_ = action_;
+        result.serviceName_ = serviceName_;
+        if (serviceDetailBuilder_ == null) {
+          result.serviceDetail_ = serviceDetail_;
+        } else {
+          result.serviceDetail_ = serviceDetailBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery) {
+          return mergeFrom((com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery other) {
+        if (other == com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          onChanged();
+        }
+        if (other.hasServiceDetail()) {
+          mergeServiceDetail(other.getServiceDetail());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int action_ = 0;
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @java.lang.Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction() {
+        @SuppressWarnings("deprecation")
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.valueOf(action_);
+        return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        
+        serviceName_ = getDefaultInstance().getServiceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service serviceDetail_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceOrBuilder> serviceDetailBuilder_;
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       * @return Whether the serviceDetail field is set.
+       */
+      public boolean hasServiceDetail() {
+        return serviceDetailBuilder_ != null || serviceDetail_ != null;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       * @return The serviceDetail.
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service getServiceDetail() {
+        if (serviceDetailBuilder_ == null) {
+          return serviceDetail_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.getDefaultInstance() : serviceDetail_;
+        } else {
+          return serviceDetailBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      public Builder setServiceDetail(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service value) {
+        if (serviceDetailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serviceDetail_ = value;
+          onChanged();
+        } else {
+          serviceDetailBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      public Builder setServiceDetail(
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder builderForValue) {
+        if (serviceDetailBuilder_ == null) {
+          serviceDetail_ = builderForValue.build();
+          onChanged();
+        } else {
+          serviceDetailBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      public Builder mergeServiceDetail(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service value) {
+        if (serviceDetailBuilder_ == null) {
+          if (serviceDetail_ != null) {
+            serviceDetail_ =
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.newBuilder(serviceDetail_).mergeFrom(value).buildPartial();
+          } else {
+            serviceDetail_ = value;
+          }
+          onChanged();
+        } else {
+          serviceDetailBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      public Builder clearServiceDetail() {
+        if (serviceDetailBuilder_ == null) {
+          serviceDetail_ = null;
+          onChanged();
+        } else {
+          serviceDetail_ = null;
+          serviceDetailBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder getServiceDetailBuilder() {
+        
+        onChanged();
+        return getServiceDetailFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceOrBuilder getServiceDetailOrBuilder() {
+        if (serviceDetailBuilder_ != null) {
+          return serviceDetailBuilder_.getMessageOrBuilder();
+        } else {
+          return serviceDetail_ == null ?
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.getDefaultInstance() : serviceDetail_;
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Service service_detail = 3 [json_name = "serviceDetail"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceOrBuilder> 
+          getServiceDetailFieldBuilder() {
+        if (serviceDetailBuilder_ == null) {
+          serviceDetailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Service.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceOrBuilder>(
+                  getServiceDetail(),
+                  getParentForChildren(),
+                  isClean());
+          serviceDetail_ = null;
+        }
+        return serviceDetailBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.ServiceDiscovery)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.ServiceDiscovery)
+    private static final com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery();
+    }
+
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServiceDiscovery>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceDiscovery>() {
+      @java.lang.Override
+      public ServiceDiscovery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServiceDiscovery(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceDiscovery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceDiscovery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ServiceDiscovery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClusterDiscoveryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.ClusterDiscovery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction();
+
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+     * @return The clusterName.
+     */
+    java.lang.String getClusterName();
+    /**
+     * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+     * @return The bytes for clusterName.
+     */
+    com.google.protobuf.ByteString
+        getClusterNameBytes();
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+     * @return Whether the clusterDetail field is set.
+     */
+    boolean hasClusterDetail();
+    /**
+     * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+     * @return The clusterDetail.
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster getClusterDetail();
+    /**
+     * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder getClusterDetailOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.ClusterDiscovery}
+   */
+  public static final class ClusterDiscovery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.ClusterDiscovery)
+      ClusterDiscoveryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClusterDiscovery.newBuilder() to construct.
+    private ClusterDiscovery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClusterDiscovery() {
+      action_ = 0;
+      serviceName_ = "";
+      clusterName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClusterDiscovery();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClusterDiscovery(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              action_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterName_ = s;
+              break;
+            }
+            case 34: {
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder subBuilder = null;
+              if (clusterDetail_ != null) {
+                subBuilder = clusterDetail_.toBuilder();
+              }
+              clusterDetail_ = input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clusterDetail_);
+                clusterDetail_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @java.lang.Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    @java.lang.Override public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction() {
+      @SuppressWarnings("deprecation")
+      com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.valueOf(action_);
+      return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.UNRECOGNIZED : result;
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceName_;
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLUSTER_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object clusterName_;
+    /**
+     * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+     * @return The clusterName.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterName() {
+      java.lang.Object ref = clusterName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+     * @return The bytes for clusterName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterNameBytes() {
+      java.lang.Object ref = clusterName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLUSTER_DETAIL_FIELD_NUMBER = 4;
+    private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster clusterDetail_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+     * @return Whether the clusterDetail field is set.
+     */
+    @java.lang.Override
+    public boolean hasClusterDetail() {
+      return clusterDetail_ != null;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+     * @return The clusterDetail.
+     */
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster getClusterDetail() {
+      return clusterDetail_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.getDefaultInstance() : clusterDetail_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+     */
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder getClusterDetailOrBuilder() {
+      return getClusterDetail();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.ADD.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceName_);
+      }
+      if (!getClusterNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterName_);
+      }
+      if (clusterDetail_ != null) {
+        output.writeMessage(4, getClusterDetail());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.ADD.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceName_);
+      }
+      if (!getClusterNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterName_);
+      }
+      if (clusterDetail_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getClusterDetail());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery) obj;
+
+      if (action_ != other.action_) return false;
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getClusterName()
+          .equals(other.getClusterName())) return false;
+      if (hasClusterDetail() != other.hasClusterDetail()) return false;
+      if (hasClusterDetail()) {
+        if (!getClusterDetail()
+            .equals(other.getClusterDetail())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      hash = (37 * hash) + CLUSTER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterName().hashCode();
+      if (hasClusterDetail()) {
+        hash = (37 * hash) + CLUSTER_DETAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getClusterDetail().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.ClusterDiscovery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.ClusterDiscovery)
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscoveryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = 0;
+
+        serviceName_ = "";
+
+        clusterName_ = "";
+
+        if (clusterDetailBuilder_ == null) {
+          clusterDetail_ = null;
+        } else {
+          clusterDetail_ = null;
+          clusterDetailBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery getDefaultInstanceForType() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery build() {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery buildPartial() {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery(this);
+        result.action_ = action_;
+        result.serviceName_ = serviceName_;
+        result.clusterName_ = clusterName_;
+        if (clusterDetailBuilder_ == null) {
+          result.clusterDetail_ = clusterDetail_;
+        } else {
+          result.clusterDetail_ = clusterDetailBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery) {
+          return mergeFrom((com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery other) {
+        if (other == com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          onChanged();
+        }
+        if (!other.getClusterName().isEmpty()) {
+          clusterName_ = other.clusterName_;
+          onChanged();
+        }
+        if (other.hasClusterDetail()) {
+          mergeClusterDetail(other.getClusterDetail());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int action_ = 0;
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @java.lang.Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction() {
+        @SuppressWarnings("deprecation")
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.valueOf(action_);
+        return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        
+        serviceName_ = getDefaultInstance().getServiceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clusterName_ = "";
+      /**
+       * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+       * @return The clusterName.
+       */
+      public java.lang.String getClusterName() {
+        java.lang.Object ref = clusterName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+       * @return The bytes for clusterName.
+       */
+      public com.google.protobuf.ByteString
+          getClusterNameBytes() {
+        java.lang.Object ref = clusterName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+       * @param value The clusterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterName() {
+        
+        clusterName_ = getDefaultInstance().getClusterName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cluster_name = 3 [json_name = "clusterName"];</code>
+       * @param value The bytes for clusterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster clusterDetail_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder> clusterDetailBuilder_;
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       * @return Whether the clusterDetail field is set.
+       */
+      public boolean hasClusterDetail() {
+        return clusterDetailBuilder_ != null || clusterDetail_ != null;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       * @return The clusterDetail.
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster getClusterDetail() {
+        if (clusterDetailBuilder_ == null) {
+          return clusterDetail_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.getDefaultInstance() : clusterDetail_;
+        } else {
+          return clusterDetailBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      public Builder setClusterDetail(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster value) {
+        if (clusterDetailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clusterDetail_ = value;
+          onChanged();
+        } else {
+          clusterDetailBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      public Builder setClusterDetail(
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder builderForValue) {
+        if (clusterDetailBuilder_ == null) {
+          clusterDetail_ = builderForValue.build();
+          onChanged();
+        } else {
+          clusterDetailBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      public Builder mergeClusterDetail(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster value) {
+        if (clusterDetailBuilder_ == null) {
+          if (clusterDetail_ != null) {
+            clusterDetail_ =
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.newBuilder(clusterDetail_).mergeFrom(value).buildPartial();
+          } else {
+            clusterDetail_ = value;
+          }
+          onChanged();
+        } else {
+          clusterDetailBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      public Builder clearClusterDetail() {
+        if (clusterDetailBuilder_ == null) {
+          clusterDetail_ = null;
+          onChanged();
+        } else {
+          clusterDetail_ = null;
+          clusterDetailBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder getClusterDetailBuilder() {
+        
+        onChanged();
+        return getClusterDetailFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder getClusterDetailOrBuilder() {
+        if (clusterDetailBuilder_ != null) {
+          return clusterDetailBuilder_.getMessageOrBuilder();
+        } else {
+          return clusterDetail_ == null ?
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.getDefaultInstance() : clusterDetail_;
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Cluster cluster_detail = 4 [json_name = "clusterDetail"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder> 
+          getClusterDetailFieldBuilder() {
+        if (clusterDetailBuilder_ == null) {
+          clusterDetailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Cluster.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterOrBuilder>(
+                  getClusterDetail(),
+                  getParentForChildren(),
+                  isClean());
+          clusterDetail_ = null;
+        }
+        return clusterDetailBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.ClusterDiscovery)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.ClusterDiscovery)
+    private static final com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery();
+    }
+
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClusterDiscovery>
+        PARSER = new com.google.protobuf.AbstractParser<ClusterDiscovery>() {
+      @java.lang.Override
+      public ClusterDiscovery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClusterDiscovery(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClusterDiscovery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClusterDiscovery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ClusterDiscovery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EndpointDiscoveryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.EndpointDiscovery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction();
+
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @return A list containing the clusterNames.
+     */
+    java.util.List<java.lang.String>
+        getClusterNamesList();
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @return The count of clusterNames.
+     */
+    int getClusterNamesCount();
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @param index The index of the element to return.
+     * @return The clusterNames at the given index.
+     */
+    java.lang.String getClusterNames(int index);
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the clusterNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getClusterNamesBytes(int index);
+
+    /**
+     * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+     * @return Whether the endpointDetail field is set.
+     */
+    boolean hasEndpointDetail();
+    /**
+     * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+     * @return The endpointDetail.
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint getEndpointDetail();
+    /**
+     * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+     */
+    com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder getEndpointDetailOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.EndpointDiscovery}
+   */
+  public static final class EndpointDiscovery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.EndpointDiscovery)
+      EndpointDiscoveryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EndpointDiscovery.newBuilder() to construct.
+    private EndpointDiscovery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EndpointDiscovery() {
+      action_ = 0;
+      serviceName_ = "";
+      clusterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EndpointDiscovery();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EndpointDiscovery(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              action_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                clusterNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              clusterNames_.add(s);
+              break;
+            }
+            case 34: {
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder subBuilder = null;
+              if (endpointDetail_ != null) {
+                subBuilder = endpointDetail_.toBuilder();
+              }
+              endpointDetail_ = input.readMessage(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(endpointDetail_);
+                endpointDetail_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          clusterNames_ = clusterNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @java.lang.Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    @java.lang.Override public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction() {
+      @SuppressWarnings("deprecation")
+      com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.valueOf(action_);
+      return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.UNRECOGNIZED : result;
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceName_;
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 2 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLUSTER_NAMES_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList clusterNames_;
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @return A list containing the clusterNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getClusterNamesList() {
+      return clusterNames_;
+    }
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @return The count of clusterNames.
+     */
+    public int getClusterNamesCount() {
+      return clusterNames_.size();
+    }
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @param index The index of the element to return.
+     * @return The clusterNames at the given index.
+     */
+    public java.lang.String getClusterNames(int index) {
+      return clusterNames_.get(index);
+    }
+    /**
+     * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the clusterNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getClusterNamesBytes(int index) {
+      return clusterNames_.getByteString(index);
+    }
+
+    public static final int ENDPOINT_DETAIL_FIELD_NUMBER = 4;
+    private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint endpointDetail_;
+    /**
+     * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+     * @return Whether the endpointDetail field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndpointDetail() {
+      return endpointDetail_ != null;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+     * @return The endpointDetail.
+     */
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint getEndpointDetail() {
+      return endpointDetail_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.getDefaultInstance() : endpointDetail_;
+    }
+    /**
+     * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+     */
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder getEndpointDetailOrBuilder() {
+      return getEndpointDetail();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.ADD.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceName_);
+      }
+      for (int i = 0; i < clusterNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterNames_.getRaw(i));
+      }
+      if (endpointDetail_ != null) {
+        output.writeMessage(4, getEndpointDetail());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.ADD.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceName_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < clusterNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(clusterNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getClusterNamesList().size();
+      }
+      if (endpointDetail_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEndpointDetail());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery other = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery) obj;
+
+      if (action_ != other.action_) return false;
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getClusterNamesList()
+          .equals(other.getClusterNamesList())) return false;
+      if (hasEndpointDetail() != other.hasEndpointDetail()) return false;
+      if (hasEndpointDetail()) {
+        if (!getEndpointDetail()
+            .equals(other.getEndpointDetail())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      if (getClusterNamesCount() > 0) {
+        hash = (37 * hash) + CLUSTER_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getClusterNamesList().hashCode();
+      }
+      if (hasEndpointDetail()) {
+        hash = (37 * hash) + ENDPOINT_DETAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointDetail().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.EndpointDiscovery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.EndpointDiscovery)
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscoveryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.class, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = 0;
+
+        serviceName_ = "";
+
+        clusterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (endpointDetailBuilder_ == null) {
+          endpointDetail_ = null;
+        } else {
+          endpointDetail_ = null;
+          endpointDetailBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery getDefaultInstanceForType() {
+        return com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery build() {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery buildPartial() {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery result = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery(this);
+        int from_bitField0_ = bitField0_;
+        result.action_ = action_;
+        result.serviceName_ = serviceName_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          clusterNames_ = clusterNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.clusterNames_ = clusterNames_;
+        if (endpointDetailBuilder_ == null) {
+          result.endpointDetail_ = endpointDetail_;
+        } else {
+          result.endpointDetail_ = endpointDetailBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery) {
+          return mergeFrom((com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery other) {
+        if (other == com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          onChanged();
+        }
+        if (!other.clusterNames_.isEmpty()) {
+          if (clusterNames_.isEmpty()) {
+            clusterNames_ = other.clusterNames_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureClusterNamesIsMutable();
+            clusterNames_.addAll(other.clusterNames_);
+          }
+          onChanged();
+        }
+        if (other.hasEndpointDetail()) {
+          mergeEndpointDetail(other.getEndpointDetail());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int action_ = 0;
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @java.lang.Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType getAction() {
+        @SuppressWarnings("deprecation")
+        com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType result = com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.valueOf(action_);
+        return result == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.ModifyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.ModifyType action = 1 [json_name = "action"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        
+        serviceName_ = getDefaultInstance().getServiceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 2 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList clusterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureClusterNamesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          clusterNames_ = new com.google.protobuf.LazyStringArrayList(clusterNames_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @return A list containing the clusterNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getClusterNamesList() {
+        return clusterNames_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @return The count of clusterNames.
+       */
+      public int getClusterNamesCount() {
+        return clusterNames_.size();
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @param index The index of the element to return.
+       * @return The clusterNames at the given index.
+       */
+      public java.lang.String getClusterNames(int index) {
+        return clusterNames_.get(index);
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the clusterNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getClusterNamesBytes(int index) {
+        return clusterNames_.getByteString(index);
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @param index The index to set the value at.
+       * @param value The clusterNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClusterNamesIsMutable();
+        clusterNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @param value The clusterNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addClusterNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClusterNamesIsMutable();
+        clusterNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @param values The clusterNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllClusterNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureClusterNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, clusterNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterNames() {
+        clusterNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cluster_names = 3 [json_name = "clusterNames"];</code>
+       * @param value The bytes of the clusterNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addClusterNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureClusterNamesIsMutable();
+        clusterNames_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint endpointDetail_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder> endpointDetailBuilder_;
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       * @return Whether the endpointDetail field is set.
+       */
+      public boolean hasEndpointDetail() {
+        return endpointDetailBuilder_ != null || endpointDetail_ != null;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       * @return The endpointDetail.
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint getEndpointDetail() {
+        if (endpointDetailBuilder_ == null) {
+          return endpointDetail_ == null ? com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.getDefaultInstance() : endpointDetail_;
+        } else {
+          return endpointDetailBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      public Builder setEndpointDetail(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint value) {
+        if (endpointDetailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endpointDetail_ = value;
+          onChanged();
+        } else {
+          endpointDetailBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      public Builder setEndpointDetail(
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder builderForValue) {
+        if (endpointDetailBuilder_ == null) {
+          endpointDetail_ = builderForValue.build();
+          onChanged();
+        } else {
+          endpointDetailBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      public Builder mergeEndpointDetail(com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint value) {
+        if (endpointDetailBuilder_ == null) {
+          if (endpointDetail_ != null) {
+            endpointDetail_ =
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.newBuilder(endpointDetail_).mergeFrom(value).buildPartial();
+          } else {
+            endpointDetail_ = value;
+          }
+          onChanged();
+        } else {
+          endpointDetailBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      public Builder clearEndpointDetail() {
+        if (endpointDetailBuilder_ == null) {
+          endpointDetail_ = null;
+          onChanged();
+        } else {
+          endpointDetail_ = null;
+          endpointDetailBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder getEndpointDetailBuilder() {
+        
+        onChanged();
+        return getEndpointDetailFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder getEndpointDetailOrBuilder() {
+        if (endpointDetailBuilder_ != null) {
+          return endpointDetailBuilder_.getMessageOrBuilder();
+        } else {
+          return endpointDetail_ == null ?
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.getDefaultInstance() : endpointDetail_;
+        }
+      }
+      /**
+       * <code>.lhotse.networking.v1alpha1.Endpoint endpoint_detail = 4 [json_name = "endpointDetail"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder> 
+          getEndpointDetailFieldBuilder() {
+        if (endpointDetailBuilder_ == null) {
+          endpointDetailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.Endpoint.Builder, com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointOrBuilder>(
+                  getEndpointDetail(),
+                  getParentForChildren(),
+                  isClean());
+          endpointDetail_ = null;
+        }
+        return endpointDetailBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.EndpointDiscovery)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.EndpointDiscovery)
+    private static final com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery();
+    }
+
+    public static com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EndpointDiscovery>
+        PARSER = new com.google.protobuf.AbstractParser<EndpointDiscovery>() {
+      @java.lang.Override
+      public EndpointDiscovery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EndpointDiscovery(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EndpointDiscovery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EndpointDiscovery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.networking.v1alpha1.RouteRuleOuterClass.EndpointDiscovery getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15273,6 +18394,21 @@ public final class RouteRuleOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lhotse_networking_v1alpha1_Service_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lhotse_networking_v1alpha1_Cluster_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15372,82 +18508,100 @@ public final class RouteRuleOuterClass {
       "s\030\002 \003(\tR\005hosts\022?\n\010clusters\030\003 \003(\0132#.lhots" +
       "e.networking.v1alpha1.ClusterR\010clusters\022" +
       ";\n\005rules\030\004 \003(\0132%.lhotse.networking.v1alp" +
-      "ha1.RouteRuleR\005rules\"\302\001\n\007Cluster\022!\n\014clus" +
-      "ter_name\030\001 \001(\tR\013clusterName\022B\n\tendpoints" +
-      "\030\002 \003(\0132$.lhotse.networking.v1alpha1.Endp" +
-      "ointR\tendpoints\022P\n\016traffic_policy\030\003 \001(\0132" +
-      ").lhotse.networking.v1alpha1.TrafficPoli" +
-      "cyR\rtrafficPolicy\".\n\010Endpoint\022\016\n\002ip\030\001 \001(" +
-      "\tR\002ip\022\022\n\004port\030\002 \001(\005R\004port\"\205\001\n\tRouteRule\022" +
-      "\022\n\004name\030\001 \001(\tR\004name\022!\n\014service_name\030\002 \001(" +
-      "\tR\013serviceName\022A\n\thttp_rule\030\003 \003(\0132$.lhot" +
-      "se.networking.v1alpha1.HttpRuleR\010httpRul" +
-      "e\"\315\002\n\010HttpRule\022\022\n\004name\030\001 \001(\tR\004name\022B\n\005ma" +
-      "tch\030\002 \001(\0132,.lhotse.networking.v1alpha1.H" +
-      "ttpMatchRequestR\005match\022F\n\005route\030\003 \003(\01320." +
-      "lhotse.networking.v1alpha1.HttpRouteDest" +
-      "inationR\005route\022D\n\010redirect\030\004 \001(\0132(.lhots" +
-      "e.networking.v1alpha1.HttpRedirectR\010redi" +
-      "rect\022A\n\007rewrite\030\005 \001(\0132\'.lhotse.networkin" +
-      "g.v1alpha1.HttpRewriteR\007rewrite\022\030\n\007timeo" +
-      "ut\030\006 \001(\005R\007timeout\"\350\010\n\020HttpMatchRequest\022\022" +
-      "\n\004name\030\001 \001(\tR\004name\0229\n\003uri\030\002 \001(\0132\'.lhotse" +
-      ".networking.v1alpha1.StringMatchR\003uri\022?\n" +
-      "\006scheme\030\003 \001(\0132\'.lhotse.networking.v1alph" +
-      "a1.StringMatchR\006scheme\022?\n\006method\030\004 \001(\0132\'" +
-      ".lhotse.networking.v1alpha1.StringMatchR" +
-      "\006method\022E\n\tauthority\030\005 \001(\0132\'.lhotse.netw" +
-      "orking.v1alpha1.StringMatchR\tauthority\022S" +
-      "\n\007headers\030\006 \003(\01329.lhotse.networking.v1al" +
-      "pha1.HttpMatchRequest.HeadersEntryR\007head" +
-      "ers\022\022\n\004port\030\007 \001(\005R\004port\022c\n\rsource_labels" +
-      "\030\010 \003(\0132>.lhotse.networking.v1alpha1.Http" +
-      "MatchRequest.SourceLabelsEntryR\014sourceLa" +
-      "bels\022`\n\014query_params\030\t \003(\0132=.lhotse.netw" +
-      "orking.v1alpha1.HttpMatchRequest.QueryPa" +
-      "ramsEntryR\013queryParams\022&\n\017ignore_uri_cas" +
-      "e\030\n \001(\010R\rignoreUriCase\022i\n\017without_header" +
-      "s\030\013 \003(\0132@.lhotse.networking.v1alpha1.Htt" +
-      "pMatchRequest.WithoutHeadersEntryR\016witho" +
-      "utHeaders\032c\n\014HeadersEntry\022\020\n\003key\030\001 \001(\tR\003" +
-      "key\022=\n\005value\030\002 \001(\0132\'.lhotse.networking.v" +
-      "1alpha1.StringMatchR\005value:\0028\001\032?\n\021Source" +
-      "LabelsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
-      " \001(\tR\005value:\0028\001\032g\n\020QueryParamsEntry\022\020\n\003k" +
-      "ey\030\001 \001(\tR\003key\022=\n\005value\030\002 \001(\0132\'.lhotse.ne" +
-      "tworking.v1alpha1.StringMatchR\005value:\0028\001" +
-      "\032j\n\023WithoutHeadersEntry\022\020\n\003key\030\001 \001(\tR\003ke" +
-      "y\022=\n\005value\030\002 \001(\0132\'.lhotse.networking.v1a" +
-      "lpha1.StringMatchR\005value:\0028\001\"g\n\013StringMa" +
-      "tch\022\026\n\005exact\030\001 \001(\tH\000R\005exact\022\030\n\006prefix\030\002 " +
-      "\001(\tH\000R\006prefix\022\026\n\005regex\030\003 \001(\tH\000R\005regexB\016\n" +
-      "\014string_match\"\211\001\n\024HttpRouteDestination\022I" +
-      "\n\013destination\030\001 \001(\0132\'.lhotse.networking." +
-      "v1alpha1.DestinationR\013destination\022\033\n\006wei" +
-      "ght\030\002 \001(\005H\000R\006weight\210\001\001B\t\n\007_weight\"%\n\013Des" +
-      "tination\022\026\n\006subset\030\001 \001(\tR\006subset\"\217\001\n\014Htt" +
-      "pRedirect\022\020\n\003uri\030\001 \001(\tR\003uri\022\034\n\tauthority" +
-      "\030\002 \001(\tR\tauthority\022\022\n\004port\030\003 \001(\005R\004port\022\026\n" +
-      "\006scheme\030\004 \001(\tR\006scheme\022#\n\rredirect_code\030\005" +
-      " \001(\tR\014redirectCode\"=\n\013HttpRewrite\022\020\n\003uri" +
+      "ha1.RouteRuleR\005rules\"\301\001\n\020ServiceDiscover" +
+      "y\022>\n\006action\030\001 \001(\0162&.lhotse.networking.v1" +
+      "alpha1.ModifyTypeR\006action\022!\n\014service_nam" +
+      "e\030\002 \001(\tR\013serviceName\022J\n\016service_detail\030\003" +
+      " \001(\0132#.lhotse.networking.v1alpha1.Servic" +
+      "eR\rserviceDetail\"\344\001\n\020ClusterDiscovery\022>\n" +
+      "\006action\030\001 \001(\0162&.lhotse.networking.v1alph" +
+      "a1.ModifyTypeR\006action\022!\n\014service_name\030\002 " +
+      "\001(\tR\013serviceName\022!\n\014cluster_name\030\003 \001(\tR\013" +
+      "clusterName\022J\n\016cluster_detail\030\004 \001(\0132#.lh" +
+      "otse.networking.v1alpha1.ClusterR\rcluste" +
+      "rDetail\"\352\001\n\021EndpointDiscovery\022>\n\006action\030" +
+      "\001 \001(\0162&.lhotse.networking.v1alpha1.Modif" +
+      "yTypeR\006action\022!\n\014service_name\030\002 \001(\tR\013ser" +
+      "viceName\022#\n\rcluster_names\030\003 \003(\tR\014cluster" +
+      "Names\022M\n\017endpoint_detail\030\004 \001(\0132$.lhotse." +
+      "networking.v1alpha1.EndpointR\016endpointDe" +
+      "tail\"\302\001\n\007Cluster\022!\n\014cluster_name\030\001 \001(\tR\013" +
+      "clusterName\022B\n\tendpoints\030\002 \003(\0132$.lhotse." +
+      "networking.v1alpha1.EndpointR\tendpoints\022" +
+      "P\n\016traffic_policy\030\003 \001(\0132).lhotse.network" +
+      "ing.v1alpha1.TrafficPolicyR\rtrafficPolic" +
+      "y\".\n\010Endpoint\022\016\n\002ip\030\001 \001(\tR\002ip\022\022\n\004port\030\002 " +
+      "\001(\005R\004port\"\205\001\n\tRouteRule\022\022\n\004name\030\001 \001(\tR\004n" +
+      "ame\022!\n\014service_name\030\002 \001(\tR\013serviceName\022A" +
+      "\n\thttp_rule\030\003 \003(\0132$.lhotse.networking.v1" +
+      "alpha1.HttpRuleR\010httpRule\"\315\002\n\010HttpRule\022\022" +
+      "\n\004name\030\001 \001(\tR\004name\022B\n\005match\030\002 \001(\0132,.lhot" +
+      "se.networking.v1alpha1.HttpMatchRequestR" +
+      "\005match\022F\n\005route\030\003 \003(\01320.lhotse.networkin" +
+      "g.v1alpha1.HttpRouteDestinationR\005route\022D" +
+      "\n\010redirect\030\004 \001(\0132(.lhotse.networking.v1a" +
+      "lpha1.HttpRedirectR\010redirect\022A\n\007rewrite\030" +
+      "\005 \001(\0132\'.lhotse.networking.v1alpha1.HttpR" +
+      "ewriteR\007rewrite\022\030\n\007timeout\030\006 \001(\005R\007timeou" +
+      "t\"\350\010\n\020HttpMatchRequest\022\022\n\004name\030\001 \001(\tR\004na" +
+      "me\0229\n\003uri\030\002 \001(\0132\'.lhotse.networking.v1al" +
+      "pha1.StringMatchR\003uri\022?\n\006scheme\030\003 \001(\0132\'." +
+      "lhotse.networking.v1alpha1.StringMatchR\006" +
+      "scheme\022?\n\006method\030\004 \001(\0132\'.lhotse.networki" +
+      "ng.v1alpha1.StringMatchR\006method\022E\n\tautho" +
+      "rity\030\005 \001(\0132\'.lhotse.networking.v1alpha1." +
+      "StringMatchR\tauthority\022S\n\007headers\030\006 \003(\0132" +
+      "9.lhotse.networking.v1alpha1.HttpMatchRe" +
+      "quest.HeadersEntryR\007headers\022\022\n\004port\030\007 \001(" +
+      "\005R\004port\022c\n\rsource_labels\030\010 \003(\0132>.lhotse." +
+      "networking.v1alpha1.HttpMatchRequest.Sou" +
+      "rceLabelsEntryR\014sourceLabels\022`\n\014query_pa" +
+      "rams\030\t \003(\0132=.lhotse.networking.v1alpha1." +
+      "HttpMatchRequest.QueryParamsEntryR\013query" +
+      "Params\022&\n\017ignore_uri_case\030\n \001(\010R\rignoreU" +
+      "riCase\022i\n\017without_headers\030\013 \003(\0132@.lhotse" +
+      ".networking.v1alpha1.HttpMatchRequest.Wi" +
+      "thoutHeadersEntryR\016withoutHeaders\032c\n\014Hea" +
+      "dersEntry\022\020\n\003key\030\001 \001(\tR\003key\022=\n\005value\030\002 \001" +
+      "(\0132\'.lhotse.networking.v1alpha1.StringMa" +
+      "tchR\005value:\0028\001\032?\n\021SourceLabelsEntry\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032" +
+      "g\n\020QueryParamsEntry\022\020\n\003key\030\001 \001(\tR\003key\022=\n" +
+      "\005value\030\002 \001(\0132\'.lhotse.networking.v1alpha" +
+      "1.StringMatchR\005value:\0028\001\032j\n\023WithoutHeade" +
+      "rsEntry\022\020\n\003key\030\001 \001(\tR\003key\022=\n\005value\030\002 \001(\013" +
+      "2\'.lhotse.networking.v1alpha1.StringMatc" +
+      "hR\005value:\0028\001\"g\n\013StringMatch\022\026\n\005exact\030\001 \001" +
+      "(\tH\000R\005exact\022\030\n\006prefix\030\002 \001(\tH\000R\006prefix\022\026\n" +
+      "\005regex\030\003 \001(\tH\000R\005regexB\016\n\014string_match\"\211\001" +
+      "\n\024HttpRouteDestination\022I\n\013destination\030\001 " +
+      "\001(\0132\'.lhotse.networking.v1alpha1.Destina" +
+      "tionR\013destination\022\033\n\006weight\030\002 \001(\005H\000R\006wei" +
+      "ght\210\001\001B\t\n\007_weight\"%\n\013Destination\022\026\n\006subs" +
+      "et\030\001 \001(\tR\006subset\"\217\001\n\014HttpRedirect\022\020\n\003uri" +
       "\030\001 \001(\tR\003uri\022\034\n\tauthority\030\002 \001(\tR\tauthorit" +
-      "y\"f\n\rTrafficPolicy\022U\n\rload_balancer\030\001 \001(" +
-      "\01320.lhotse.networking.v1alpha1.LoadBalan" +
-      "cerSettingsR\014loadBalancer\"\213\002\n\024LoadBalanc" +
-      "erSettings\022Q\n\006simple\030\001 \001(\01629.lhotse.netw" +
-      "orking.v1alpha1.LoadBalancerSettings.Sim" +
-      "pleLBR\006simple\022U\n\017consistent_hash\030\002 \001(\0132," +
-      ".lhotse.networking.v1alpha1.ConsistentHa" +
-      "shLbR\016consistentHash\"I\n\010SimpleLB\022\017\n\013ROUN" +
-      "D_ROBIN\020\000\022\016\n\nLEAST_CONN\020\001\022\n\n\006RANDOM\020\002\022\020\n" +
-      "\014PASS_THROUGH\020\003\"\307\001\n\020ConsistentHashLb\022(\n\020" +
-      "http_header_name\030\001 \001(\tR\016httpHeaderName\022\"" +
-      "\n\ruse_source_ip\030\002 \001(\010R\013useSourceIp\0229\n\031ht" +
-      "tp_query_parameter_name\030\003 \001(\tR\026httpQuery" +
-      "ParameterName\022*\n\021minimum_ring_size\030\004 \001(\005" +
-      "R\017minimumRingSizeBD\n\"com.lhotse.api.netw" +
-      "orking.v1alpha1Z\036lhotse/api/networking/v" +
-      "1alpha1b\006proto3"
+      "y\022\022\n\004port\030\003 \001(\005R\004port\022\026\n\006scheme\030\004 \001(\tR\006s" +
+      "cheme\022#\n\rredirect_code\030\005 \001(\tR\014redirectCo" +
+      "de\"=\n\013HttpRewrite\022\020\n\003uri\030\001 \001(\tR\003uri\022\034\n\ta" +
+      "uthority\030\002 \001(\tR\tauthority\"f\n\rTrafficPoli" +
+      "cy\022U\n\rload_balancer\030\001 \001(\01320.lhotse.netwo" +
+      "rking.v1alpha1.LoadBalancerSettingsR\014loa" +
+      "dBalancer\"\213\002\n\024LoadBalancerSettings\022Q\n\006si" +
+      "mple\030\001 \001(\01629.lhotse.networking.v1alpha1." +
+      "LoadBalancerSettings.SimpleLBR\006simple\022U\n" +
+      "\017consistent_hash\030\002 \001(\0132,.lhotse.networki" +
+      "ng.v1alpha1.ConsistentHashLbR\016consistent" +
+      "Hash\"I\n\010SimpleLB\022\017\n\013ROUND_ROBIN\020\000\022\016\n\nLEA" +
+      "ST_CONN\020\001\022\n\n\006RANDOM\020\002\022\020\n\014PASS_THROUGH\020\003\"" +
+      "\307\001\n\020ConsistentHashLb\022(\n\020http_header_name" +
+      "\030\001 \001(\tR\016httpHeaderName\022\"\n\ruse_source_ip\030" +
+      "\002 \001(\010R\013useSourceIp\0229\n\031http_query_paramet" +
+      "er_name\030\003 \001(\tR\026httpQueryParameterName\022*\n" +
+      "\021minimum_ring_size\030\004 \001(\005R\017minimumRingSiz" +
+      "e*-\n\nModifyType\022\007\n\003ADD\020\000\022\n\n\006UPDATE\020\001\022\n\n\006" +
+      "REMOVE\020\002BD\n\"com.lhotse.api.networking.v1" +
+      "alpha1Z\036lhotse/api/networking/v1alpha1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15459,32 +18613,50 @@ public final class RouteRuleOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_Service_descriptor,
         new java.lang.String[] { "ServiceName", "Hosts", "Clusters", "Rules", });
-    internal_static_lhotse_networking_v1alpha1_Cluster_descriptor =
+    internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_ServiceDiscovery_descriptor,
+        new java.lang.String[] { "Action", "ServiceName", "ServiceDetail", });
+    internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_ClusterDiscovery_descriptor,
+        new java.lang.String[] { "Action", "ServiceName", "ClusterName", "ClusterDetail", });
+    internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_EndpointDiscovery_descriptor,
+        new java.lang.String[] { "Action", "ServiceName", "ClusterNames", "EndpointDetail", });
+    internal_static_lhotse_networking_v1alpha1_Cluster_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_lhotse_networking_v1alpha1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_Cluster_descriptor,
         new java.lang.String[] { "ClusterName", "Endpoints", "TrafficPolicy", });
     internal_static_lhotse_networking_v1alpha1_Endpoint_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_lhotse_networking_v1alpha1_Endpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_Endpoint_descriptor,
         new java.lang.String[] { "Ip", "Port", });
     internal_static_lhotse_networking_v1alpha1_RouteRule_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_lhotse_networking_v1alpha1_RouteRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_RouteRule_descriptor,
         new java.lang.String[] { "Name", "ServiceName", "HttpRule", });
     internal_static_lhotse_networking_v1alpha1_HttpRule_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_lhotse_networking_v1alpha1_HttpRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_HttpRule_descriptor,
         new java.lang.String[] { "Name", "Match", "Route", "Redirect", "Rewrite", "Timeout", });
     internal_static_lhotse_networking_v1alpha1_HttpMatchRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_lhotse_networking_v1alpha1_HttpMatchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_HttpMatchRequest_descriptor,
@@ -15514,49 +18686,49 @@ public final class RouteRuleOuterClass {
         internal_static_lhotse_networking_v1alpha1_HttpMatchRequest_WithoutHeadersEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_lhotse_networking_v1alpha1_StringMatch_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_lhotse_networking_v1alpha1_StringMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_StringMatch_descriptor,
         new java.lang.String[] { "Exact", "Prefix", "Regex", "StringMatch", });
     internal_static_lhotse_networking_v1alpha1_HttpRouteDestination_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_lhotse_networking_v1alpha1_HttpRouteDestination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_HttpRouteDestination_descriptor,
         new java.lang.String[] { "Destination", "Weight", "Weight", });
     internal_static_lhotse_networking_v1alpha1_Destination_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_lhotse_networking_v1alpha1_Destination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_Destination_descriptor,
         new java.lang.String[] { "Subset", });
     internal_static_lhotse_networking_v1alpha1_HttpRedirect_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_lhotse_networking_v1alpha1_HttpRedirect_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_HttpRedirect_descriptor,
         new java.lang.String[] { "Uri", "Authority", "Port", "Scheme", "RedirectCode", });
     internal_static_lhotse_networking_v1alpha1_HttpRewrite_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_lhotse_networking_v1alpha1_HttpRewrite_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_HttpRewrite_descriptor,
         new java.lang.String[] { "Uri", "Authority", });
     internal_static_lhotse_networking_v1alpha1_TrafficPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_lhotse_networking_v1alpha1_TrafficPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_TrafficPolicy_descriptor,
         new java.lang.String[] { "LoadBalancer", });
     internal_static_lhotse_networking_v1alpha1_LoadBalancerSettings_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_lhotse_networking_v1alpha1_LoadBalancerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_LoadBalancerSettings_descriptor,
         new java.lang.String[] { "Simple", "ConsistentHash", });
     internal_static_lhotse_networking_v1alpha1_ConsistentHashLb_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_lhotse_networking_v1alpha1_ConsistentHashLb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_ConsistentHashLb_descriptor,
