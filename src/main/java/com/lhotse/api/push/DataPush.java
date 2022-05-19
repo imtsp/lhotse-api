@@ -419,29 +419,10 @@ public final class DataPush {
 
     /**
      * <pre>
-     * 动作
-     * </pre>
-     *
-     * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-     * @return The enum numeric value on the wire for action.
-     */
-    int getActionValue();
-    /**
-     * <pre>
-     * 动作
-     * </pre>
-     *
-     * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-     * @return The action.
-     */
-    com.lhotse.api.push.DataPush.PushAction getAction();
-
-    /**
-     * <pre>
      * 数据
      * </pre>
      *
-     * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     boolean hasData();
@@ -450,7 +431,7 @@ public final class DataPush {
      * 数据
      * </pre>
      *
-     * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
      * @return The data.
      */
     com.google.protobuf.Any getData();
@@ -459,7 +440,7 @@ public final class DataPush {
      * 数据
      * </pre>
      *
-     * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
      */
     com.google.protobuf.AnyOrBuilder getDataOrBuilder();
   }
@@ -481,7 +462,6 @@ public final class DataPush {
     }
     private DataPushRequest() {
       category_ = 0;
-      action_ = 0;
     }
 
     @java.lang.Override
@@ -520,13 +500,7 @@ public final class DataPush {
               category_ = rawValue;
               break;
             }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              action_ = rawValue;
-              break;
-            }
-            case 26: {
+            case 18: {
               com.google.protobuf.Any.Builder subBuilder = null;
               if (data_ != null) {
                 subBuilder = data_.toBuilder();
@@ -598,41 +572,14 @@ public final class DataPush {
       return result == null ? com.lhotse.api.push.DataPush.DataCategory.UNRECOGNIZED : result;
     }
 
-    public static final int ACTION_FIELD_NUMBER = 2;
-    private int action_;
-    /**
-     * <pre>
-     * 动作
-     * </pre>
-     *
-     * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-     * @return The enum numeric value on the wire for action.
-     */
-    @java.lang.Override public int getActionValue() {
-      return action_;
-    }
-    /**
-     * <pre>
-     * 动作
-     * </pre>
-     *
-     * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-     * @return The action.
-     */
-    @java.lang.Override public com.lhotse.api.push.DataPush.PushAction getAction() {
-      @SuppressWarnings("deprecation")
-      com.lhotse.api.push.DataPush.PushAction result = com.lhotse.api.push.DataPush.PushAction.valueOf(action_);
-      return result == null ? com.lhotse.api.push.DataPush.PushAction.UNRECOGNIZED : result;
-    }
-
-    public static final int DATA_FIELD_NUMBER = 3;
+    public static final int DATA_FIELD_NUMBER = 2;
     private com.google.protobuf.Any data_;
     /**
      * <pre>
      * 数据
      * </pre>
      *
-     * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -644,7 +591,7 @@ public final class DataPush {
      * 数据
      * </pre>
      *
-     * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -656,7 +603,7 @@ public final class DataPush {
      * 数据
      * </pre>
      *
-     * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+     * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
@@ -680,11 +627,8 @@ public final class DataPush {
       if (category_ != com.lhotse.api.push.DataPush.DataCategory.DATA_CATEGORY_SERVICE.getNumber()) {
         output.writeEnum(1, category_);
       }
-      if (action_ != com.lhotse.api.push.DataPush.PushAction.PUSH_ACTION_FULL.getNumber()) {
-        output.writeEnum(2, action_);
-      }
       if (data_ != null) {
-        output.writeMessage(3, getData());
+        output.writeMessage(2, getData());
       }
       unknownFields.writeTo(output);
     }
@@ -699,13 +643,9 @@ public final class DataPush {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, category_);
       }
-      if (action_ != com.lhotse.api.push.DataPush.PushAction.PUSH_ACTION_FULL.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, action_);
-      }
       if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getData());
+          .computeMessageSize(2, getData());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -723,7 +663,6 @@ public final class DataPush {
       com.lhotse.api.push.DataPush.DataPushRequest other = (com.lhotse.api.push.DataPush.DataPushRequest) obj;
 
       if (category_ != other.category_) return false;
-      if (action_ != other.action_) return false;
       if (hasData() != other.hasData()) return false;
       if (hasData()) {
         if (!getData()
@@ -742,8 +681,6 @@ public final class DataPush {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + category_;
-      hash = (37 * hash) + ACTION_FIELD_NUMBER;
-      hash = (53 * hash) + action_;
       if (hasData()) {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getData().hashCode();
@@ -887,8 +824,6 @@ public final class DataPush {
         super.clear();
         category_ = 0;
 
-        action_ = 0;
-
         if (dataBuilder_ == null) {
           data_ = null;
         } else {
@@ -922,7 +857,6 @@ public final class DataPush {
       public com.lhotse.api.push.DataPush.DataPushRequest buildPartial() {
         com.lhotse.api.push.DataPush.DataPushRequest result = new com.lhotse.api.push.DataPush.DataPushRequest(this);
         result.category_ = category_;
-        result.action_ = action_;
         if (dataBuilder_ == null) {
           result.data_ = data_;
         } else {
@@ -978,9 +912,6 @@ public final class DataPush {
         if (other == com.lhotse.api.push.DataPush.DataPushRequest.getDefaultInstance()) return this;
         if (other.category_ != 0) {
           setCategoryValue(other.getCategoryValue());
-        }
-        if (other.action_ != 0) {
-          setActionValue(other.getActionValue());
         }
         if (other.hasData()) {
           mergeData(other.getData());
@@ -1088,80 +1019,6 @@ public final class DataPush {
         return this;
       }
 
-      private int action_ = 0;
-      /**
-       * <pre>
-       * 动作
-       * </pre>
-       *
-       * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-       * @return The enum numeric value on the wire for action.
-       */
-      @java.lang.Override public int getActionValue() {
-        return action_;
-      }
-      /**
-       * <pre>
-       * 动作
-       * </pre>
-       *
-       * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-       * @param value The enum numeric value on the wire for action to set.
-       * @return This builder for chaining.
-       */
-      public Builder setActionValue(int value) {
-        
-        action_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 动作
-       * </pre>
-       *
-       * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-       * @return The action.
-       */
-      @java.lang.Override
-      public com.lhotse.api.push.DataPush.PushAction getAction() {
-        @SuppressWarnings("deprecation")
-        com.lhotse.api.push.DataPush.PushAction result = com.lhotse.api.push.DataPush.PushAction.valueOf(action_);
-        return result == null ? com.lhotse.api.push.DataPush.PushAction.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * 动作
-       * </pre>
-       *
-       * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-       * @param value The action to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAction(com.lhotse.api.push.DataPush.PushAction value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        action_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 动作
-       * </pre>
-       *
-       * <code>.lhotse.networking.v1alpha1.PushAction action = 2 [json_name = "action"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAction() {
-        
-        action_ = 0;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.Any data_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
@@ -1170,7 +1027,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        * @return Whether the data field is set.
        */
       public boolean hasData() {
@@ -1181,7 +1038,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        * @return The data.
        */
       public com.google.protobuf.Any getData() {
@@ -1196,7 +1053,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       public Builder setData(com.google.protobuf.Any value) {
         if (dataBuilder_ == null) {
@@ -1216,7 +1073,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       public Builder setData(
           com.google.protobuf.Any.Builder builderForValue) {
@@ -1234,7 +1091,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       public Builder mergeData(com.google.protobuf.Any value) {
         if (dataBuilder_ == null) {
@@ -1256,7 +1113,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       public Builder clearData() {
         if (dataBuilder_ == null) {
@@ -1274,7 +1131,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       public com.google.protobuf.Any.Builder getDataBuilder() {
         
@@ -1286,7 +1143,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
         if (dataBuilder_ != null) {
@@ -1301,7 +1158,7 @@ public final class DataPush {
        * 数据
        * </pre>
        *
-       * <code>.google.protobuf.Any data = 3 [json_name = "data"];</code>
+       * <code>.google.protobuf.Any data = 2 [json_name = "data"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
@@ -1364,6 +1221,1202 @@ public final class DataPush {
 
     @java.lang.Override
     public com.lhotse.api.push.DataPush.DataPushRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServerDataPushRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.ServerDataPushRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 动作
+     * </pre>
+     *
+     * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <pre>
+     * 动作
+     * </pre>
+     *
+     * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    com.lhotse.api.push.DataPush.PushAction getAction();
+
+    /**
+     * <pre>
+     *校验和
+     * </pre>
+     *
+     * <code>string checksum = 2 [json_name = "checksum"];</code>
+     * @return The checksum.
+     */
+    java.lang.String getChecksum();
+    /**
+     * <pre>
+     *校验和
+     * </pre>
+     *
+     * <code>string checksum = 2 [json_name = "checksum"];</code>
+     * @return The bytes for checksum.
+     */
+    com.google.protobuf.ByteString
+        getChecksumBytes();
+
+    /**
+     * <pre>
+     *修订版本
+     * </pre>
+     *
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <pre>
+     *修订版本
+     * </pre>
+     *
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
+
+    /**
+     * <pre>
+     * 数据
+     * </pre>
+     *
+     * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+     * @return Whether the data field is set.
+     */
+    boolean hasData();
+    /**
+     * <pre>
+     * 数据
+     * </pre>
+     *
+     * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.Any getData();
+    /**
+     * <pre>
+     * 数据
+     * </pre>
+     *
+     * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lhotse.networking.v1alpha1.ServerDataPushRequest}
+   */
+  public static final class ServerDataPushRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.ServerDataPushRequest)
+      ServerDataPushRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServerDataPushRequest.newBuilder() to construct.
+    private ServerDataPushRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServerDataPushRequest() {
+      action_ = 0;
+      checksum_ = "";
+      revision_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServerDataPushRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServerDataPushRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              action_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              checksum_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              revision_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Any.Builder subBuilder = null;
+              if (data_ != null) {
+                subBuilder = data_.toBuilder();
+              }
+              data_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(data_);
+                data_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.push.DataPush.ServerDataPushRequest.class, com.lhotse.api.push.DataPush.ServerDataPushRequest.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_;
+    /**
+     * <pre>
+     * 动作
+     * </pre>
+     *
+     * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @java.lang.Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <pre>
+     * 动作
+     * </pre>
+     *
+     * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    @java.lang.Override public com.lhotse.api.push.DataPush.PushAction getAction() {
+      @SuppressWarnings("deprecation")
+      com.lhotse.api.push.DataPush.PushAction result = com.lhotse.api.push.DataPush.PushAction.valueOf(action_);
+      return result == null ? com.lhotse.api.push.DataPush.PushAction.UNRECOGNIZED : result;
+    }
+
+    public static final int CHECKSUM_FIELD_NUMBER = 2;
+    private volatile java.lang.Object checksum_;
+    /**
+     * <pre>
+     *校验和
+     * </pre>
+     *
+     * <code>string checksum = 2 [json_name = "checksum"];</code>
+     * @return The checksum.
+     */
+    @java.lang.Override
+    public java.lang.String getChecksum() {
+      java.lang.Object ref = checksum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        checksum_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *校验和
+     * </pre>
+     *
+     * <code>string checksum = 2 [json_name = "checksum"];</code>
+     * @return The bytes for checksum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChecksumBytes() {
+      java.lang.Object ref = checksum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        checksum_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object revision_;
+    /**
+     * <pre>
+     *修订版本
+     * </pre>
+     *
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      java.lang.Object ref = revision_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        revision_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *修订版本
+     * </pre>
+     *
+     * <code>string revision = 3 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      java.lang.Object ref = revision_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        revision_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.Any data_;
+    /**
+     * <pre>
+     * 数据
+     * </pre>
+     *
+     * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+     * @return Whether the data field is set.
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return data_ != null;
+    }
+    /**
+     * <pre>
+     * 数据
+     * </pre>
+     *
+     * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getData() {
+      return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+    }
+    /**
+     * <pre>
+     * 数据
+     * </pre>
+     *
+     * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+      return getData();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != com.lhotse.api.push.DataPush.PushAction.PUSH_ACTION_FULL.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (!getChecksumBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, checksum_);
+      }
+      if (!getRevisionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, revision_);
+      }
+      if (data_ != null) {
+        output.writeMessage(4, getData());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != com.lhotse.api.push.DataPush.PushAction.PUSH_ACTION_FULL.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (!getChecksumBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, checksum_);
+      }
+      if (!getRevisionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, revision_);
+      }
+      if (data_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getData());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.push.DataPush.ServerDataPushRequest)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.push.DataPush.ServerDataPushRequest other = (com.lhotse.api.push.DataPush.ServerDataPushRequest) obj;
+
+      if (action_ != other.action_) return false;
+      if (!getChecksum()
+          .equals(other.getChecksum())) return false;
+      if (!getRevision()
+          .equals(other.getRevision())) return false;
+      if (hasData() != other.hasData()) return false;
+      if (hasData()) {
+        if (!getData()
+            .equals(other.getData())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
+      hash = (53 * hash) + getChecksum().hashCode();
+      hash = (37 * hash) + REVISION_FIELD_NUMBER;
+      hash = (53 * hash) + getRevision().hashCode();
+      if (hasData()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.push.DataPush.ServerDataPushRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lhotse.networking.v1alpha1.ServerDataPushRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.ServerDataPushRequest)
+        com.lhotse.api.push.DataPush.ServerDataPushRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.push.DataPush.ServerDataPushRequest.class, com.lhotse.api.push.DataPush.ServerDataPushRequest.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.push.DataPush.ServerDataPushRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = 0;
+
+        checksum_ = "";
+
+        revision_ = "";
+
+        if (dataBuilder_ == null) {
+          data_ = null;
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.ServerDataPushRequest getDefaultInstanceForType() {
+        return com.lhotse.api.push.DataPush.ServerDataPushRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.ServerDataPushRequest build() {
+        com.lhotse.api.push.DataPush.ServerDataPushRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.ServerDataPushRequest buildPartial() {
+        com.lhotse.api.push.DataPush.ServerDataPushRequest result = new com.lhotse.api.push.DataPush.ServerDataPushRequest(this);
+        result.action_ = action_;
+        result.checksum_ = checksum_;
+        result.revision_ = revision_;
+        if (dataBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = dataBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.push.DataPush.ServerDataPushRequest) {
+          return mergeFrom((com.lhotse.api.push.DataPush.ServerDataPushRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.push.DataPush.ServerDataPushRequest other) {
+        if (other == com.lhotse.api.push.DataPush.ServerDataPushRequest.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (!other.getChecksum().isEmpty()) {
+          checksum_ = other.checksum_;
+          onChanged();
+        }
+        if (!other.getRevision().isEmpty()) {
+          revision_ = other.revision_;
+          onChanged();
+        }
+        if (other.hasData()) {
+          mergeData(other.getData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.push.DataPush.ServerDataPushRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.push.DataPush.ServerDataPushRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int action_ = 0;
+      /**
+       * <pre>
+       * 动作
+       * </pre>
+       *
+       * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @java.lang.Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <pre>
+       * 动作
+       * </pre>
+       *
+       * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 动作
+       * </pre>
+       *
+       * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.PushAction getAction() {
+        @SuppressWarnings("deprecation")
+        com.lhotse.api.push.DataPush.PushAction result = com.lhotse.api.push.DataPush.PushAction.valueOf(action_);
+        return result == null ? com.lhotse.api.push.DataPush.PushAction.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 动作
+       * </pre>
+       *
+       * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(com.lhotse.api.push.DataPush.PushAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 动作
+       * </pre>
+       *
+       * <code>.lhotse.networking.v1alpha1.PushAction action = 1 [json_name = "action"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object checksum_ = "";
+      /**
+       * <pre>
+       *校验和
+       * </pre>
+       *
+       * <code>string checksum = 2 [json_name = "checksum"];</code>
+       * @return The checksum.
+       */
+      public java.lang.String getChecksum() {
+        java.lang.Object ref = checksum_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          checksum_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *校验和
+       * </pre>
+       *
+       * <code>string checksum = 2 [json_name = "checksum"];</code>
+       * @return The bytes for checksum.
+       */
+      public com.google.protobuf.ByteString
+          getChecksumBytes() {
+        java.lang.Object ref = checksum_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          checksum_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *校验和
+       * </pre>
+       *
+       * <code>string checksum = 2 [json_name = "checksum"];</code>
+       * @param value The checksum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksum(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        checksum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *校验和
+       * </pre>
+       *
+       * <code>string checksum = 2 [json_name = "checksum"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChecksum() {
+        
+        checksum_ = getDefaultInstance().getChecksum();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *校验和
+       * </pre>
+       *
+       * <code>string checksum = 2 [json_name = "checksum"];</code>
+       * @param value The bytes for checksum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksumBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        checksum_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object revision_ = "";
+      /**
+       * <pre>
+       *修订版本
+       * </pre>
+       *
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      public java.lang.String getRevision() {
+        java.lang.Object ref = revision_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          revision_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *修订版本
+       * </pre>
+       *
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        java.lang.Object ref = revision_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          revision_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *修订版本
+       * </pre>
+       *
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        revision_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *修订版本
+       * </pre>
+       *
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        
+        revision_ = getDefaultInstance().getRevision();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *修订版本
+       * </pre>
+       *
+       * <code>string revision = 3 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        revision_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any data_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> dataBuilder_;
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       * @return Whether the data field is set.
+       */
+      public boolean hasData() {
+        return dataBuilder_ != null || data_ != null;
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       * @return The data.
+       */
+      public com.google.protobuf.Any getData() {
+        if (dataBuilder_ == null) {
+          return data_ == null ? com.google.protobuf.Any.getDefaultInstance() : data_;
+        } else {
+          return dataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Any value) {
+        if (dataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      public Builder setData(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (dataBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      public Builder mergeData(com.google.protobuf.Any value) {
+        if (dataBuilder_ == null) {
+          if (data_ != null) {
+            data_ =
+              com.google.protobuf.Any.newBuilder(data_).mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          dataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      public Builder clearData() {
+        if (dataBuilder_ == null) {
+          data_ = null;
+          onChanged();
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      public com.google.protobuf.Any.Builder getDataBuilder() {
+        
+        onChanged();
+        return getDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getDataOrBuilder() {
+        if (dataBuilder_ != null) {
+          return dataBuilder_.getMessageOrBuilder();
+        } else {
+          return data_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : data_;
+        }
+      }
+      /**
+       * <pre>
+       * 数据
+       * </pre>
+       *
+       * <code>.google.protobuf.Any data = 4 [json_name = "data"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getDataFieldBuilder() {
+        if (dataBuilder_ == null) {
+          dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getData(),
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        return dataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.ServerDataPushRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.ServerDataPushRequest)
+    private static final com.lhotse.api.push.DataPush.ServerDataPushRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.push.DataPush.ServerDataPushRequest();
+    }
+
+    public static com.lhotse.api.push.DataPush.ServerDataPushRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServerDataPushRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ServerDataPushRequest>() {
+      @java.lang.Override
+      public ServerDataPushRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServerDataPushRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServerDataPushRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServerDataPushRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.ServerDataPushRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2124,16 +3177,752 @@ public final class DataPush {
 
   }
 
+  public interface AgentRegisterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lhotse.networking.v1alpha1.AgentRegisterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The agentId.
+     */
+    java.lang.String getAgentId();
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The bytes for agentId.
+     */
+    com.google.protobuf.ByteString
+        getAgentIdBytes();
+
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+  }
+  /**
+   * <pre>
+   * Agent启动上报身份信息
+   * </pre>
+   *
+   * Protobuf type {@code lhotse.networking.v1alpha1.AgentRegisterRequest}
+   */
+  public static final class AgentRegisterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lhotse.networking.v1alpha1.AgentRegisterRequest)
+      AgentRegisterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AgentRegisterRequest.newBuilder() to construct.
+    private AgentRegisterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AgentRegisterRequest() {
+      agentId_ = "";
+      version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentRegisterRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AgentRegisterRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              agentId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              version_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lhotse.api.push.DataPush.AgentRegisterRequest.class, com.lhotse.api.push.DataPush.AgentRegisterRequest.Builder.class);
+    }
+
+    public static final int AGENT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object agentId_;
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The agentId.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentId() {
+      java.lang.Object ref = agentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string agent_id = 1 [json_name = "agentId"];</code>
+     * @return The bytes for agentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentIdBytes() {
+      java.lang.Object ref = agentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object version_;
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAgentIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agentId_);
+      }
+      if (!getVersionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAgentIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agentId_);
+      }
+      if (!getVersionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lhotse.api.push.DataPush.AgentRegisterRequest)) {
+        return super.equals(obj);
+      }
+      com.lhotse.api.push.DataPush.AgentRegisterRequest other = (com.lhotse.api.push.DataPush.AgentRegisterRequest) obj;
+
+      if (!getAgentId()
+          .equals(other.getAgentId())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AGENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentId().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lhotse.api.push.DataPush.AgentRegisterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Agent启动上报身份信息
+     * </pre>
+     *
+     * Protobuf type {@code lhotse.networking.v1alpha1.AgentRegisterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lhotse.networking.v1alpha1.AgentRegisterRequest)
+        com.lhotse.api.push.DataPush.AgentRegisterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lhotse.api.push.DataPush.AgentRegisterRequest.class, com.lhotse.api.push.DataPush.AgentRegisterRequest.Builder.class);
+      }
+
+      // Construct using com.lhotse.api.push.DataPush.AgentRegisterRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        agentId_ = "";
+
+        version_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lhotse.api.push.DataPush.internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AgentRegisterRequest getDefaultInstanceForType() {
+        return com.lhotse.api.push.DataPush.AgentRegisterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AgentRegisterRequest build() {
+        com.lhotse.api.push.DataPush.AgentRegisterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lhotse.api.push.DataPush.AgentRegisterRequest buildPartial() {
+        com.lhotse.api.push.DataPush.AgentRegisterRequest result = new com.lhotse.api.push.DataPush.AgentRegisterRequest(this);
+        result.agentId_ = agentId_;
+        result.version_ = version_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lhotse.api.push.DataPush.AgentRegisterRequest) {
+          return mergeFrom((com.lhotse.api.push.DataPush.AgentRegisterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lhotse.api.push.DataPush.AgentRegisterRequest other) {
+        if (other == com.lhotse.api.push.DataPush.AgentRegisterRequest.getDefaultInstance()) return this;
+        if (!other.getAgentId().isEmpty()) {
+          agentId_ = other.agentId_;
+          onChanged();
+        }
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lhotse.api.push.DataPush.AgentRegisterRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lhotse.api.push.DataPush.AgentRegisterRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object agentId_ = "";
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @return The agentId.
+       */
+      public java.lang.String getAgentId() {
+        java.lang.Object ref = agentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          agentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @return The bytes for agentId.
+       */
+      public com.google.protobuf.ByteString
+          getAgentIdBytes() {
+        java.lang.Object ref = agentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          agentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @param value The agentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        agentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentId() {
+        
+        agentId_ = getDefaultInstance().getAgentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_id = 1 [json_name = "agentId"];</code>
+       * @param value The bytes for agentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        agentId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lhotse.networking.v1alpha1.AgentRegisterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lhotse.networking.v1alpha1.AgentRegisterRequest)
+    private static final com.lhotse.api.push.DataPush.AgentRegisterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lhotse.api.push.DataPush.AgentRegisterRequest();
+    }
+
+    public static com.lhotse.api.push.DataPush.AgentRegisterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AgentRegisterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AgentRegisterRequest>() {
+      @java.lang.Override
+      public AgentRegisterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AgentRegisterRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AgentRegisterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AgentRegisterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lhotse.api.push.DataPush.AgentRegisterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lhotse_networking_v1alpha1_DataPushRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lhotse_networking_v1alpha1_DataPushRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lhotse_networking_v1alpha1_DataPushResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lhotse_networking_v1alpha1_DataPushResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2144,27 +3933,32 @@ public final class DataPush {
   static {
     java.lang.String[] descriptorData = {
       "\n\023push/DataPush.proto\022\032lhotse.networking" +
-      ".v1alpha1\032\031google/protobuf/any.proto\"\301\001\n" +
+      ".v1alpha1\032\031google/protobuf/any.proto\"\201\001\n" +
       "\017DataPushRequest\022D\n\010category\030\001 \001(\0162(.lho" +
       "tse.networking.v1alpha1.DataCategoryR\010ca" +
-      "tegory\022>\n\006action\030\002 \001(\0162&.lhotse.networki" +
-      "ng.v1alpha1.PushActionR\006action\022(\n\004data\030\003" +
-      " \001(\0132\024.google.protobuf.AnyR\004data\"l\n\020Data" +
-      "PushResponse\022>\n\006status\030\001 \001(\0162&.lhotse.ne" +
-      "tworking.v1alpha1.PushStatusR\006status\022\030\n\007" +
-      "message\030\002 \001(\tR\007message*\275\001\n\014DataCategory\022" +
-      "\031\n\025DATA_CATEGORY_SERVICE\020\000\022\031\n\025DATA_CATEG" +
-      "ORY_CLUSTER\020\001\022\032\n\026DATA_CATEGORY_ENDPOINT\020" +
-      "\002\022\026\n\022DATA_CATEGORY_RULE\020\003\022\034\n\030DATA_CATEGO" +
-      "RY_AGENT_META\020\004\022%\n!DATA_CATEGORY_AGENT_U" +
-      "PLOAD_STATUS\020\005*6\n\nPushStatus\022\022\n\016PUSH_STA" +
-      "TUS_OK\020\000\022\024\n\020PUSH_STATUS_FAIL\020\001*=\n\nPushAc" +
-      "tion\022\024\n\020PUSH_ACTION_FULL\020\000\022\031\n\025PUSH_ACTIO" +
-      "N_INCREMENT\020\0012x\n\013PushService\022i\n\010PushData" +
-      "\022+.lhotse.networking.v1alpha1.DataPushRe" +
-      "quest\032,.lhotse.networking.v1alpha1.DataP" +
-      "ushResponse(\0010\001B&\n\023com.lhotse.api.pushZ\017" +
-      "lhotse/api/pushb\006proto3"
+      "tegory\022(\n\004data\030\002 \001(\0132\024.google.protobuf.A" +
+      "nyR\004data\"\271\001\n\025ServerDataPushRequest\022>\n\006ac" +
+      "tion\030\001 \001(\0162&.lhotse.networking.v1alpha1." +
+      "PushActionR\006action\022\032\n\010checksum\030\002 \001(\tR\010ch" +
+      "ecksum\022\032\n\010revision\030\003 \001(\tR\010revision\022(\n\004da" +
+      "ta\030\004 \001(\0132\024.google.protobuf.AnyR\004data\"l\n\020" +
+      "DataPushResponse\022>\n\006status\030\001 \001(\0162&.lhots" +
+      "e.networking.v1alpha1.PushStatusR\006status" +
+      "\022\030\n\007message\030\002 \001(\tR\007message\"K\n\024AgentRegis" +
+      "terRequest\022\031\n\010agent_id\030\001 \001(\tR\007agentId\022\030\n" +
+      "\007version\030\002 \001(\tR\007version*\275\001\n\014DataCategory" +
+      "\022\031\n\025DATA_CATEGORY_SERVICE\020\000\022\031\n\025DATA_CATE" +
+      "GORY_CLUSTER\020\001\022\032\n\026DATA_CATEGORY_ENDPOINT" +
+      "\020\002\022\026\n\022DATA_CATEGORY_RULE\020\003\022\034\n\030DATA_CATEG" +
+      "ORY_AGENT_META\020\004\022%\n!DATA_CATEGORY_AGENT_" +
+      "UPLOAD_STATUS\020\005*6\n\nPushStatus\022\022\n\016PUSH_ST" +
+      "ATUS_OK\020\000\022\024\n\020PUSH_STATUS_FAIL\020\001*=\n\nPushA" +
+      "ction\022\024\n\020PUSH_ACTION_FULL\020\000\022\031\n\025PUSH_ACTI" +
+      "ON_INCREMENT\020\0012x\n\013PushService\022i\n\010PushDat" +
+      "a\022+.lhotse.networking.v1alpha1.DataPushR" +
+      "equest\032,.lhotse.networking.v1alpha1.Data" +
+      "PushResponse(\0010\001B&\n\023com.lhotse.api.pushZ" +
+      "\017lhotse/api/pushb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2176,13 +3970,25 @@ public final class DataPush {
     internal_static_lhotse_networking_v1alpha1_DataPushRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_DataPushRequest_descriptor,
-        new java.lang.String[] { "Category", "Action", "Data", });
-    internal_static_lhotse_networking_v1alpha1_DataPushResponse_descriptor =
+        new java.lang.String[] { "Category", "Data", });
+    internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_ServerDataPushRequest_descriptor,
+        new java.lang.String[] { "Action", "Checksum", "Revision", "Data", });
+    internal_static_lhotse_networking_v1alpha1_DataPushResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_lhotse_networking_v1alpha1_DataPushResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_lhotse_networking_v1alpha1_DataPushResponse_descriptor,
         new java.lang.String[] { "Status", "Message", });
+    internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_lhotse_networking_v1alpha1_AgentRegisterRequest_descriptor,
+        new java.lang.String[] { "AgentId", "Version", });
     com.google.protobuf.AnyProto.getDescriptor();
   }
 
