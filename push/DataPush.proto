@@ -17,9 +17,9 @@ enum DataCategory {
     DATA_CATEGORY_AGENT_UPLOAD_STATUS = 5;
 }
 
-enum PushStatus {
-    PUSH_STATUS_OK = 0;
-    PUSH_STATUS_FAIL = 1;
+enum RespStatus {
+    STATUS_OK = 0;
+    STATUS_FAIL = 1;
 }
 
 // 推送动作
@@ -43,7 +43,7 @@ message ServerDataPushRequest {
 
 // 推送结果
 message DataPushResponse {
-    PushStatus status = 1;// 状态
+    RespStatus status = 1;// 状态
     string message = 2;// 消息
 }
 
@@ -51,11 +51,56 @@ message DataPushResponse {
 message AgentRegisterRequest {
     string agent_id = 1;
     string version = 2;
+    string proxy_app_id = 3;
 }
 
+message AgentRegisterResponse {
+    string checksum = 1;
+    google.protobuf.Any data = 2;
+}
+
+message UploadStatusRequest {
+    string agent_id = 1;
+    string version = 2;
+    string proxy_app_id = 3;
+    ProxyAppHealthCheck proxy_app_health_check = 4;
+}
+
+message UploadStatusResponse {
+    RespStatus status = 1;
+    string message = 2;
+}
+
+enum AppStatus {
+    // 正在启动
+    STARTING = 0;
+
+    // 终止中
+    TERMINATING = 1;
+
+    // 已终止
+    TERMINATED = 2;
+
+    // 运行中
+    RUNNING = 4;
+
+}
+
+message ProxyAppHealthCheck {
+    string app = 1;
+    AppStatus status = 2;
+}
 
 
 service PushService {
     // 推送数据到agent
     rpc PushData (stream DataPushRequest) returns (stream DataPushResponse);
+}
+
+service AgentService {
+    // Agent注册
+    rpc Register (AgentRegisterRequest) returns (AgentRegisterResponse);
+
+    // Agent上报状态
+    rpc UploadStatus (UploadStatusRequest) returns (UploadStatusResponse);
 }
