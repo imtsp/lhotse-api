@@ -19,11 +19,13 @@ public final class Metadata {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string version = 1[json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
+     * @return The version.
      */
     java.lang.String getVersion();
     /**
-     * <code>string version = 1[json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
+     * @return The bytes for version.
      */
     com.google.protobuf.ByteString
         getVersionBytes();
@@ -31,7 +33,7 @@ public final class Metadata {
   /**
    * Protobuf type {@code lhotse.api.agent.AgentMeta}
    */
-  public  static final class AgentMeta extends
+  public static final class AgentMeta extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lhotse.api.agent.AgentMeta)
       AgentMetaOrBuilder {
@@ -42,6 +44,13 @@ public final class Metadata {
     }
     private AgentMeta() {
       version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentMeta();
     }
 
     @java.lang.Override
@@ -57,7 +66,6 @@ public final class Metadata {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -75,7 +83,7 @@ public final class Metadata {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -109,8 +117,10 @@ public final class Metadata {
     public static final int VERSION_FIELD_NUMBER = 1;
     private volatile java.lang.Object version_;
     /**
-     * <code>string version = 1[json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
+     * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -124,8 +134,10 @@ public final class Metadata {
       }
     }
     /**
-     * <code>string version = 1[json_name = "version"];</code>
+     * <code>string version = 1 [json_name = "version"];</code>
+     * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -184,11 +196,10 @@ public final class Metadata {
       }
       com.lhotse.api.agent.Metadata.AgentMeta other = (com.lhotse.api.agent.Metadata.AgentMeta) obj;
 
-      boolean result = true;
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -368,35 +379,35 @@ public final class Metadata {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -445,7 +456,8 @@ public final class Metadata {
 
       private java.lang.Object version_ = "";
       /**
-       * <code>string version = 1[json_name = "version"];</code>
+       * <code>string version = 1 [json_name = "version"];</code>
+       * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -460,7 +472,8 @@ public final class Metadata {
         }
       }
       /**
-       * <code>string version = 1[json_name = "version"];</code>
+       * <code>string version = 1 [json_name = "version"];</code>
+       * @return The bytes for version.
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -476,7 +489,9 @@ public final class Metadata {
         }
       }
       /**
-       * <code>string version = 1[json_name = "version"];</code>
+       * <code>string version = 1 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -489,7 +504,8 @@ public final class Metadata {
         return this;
       }
       /**
-       * <code>string version = 1[json_name = "version"];</code>
+       * <code>string version = 1 [json_name = "version"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearVersion() {
         
@@ -498,7 +514,9 @@ public final class Metadata {
         return this;
       }
       /**
-       * <code>string version = 1[json_name = "version"];</code>
+       * <code>string version = 1 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -514,7 +532,7 @@ public final class Metadata {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -583,18 +601,10 @@ public final class Metadata {
       "(\n\024com.lhotse.api.agentZ\020lhotse/api/agen" +
       "tb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_lhotse_api_agent_AgentMeta_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_lhotse_api_agent_AgentMeta_fieldAccessorTable = new
